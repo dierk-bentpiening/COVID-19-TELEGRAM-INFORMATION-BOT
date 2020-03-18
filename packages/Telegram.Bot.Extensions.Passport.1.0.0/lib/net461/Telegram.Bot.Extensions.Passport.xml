@@ -1,0 +1,960 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Telegram.Bot.Extensions.Passport</name>
+    </assembly>
+    <members>
+        <member name="T:Telegram.Bot.Passport.Decrypter">
+            <inheritdoc />
+        </member>
+        <member name="M:Telegram.Bot.Passport.Decrypter.DecryptCredentials(Telegram.Bot.Types.Passport.EncryptedCredentials,System.Security.Cryptography.RSA)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telegram.Bot.Passport.Decrypter.DecryptData``1(System.String,Telegram.Bot.Types.Passport.DataCredentials)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telegram.Bot.Passport.Decrypter.DecryptFile(System.Byte[],Telegram.Bot.Types.Passport.FileCredentials)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telegram.Bot.Passport.Decrypter.DecryptFileAsync(System.IO.Stream,Telegram.Bot.Types.Passport.FileCredentials,System.IO.Stream,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="T:Telegram.Bot.Passport.IDecrypter">
+            <summary>
+            Provides decryption utilities for encrypted Telegram Passport data
+            </summary>
+        </member>
+        <member name="M:Telegram.Bot.Passport.IDecrypter.DecryptCredentials(Telegram.Bot.Types.Passport.EncryptedCredentials,System.Security.Cryptography.RSA)">
+            <summary>
+            Decrypts encrypted credentials in <see cref="T:Telegram.Bot.Types.Passport.PassportData"/> using RSA key
+            </summary>
+            <param name="encryptedCredentials">Encrypted credentials in Passport data</param>
+            <param name="key">RSA private key</param>
+            <returns>Decrypted credentials</returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+            <exception cref="T:System.ArgumentException"></exception>
+            <exception cref="T:System.FormatException"></exception>
+            <exception cref="T:Telegram.Bot.Exceptions.PassportDataDecryptionException"></exception>
+            <exception cref="T:System.Security.Cryptography.CryptographicException"></exception>
+        </member>
+        <member name="M:Telegram.Bot.Passport.IDecrypter.DecryptData``1(System.String,Telegram.Bot.Types.Passport.DataCredentials)">
+            <summary>
+            Decrypts encrypted data using its accompanying data credentials and deserializes the result
+            from JSON to an instance of <typeparamref name="TValue"/>
+            </summary>
+            <param name="encryptedData">Encrypted Passport data</param>
+            <param name="dataCredentials">Accompanying data credentials required for decryption</param>
+            <returns>Decrypted data</returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+            <exception cref="T:System.ArgumentException"></exception>
+            <exception cref="T:System.FormatException"></exception>
+            <exception cref="T:Telegram.Bot.Exceptions.PassportDataDecryptionException"></exception>
+            <exception cref="T:Newtonsoft.Json.JsonSerializationException"></exception>
+        </member>
+        <member name="M:Telegram.Bot.Passport.IDecrypter.DecryptFile(System.Byte[],Telegram.Bot.Types.Passport.FileCredentials)">
+            <summary>
+            Decrypts encrypted file bytes using its accompanying file credentials
+            </summary>
+            <param name="encryptedContent">Encrypted Passport file</param>
+            <param name="fileCredentials">Accompanying file credentials required for decryption</param>
+            <returns>Decrypted file bytes</returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+            <exception cref="T:System.ArgumentException"></exception>
+            <exception cref="T:System.FormatException"></exception>
+            <exception cref="T:Telegram.Bot.Exceptions.PassportDataDecryptionException"></exception>
+        </member>
+        <member name="M:Telegram.Bot.Passport.IDecrypter.DecryptFileAsync(System.IO.Stream,Telegram.Bot.Types.Passport.FileCredentials,System.IO.Stream,System.Threading.CancellationToken)">
+            <summary>
+            Decrypts encrypted file from stream using its accompanying file credentials and writes it
+            to <paramref name="destination"/> stream
+            </summary>
+            <param name="encryptedContent">Encrypted Passport file stream</param>
+            <param name="fileCredentials">Accompanying file credentials required for decryption</param>
+            <param name="destination">Stream to write decrypted file content to</param>
+            <param name="cancellationToken">The cancellation token to cancel operation</param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+            <exception cref="T:System.ArgumentException"></exception>
+            <exception cref="T:System.FormatException"></exception>
+            <exception cref="T:Telegram.Bot.Exceptions.PassportDataDecryptionException"></exception>
+            <exception cref="T:System.Security.Cryptography.CryptographicException"></exception>
+        </member>
+        <member name="T:Telegram.Bot.Passport.Request.AuthorizationRequestParameters">
+            <summary>
+            Parameters for making a Telegram Passport authorization request
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Passport.Request.AuthorizationRequestParameters.BotId">
+            <summary>
+            Unique identifier for the bot. You can get it from bot token. For example, for the bot token
+            "1234567:4TT8bAc8GHUspu3ERYn-KGcvsvGB9u_n4ddy", the bot id is 1234567.
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Passport.Request.AuthorizationRequestParameters.PublicKey">
+            <summary>
+            Public key of the bot
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Passport.Request.AuthorizationRequestParameters.Nonce">
+            <summary>
+            Bot-specified nonce.
+            Important: For security purposes it should be a cryptographically secure unique identifier of the request.
+            In particular, it should be long enough and it should be generated using a cryptographically secure
+            pseudorandom number generator. You should never accept credentials with the same nonce twice.
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Passport.Request.AuthorizationRequestParameters.PassportScope">
+            <summary>
+            Description of the data you want to request
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Passport.Request.AuthorizationRequestParameters.Query">
+            <summary>
+            Query string part of the URI generated from the parameters
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Passport.Request.AuthorizationRequestParameters.Uri">
+            <summary>
+            Authorization request URI
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Passport.Request.AuthorizationRequestParameters.AndroidUri">
+            <summary>
+            Authorization request URI for Android devices
+            </summary>
+        </member>
+        <member name="M:Telegram.Bot.Passport.Request.AuthorizationRequestParameters.#ctor(System.Int32,System.String,System.String,Telegram.Bot.Passport.Request.PassportScope)">
+            <summary>
+            Initializes a new instance of <see cref="T:Telegram.Bot.Passport.Request.AuthorizationRequestParameters"/>
+            </summary>
+            <param name="botId">
+            Unique identifier for the bot. You can get it from bot token. For example, for the bot token
+            "1234567:4TT8bAc8GHUspu3ERYn-KGcvsvGB9u_n4ddy", the bot id is 1234567.
+            </param>
+            <param name="publicKey">Public key of the bot</param>
+            <param name="nonce">
+            Bot-specified nonce.
+            Important: For security purposes it should be a cryptographically secure unique identifier of the request.
+            In particular, it should be long enough and it should be generated using a cryptographically secure
+            pseudorandom number generator. You should never accept credentials with the same nonce twice.
+            </param>
+            <param name="scope">Description of the data you want to request</param>
+        </member>
+        <member name="M:Telegram.Bot.Passport.Request.AuthorizationRequestParameters.ToString">
+            <summary>
+            Converts the parameters to their "tg://" URI string representation
+            </summary>
+            <returns>URI representation of this request</returns>
+        </member>
+        <member name="T:Telegram.Bot.Passport.Request.IPassportScopeElement">
+            <summary>
+            A marker interface for object represents a requested element
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Passport.Request.IPassportScopeElement.Selfie">
+            <summary>
+            Optional. Use this parameter if you want to request a selfie with the document.
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Passport.Request.IPassportScopeElement.Translation">
+            <summary>
+            Optional. Use this parameter if you want to request a translation of the document.
+            </summary>
+        </member>
+        <member name="T:Telegram.Bot.Passport.Request.PassportScope">
+            <summary>
+            This object represents the data to be requested.
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Passport.Request.PassportScope.Data">
+            <summary>
+            List of requested elements, each type may be used only once in the entire array of
+            <see cref="T:Telegram.Bot.Passport.Request.IPassportScopeElement"/> objects
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Passport.Request.PassportScope.V">
+            <summary>
+            Scope version
+            </summary>
+        </member>
+        <member name="M:Telegram.Bot.Passport.Request.PassportScope.#ctor(System.Collections.Generic.IEnumerable{Telegram.Bot.Passport.Request.IPassportScopeElement},System.Int32)">
+            <summary>
+            Initializes a new instance of <see cref="T:Telegram.Bot.Passport.Request.PassportScope"/> with required parameters
+            </summary>
+            <param name="data">
+            List of requested elements, each type may be used only once in the entire array of
+            <see cref="T:Telegram.Bot.Passport.Request.IPassportScopeElement"/> objects
+            </param>
+            <param name="v">Scope version. Defaults to 1.</param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="T:Telegram.Bot.Passport.Request.PassportScopeElementOne">
+            <summary>
+            This object represents one particular element that must be provided. If no options are needed, String
+            can be used instead of this object to specify the type of the element.
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Passport.Request.PassportScopeElementOne.Type">
+            <summary>
+            Element type. One of <see cref="T:Telegram.Bot.PassportEnums.Scope"/>
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Passport.Request.PassportScopeElementOne.Selfie">
+            <summary>
+            Optional. Use this parameter if you want to request a selfie with the document as well.
+            Available for "passport", "driver_license", "identity_card" and "internal_passport"
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Passport.Request.PassportScopeElementOne.Translation">
+            <summary>
+            Optional. Use this parameter if you want to request a translation of the document as well.
+            Available for "passport", "driver_license", "identity_card", "internal_passport", "utility_bill",
+            "bank_statement", "rental_agreement", "passport_registration" and "temporary_registration".
+            Note: We suggest to only request translations after you have received a valid document that requires one.
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Passport.Request.PassportScopeElementOne.NativeNames">
+            <summary>
+            Optional. Use this parameter to request the first, last and middle name of the user in the language
+            of the user's country of residence. Available for "personal_details"
+            </summary>
+        </member>
+        <member name="M:Telegram.Bot.Passport.Request.PassportScopeElementOne.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of <see cref="T:Telegram.Bot.Passport.Request.PassportScopeElementOne"/> with required parameter
+            </summary>
+            <param name="type">Element type. One of <see cref="T:Telegram.Bot.PassportEnums.Scope"/></param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="T:Telegram.Bot.Passport.Request.PassportScopeElementOneOfSeveral">
+            <summary>
+            This object represents several elements one of which must be provided.
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Passport.Request.PassportScopeElementOneOfSeveral.OneOf">
+            <summary>
+            List of elements one of which must be provided; must contain either several of "passport",
+            "driver_license", "identity_card", "internal_passport" or several of "utility_bill", "bank_statement",
+            "rental_agreement", "passport_registration", "temporary_registration"
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Passport.Request.PassportScopeElementOneOfSeveral.Selfie">
+            <summary>
+            Optional. Use this parameter if you want to request a selfie with the document from this list that
+            the user chooses to upload.
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Passport.Request.PassportScopeElementOneOfSeveral.Translation">
+            <summary>
+            Optional. Use this parameter if you want to request a translation of the document from this list
+            that the user chooses to upload.
+            Note: We suggest to only request translations after you have received a valid document that requires one.
+            </summary>
+        </member>
+        <member name="M:Telegram.Bot.Passport.Request.PassportScopeElementOneOfSeveral.#ctor(System.Collections.Generic.IEnumerable{Telegram.Bot.Passport.Request.PassportScopeElementOne})">
+            <summary>
+            Initializes a new instance of <see cref="T:Telegram.Bot.Passport.Request.PassportScopeElementOneOfSeveral"/> with required parameter
+            </summary>
+            <param name="oneOf">
+            List of elements one of which must be provided; must contain either several of "passport",
+            "driver_license", "identity_card", "internal_passport" or several of "utility_bill", "bank_statement",
+            "rental_agreement", "passport_registration", "temporary_registration"
+            </param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="T:Telegram.Bot.Exceptions.PassportDataDecryptionException">
+            <summary>
+            Represents a fatal error in decryption of Telegram Passport Data
+            </summary>
+        </member>
+        <member name="M:Telegram.Bot.Exceptions.PassportDataDecryptionException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of <see cref="T:Telegram.Bot.Exceptions.PassportDataDecryptionException"/>
+            </summary>
+            <param name="message">Error description</param>
+        </member>
+        <member name="M:Telegram.Bot.Exceptions.PassportDataDecryptionException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of <see cref="T:Telegram.Bot.Exceptions.PassportDataDecryptionException"/>
+            </summary>
+            <param name="message">Error description</param>
+            <param name="innerException">Root cause of the error</param>
+        </member>
+        <member name="T:Telegram.Bot.PassportEnums">
+            <summary>
+            Provides constant values for Passport feature
+            </summary>
+        </member>
+        <member name="T:Telegram.Bot.PassportEnums.Gender">
+            <summary>
+            Gender, male or female
+            </summary>
+        </member>
+        <member name="F:Telegram.Bot.PassportEnums.Gender.Male">
+            <summary>
+            Male
+            </summary>
+        </member>
+        <member name="F:Telegram.Bot.PassportEnums.Gender.Female">
+            <summary>
+            Female
+            </summary>
+        </member>
+        <member name="T:Telegram.Bot.PassportEnums.Scope">
+            <summary>
+            Provides scope names that a bot can request for
+            </summary>
+        </member>
+        <member name="F:Telegram.Bot.PassportEnums.Scope.PersonalDetails">
+            <summary>
+            Personal details
+            </summary>
+        </member>
+        <member name="F:Telegram.Bot.PassportEnums.Scope.Passport">
+            <summary>
+            Passport
+            </summary>
+        </member>
+        <member name="F:Telegram.Bot.PassportEnums.Scope.DriverLicense">
+            <summary>
+            Driver license
+            </summary>
+        </member>
+        <member name="F:Telegram.Bot.PassportEnums.Scope.IdentityCard">
+            <summary>
+            Identity card
+            </summary>
+        </member>
+        <member name="F:Telegram.Bot.PassportEnums.Scope.InternalPassport">
+            <summary>
+            Internal passport
+            </summary>
+        </member>
+        <member name="F:Telegram.Bot.PassportEnums.Scope.Address">
+            <summary>
+            Residential address
+            </summary>
+        </member>
+        <member name="F:Telegram.Bot.PassportEnums.Scope.UtilityBill">
+            <summary>
+            Utility bill
+            </summary>
+        </member>
+        <member name="F:Telegram.Bot.PassportEnums.Scope.BankStatement">
+            <summary>
+            Bank statement
+            </summary>
+        </member>
+        <member name="F:Telegram.Bot.PassportEnums.Scope.RentalAgreement">
+            <summary>
+            Rental agreement
+            </summary>
+        </member>
+        <member name="F:Telegram.Bot.PassportEnums.Scope.PassportRegistration">
+            <summary>
+            Passport registration
+            </summary>
+        </member>
+        <member name="F:Telegram.Bot.PassportEnums.Scope.TemporaryRegistration">
+            <summary>
+            Temporary registration
+            </summary>
+        </member>
+        <member name="F:Telegram.Bot.PassportEnums.Scope.PhoneNumber">
+            <summary>
+            Phone number
+            </summary>
+        </member>
+        <member name="F:Telegram.Bot.PassportEnums.Scope.Email">
+            <summary>
+            Email
+            </summary>
+        </member>
+        <member name="F:Telegram.Bot.PassportEnums.Scope.IdDocument">
+            <summary>
+            Special type "id_document" is an alias for one of "passport", "driver_license", or "identity_card"
+            </summary>
+        </member>
+        <member name="F:Telegram.Bot.PassportEnums.Scope.AddressDocument">
+            <summary>
+            Special type "address_document" is an alias for one of "utility_bill", "bank_statement", or
+            "rental_agreement"
+            </summary>
+        </member>
+        <member name="T:Telegram.Bot.Types.Passport.PassportElementError">
+            <summary>
+            This object represents an error in the Telegram Passport element which was submitted that should be resolved
+            by the user.
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.Passport.PassportElementError.Type">
+            <summary>
+            Error source.
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.Passport.PassportElementError.Source">
+            <summary>
+            The section of the user's Telegram Passport which has the error.
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.Passport.PassportElementError.Message">
+            <summary>
+            Error message
+            </summary>
+        </member>
+        <member name="M:Telegram.Bot.Types.Passport.PassportElementError.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Initializes a new passport element error instance with required parameters
+            </summary>
+            <param name="source">Error source</param>
+            <param name="type">The section of the user's Telegram Passport which has the issue</param>
+            <param name="message">Error message</param>
+            <exception cref="T:System.ArgumentNullException">if any argument is null</exception>
+        </member>
+        <member name="T:Telegram.Bot.Types.Passport.PassportElementErrorDataField">
+            <summary>
+            Represents an issue in one of the data fields that was provided by the user. The error is considered
+            resolved when the field's value changes.
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.Passport.PassportElementErrorDataField.FieldName">
+            <summary>
+            Name of the data field which has the error.
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.Passport.PassportElementErrorDataField.DataHash">
+            <summary>
+            Base64-encoded data hash.
+            </summary>
+        </member>
+        <member name="M:Telegram.Bot.Types.Passport.PassportElementErrorDataField.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of <see cref="T:Telegram.Bot.Types.Passport.PassportElementErrorDataField"/> with required parameters
+            </summary>
+            <param name="type">
+            The section of the user's Telegram Passport which has the error, one of "personal_details", "passport",
+            "driver_license", "identity_card", "internal_passport", "address"
+            </param>
+            <param name="fieldName">Name of the data field which has the error</param>
+            <param name="dataHash">Base64-encoded data hash</param>
+            <param name="message">Error message</param>
+            <exception cref="T:System.ArgumentNullException">if any argument is null</exception>
+        </member>
+        <member name="T:Telegram.Bot.Types.Passport.PassportElementErrorFile">
+            <summary>
+            Represents an issue with a document scan. The error is considered resolved when the file with the document
+            scan changes.
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.Passport.PassportElementErrorFile.FileHash">
+            <summary>
+            Base64-encoded hash of the file with the front side of the document.
+            </summary>
+        </member>
+        <member name="M:Telegram.Bot.Types.Passport.PassportElementErrorFile.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of <see cref="T:Telegram.Bot.Types.Passport.PassportElementErrorFile"/> with required parameters
+            </summary>
+            <param name="type">
+            The section of the user's Telegram Passport which has the issue, one of "utility_bill",
+            "bank_statement", "rental_agreement", "passport_registration", "temporary_registration"
+            </param>
+            <param name="fileHash">Base64-encoded file hash</param>
+            <param name="message">Error message</param>
+            <exception cref="T:System.ArgumentNullException">if any argument is null</exception>
+        </member>
+        <member name="T:Telegram.Bot.Types.Passport.PassportElementErrorFiles">
+            <summary>
+            Represents an issue with a list of scans. The error is considered resolved when the list of files containing
+            the scans changes.
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.Passport.PassportElementErrorFiles.FileHashes">
+            <summary>
+            Base64-encoded hash of the file with the front side of the document.
+            </summary>
+        </member>
+        <member name="M:Telegram.Bot.Types.Passport.PassportElementErrorFiles.#ctor(System.String,System.Collections.Generic.IEnumerable{System.String},System.String)">
+            <summary>
+            Initializes a new instance of <see cref="T:Telegram.Bot.Types.Passport.PassportElementErrorFiles"/> with required parameters
+            </summary>
+            <param name="type">
+            The section of the user's Telegram Passport which has the issue, one of "utility_bill", "bank_statement",
+            "rental_agreement", "passport_registration", "temporary_registration"
+            </param>
+            <param name="fileHashes">List of base64-encoded file hashes</param>
+            <param name="message">Error message</param>
+            <exception cref="T:System.ArgumentNullException">if any argument is null</exception>
+        </member>
+        <member name="T:Telegram.Bot.Types.Passport.PassportElementErrorFrontSide">
+            <summary>
+            Represents an issue with the front side of a document. The error is considered resolved when the file with
+            the front side of the document changes.
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.Passport.PassportElementErrorFrontSide.FileHash">
+            <summary>
+            Base64-encoded hash of the file with the front side of the document
+            </summary>
+        </member>
+        <member name="M:Telegram.Bot.Types.Passport.PassportElementErrorFrontSide.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Initialize a new instance of <see cref="T:Telegram.Bot.Types.Passport.PassportElementErrorFrontSide"/> with required parameters
+            </summary>
+            <param name="type">
+            The section of the user's Telegram Passport which has the issue, one of "passport", "driver_license",
+            "identity_card", "internal_passport"
+            </param>
+            <param name="fileHash">Base64-encoded hash of the file with the front side of the document</param>
+            <param name="message">Error message</param>
+            <exception cref="T:System.ArgumentNullException">if any argument is null</exception>
+        </member>
+        <member name="T:Telegram.Bot.Types.Passport.PassportElementErrorReverseSide">
+            <summary>
+            Represents an issue with the front side of a document. The error is considered resolved when the file with
+            the reverse side of the document changes.
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.Passport.PassportElementErrorReverseSide.FileHash">
+            <summary>
+            Base64-encoded hash of the file with the reverse side of the document
+            </summary>
+        </member>
+        <member name="M:Telegram.Bot.Types.Passport.PassportElementErrorReverseSide.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of <see cref="T:Telegram.Bot.Types.Passport.PassportElementErrorReverseSide"/> with required parameters
+            </summary>
+            <param name="type">
+            The section of the user's Telegram Passport which has the issue, one of "driver_license", "identity_card"
+            </param>
+            <param name="fileHash">Base64-encoded hash of the file with the reverse side of the document</param>
+            <param name="message">Error message</param>
+            <exception cref="T:System.ArgumentNullException">if any argument is null</exception>
+        </member>
+        <member name="T:Telegram.Bot.Types.Passport.PassportElementErrorSelfie">
+            <summary>
+            Represents an issue with the selfie with a document. The error is considered resolved when the file with
+            the selfie changes.
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.Passport.PassportElementErrorSelfie.FileHash">
+            <summary>
+            Base64-encoded hash of the file with the selfie
+            </summary>
+        </member>
+        <member name="M:Telegram.Bot.Types.Passport.PassportElementErrorSelfie.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of <see cref="T:Telegram.Bot.Types.Passport.PassportElementErrorSelfie"/> with required parameters
+            </summary>
+            <param name="type">
+            The section of the user's Telegram Passport which has the issue, one of "passport", "driver_license",
+            "identity_card", "internal_passport"
+            </param>
+            <param name="fileHash">Base64-encoded hash of the file with the selfie</param>
+            <param name="message">Error message</param>
+            <exception cref="T:System.ArgumentNullException">if any argument is null</exception>
+        </member>
+        <member name="T:Telegram.Bot.Types.Passport.PassportElementErrorTranslationFile">
+            <summary>
+            Represents an issue with one of the files that constitute the translation of a document. The error is
+            considered resolved when the file changes.
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.Passport.PassportElementErrorTranslationFile.FileHash">
+            <summary>
+            Base64-encoded file hash
+            </summary>
+        </member>
+        <member name="M:Telegram.Bot.Types.Passport.PassportElementErrorTranslationFile.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of <see cref="T:Telegram.Bot.Types.Passport.PassportElementErrorTranslationFile"/> with required parameters
+            </summary>
+            <param name="type">
+            Type of element of the user's Telegram Passport which has the issue, one of "passport",
+            "driver_license", "identity_card", "internal_passport", "utility_bill", "bank_statement",
+            "rental_agreement", "passport_registration", "temporary_registration"
+            </param>
+            <param name="fileHash">Base64-encoded file hash</param>
+            <param name="message">Error message</param>
+            <exception cref="T:System.ArgumentNullException">if any argument is null</exception>
+        </member>
+        <member name="T:Telegram.Bot.Types.Passport.PassportElementErrorTranslationFiles">
+            <summary>
+            Represents an issue with the translated version of a document. The error is considered resolved when a
+            file with the document translation change.
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.Passport.PassportElementErrorTranslationFiles.FileHashes">
+            <summary>
+            List of base64-encoded file hashes
+            </summary>
+        </member>
+        <member name="M:Telegram.Bot.Types.Passport.PassportElementErrorTranslationFiles.#ctor(System.String,System.Collections.Generic.IEnumerable{System.String},System.String)">
+            <summary>
+            Initializes a new instance of <see cref="T:Telegram.Bot.Types.Passport.PassportElementErrorTranslationFiles"/> with required parameters
+            </summary>
+            <param name="type">
+            Type of element of the user's Telegram Passport which has the issue, one of "passport", "driver_license",
+            "identity_card", "internal_passport", "utility_bill", "bank_statement", "rental_agreement",
+            "passport_registration", "temporary_registration"
+            </param>
+            <param name="fileHashes">List of base64-encoded file hashes</param>
+            <param name="message">Error message</param>
+            <exception cref="T:System.ArgumentNullException">if any argument is null</exception>
+        </member>
+        <member name="T:Telegram.Bot.Types.Passport.PassportElementErrorUnspecified">
+            <summary>
+            Represents an issue in an unspecified place. The error is considered resolved when new data is added.
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.Passport.PassportElementErrorUnspecified.ElementHash">
+            <summary>
+            Base64-encoded element hash
+            </summary>
+        </member>
+        <member name="M:Telegram.Bot.Types.Passport.PassportElementErrorUnspecified.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of <see cref="T:Telegram.Bot.Types.Passport.PassportElementErrorUnspecified"/> with required parameters
+            </summary>
+            <param name="type">
+            Type of element of the user's Telegram Passport which has the issue
+            </param>
+            <param name="elementHash">Base64-encoded element hash</param>
+            <param name="message">Error message</param>
+            <exception cref="T:System.ArgumentNullException">if any argument is null</exception>
+        </member>
+        <member name="T:Telegram.Bot.Types.Passport.Credentials">
+            <summary>
+            Credentials is a JSON-serialized object.
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.Passport.Credentials.SecureData">
+            <summary>
+            Credentials for encrypted data
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.Passport.Credentials.Nonce">
+            <summary>
+            Bot-specified nonce. Make sure that the payload is the same as was passed in the request.
+            </summary>
+        </member>
+        <member name="T:Telegram.Bot.Types.Passport.DataCredentials">
+            <summary>
+            These credentials can be used to decrypt encrypted data from the data field in <see cref="T:Telegram.Bot.Types.Passport.PassportData"/>.
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.Passport.DataCredentials.DataHash">
+            <summary>
+            Checksum of encrypted data
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.Passport.DataCredentials.Secret">
+            <summary>
+            Secret of encrypted data
+            </summary>
+        </member>
+        <member name="T:Telegram.Bot.Types.Passport.FileCredentials">
+            <summary>
+            These credentials can be used to decrypt encrypted files from the front_side, reverse_side, selfie and
+            files fields in EncryptedPassportData.
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.Passport.FileCredentials.FileHash">
+            <summary>
+            Checksum of encrypted file
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.Passport.FileCredentials.Secret">
+            <summary>
+            Secret of encrypted file
+            </summary>
+        </member>
+        <member name="T:Telegram.Bot.Types.Passport.IdDocumentData">
+            <summary>
+            This object represents the data of an identity document.
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.Passport.IdDocumentData.DocumentNo">
+            <summary>
+            Document number
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.Passport.IdDocumentData.ExpiryDate">
+            <summary>
+            Optional. Date of expiry, in DD.MM.YYYY format
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.Passport.IdDocumentData.Expiry">
+            <summary>
+            Date of expiry if available
+            </summary>
+        </member>
+        <member name="T:Telegram.Bot.Types.Passport.IDecryptedValue">
+            <summary>
+            Marker interface for type of data in <see cref="P:Telegram.Bot.Types.Passport.EncryptedPassportElement.Data"/> property
+            </summary>
+        </member>
+        <member name="T:Telegram.Bot.Types.Passport.PersonalDetails">
+            <summary>
+            This object represents personal details.
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.Passport.PersonalDetails.FirstName">
+            <summary>
+            First Name
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.Passport.PersonalDetails.LastName">
+            <summary>
+            Last Name
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.Passport.PersonalDetails.MiddleName">
+            <summary>
+            Optional. Middle Name
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.Passport.PersonalDetails.BirthDate">
+            <summary>
+            Date of birth in DD.MM.YYYY format
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.Passport.PersonalDetails.Gender">
+            <summary>
+            Gender, male or female
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.Passport.PersonalDetails.CountryCode">
+            <summary>
+            Citizenship (ISO 3166-1 alpha-2 country code)
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.Passport.PersonalDetails.ResidenceCountryCode">
+            <summary>
+            Country of residence (ISO 3166-1 alpha-2 country code)
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.Passport.PersonalDetails.FirstNameNative">
+            <summary>
+            First Name in the language of the user's country of residence
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.Passport.PersonalDetails.LastNameNative">
+            <summary>
+            Last Name in the language of the user's country of residence
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.Passport.PersonalDetails.MiddleNameNative">
+            <summary>
+            Optional. Middle Name in the language of the user's country of residence
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.Passport.PersonalDetails.Birthdate">
+            <summary>
+            Date of birth
+            </summary>
+        </member>
+        <member name="T:Telegram.Bot.Types.Passport.ResidentialAddress">
+            <summary>
+            This object represents a residential address.
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.Passport.ResidentialAddress.StreetLine1">
+            <summary>
+            First line for the address
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.Passport.ResidentialAddress.StreetLine2">
+            <summary>
+            Optional. Second line for the address
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.Passport.ResidentialAddress.City">
+            <summary>
+            City
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.Passport.ResidentialAddress.State">
+            <summary>
+            Optional. State
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.Passport.ResidentialAddress.CountryCode">
+            <summary>
+            ISO 3166-1 alpha-2 country code
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.Passport.ResidentialAddress.PostCode">
+            <summary>
+            Address post code
+            </summary>
+        </member>
+        <member name="T:Telegram.Bot.Types.Passport.SecureData">
+            <summary>
+            This object represents the credentials required to decrypt encrypted data. All fields are optional and depend
+            on fields that were requested.
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.Passport.SecureData.PersonalDetails">
+            <summary>
+            Optional. Credentials for encrypted personal details
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.Passport.SecureData.Passport">
+            <summary>
+            Optional. Credentials for encrypted passport
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.Passport.SecureData.InternalPassport">
+            <summary>
+            Optional. Credentials for encrypted internal passport
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.Passport.SecureData.DriverLicense">
+            <summary>
+            Optional. Credentials for encrypted driver license
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.Passport.SecureData.IdentityCard">
+            <summary>
+            Optional. Credentials for encrypted ID card
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.Passport.SecureData.Address">
+            <summary>
+            Optional. Credentials for encrypted residential address
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.Passport.SecureData.UtilityBill">
+            <summary>
+            Optional. Credentials for encrypted utility bill
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.Passport.SecureData.BankStatement">
+            <summary>
+            Optional. Credentials for encrypted bank statement
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.Passport.SecureData.RentalAgreement">
+            <summary>
+            Optional. Credentials for encrypted rental agreement
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.Passport.SecureData.PassportRegistration">
+            <summary>
+            Optional. Credentials for encrypted registration from internal passport
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.Passport.SecureData.TemporaryRegistration">
+            <summary>
+            Optional. Credentials for encrypted temporary registration
+            </summary>
+        </member>
+        <member name="T:Telegram.Bot.Types.Passport.SecureValue">
+            <summary>
+            This object represents the credentials required to decrypt encrypted value. All fields are optional and
+            depend on the type of field.
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.Passport.SecureValue.Data">
+            <summary>
+            Optional. Credentials for encrypted Telegram Passport data. Available for "personal_details", "passport",
+            "driver_license", "identity_card", "identity_passport" and "address" types.
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.Passport.SecureValue.FrontSide">
+            <summary>
+            Optional. Credentials for encrypted document's front side. Available for "passport", "driver_license",
+            "identity_card" and "internal_passport".
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.Passport.SecureValue.ReverseSide">
+            <summary>
+            Optional. Credentials for encrypted document's reverse side. Available for "driver_license" and
+            "identity_card".
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.Passport.SecureValue.Selfie">
+            <summary>
+            Optional. Credentials for encrypted selfie of the user with a document. Can be available for "passport",
+            "driver_license", "identity_card" and "internal_passport".
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.Passport.SecureValue.Translation">
+            <summary>
+            Optional. Credentials for an encrypted translation of the document. Available for "passport",
+            "driver_license", "identity_card", "internal_passport", "utility_bill", "bank_statement",
+            "rental_agreement", "passport_registration" and "temporary_registration".
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Types.Passport.SecureValue.Files">
+            <summary>
+            Optional. Credentials for encrypted files. Available for "utility_bill", "bank_statement",
+            "rental_agreement", "passport_registration" and "temporary_registration" types.
+            </summary>
+        </member>
+        <member name="T:Telegram.Bot.Requests.SetPassportDataErrorsRequest">
+            <summary>
+            Informs a user that some of the Telegram Passport elements they provided contains errors.
+            The user will not be able to re-submit their Passport to you until the errors are fixed (the contents of
+            the field for which you returned the error must change). Returns True on success.
+            Use this if the data submitted by the user doesn't satisfy the standards your service requires for any reason.
+            For example, if a birthday date seems invalid, a submitted document is blurry, a scan shows evidence of
+            tampering, etc. Supply some details in the error message to make sure the user knows how to correct the issues.
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Requests.SetPassportDataErrorsRequest.UserId">
+            <summary>
+            User identifier
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Requests.SetPassportDataErrorsRequest.Errors">
+            <summary>
+            Descriptions of the errors
+            </summary>
+        </member>
+        <member name="M:Telegram.Bot.Requests.SetPassportDataErrorsRequest.#ctor(System.Int32,System.Collections.Generic.IEnumerable{Telegram.Bot.Types.Passport.PassportElementError})">
+            <summary>
+            Initializes a new request with required parameters
+            </summary>
+            <param name="userId">User identifier</param>
+            <param name="errors">Descriptions of the errors</param>
+            <exception cref="T:System.ArgumentNullException">
+            If <paramref name="errors"/> is null
+            </exception>
+        </member>
+        <member name="T:Telegram.Bot.TelegramBotClientPassportExtensions">
+            <summary>
+            Contains extension methods for <see cref="T:Telegram.Bot.ITelegramBotClient"/> instances
+            </summary>
+        </member>
+        <member name="M:Telegram.Bot.TelegramBotClientPassportExtensions.SetPassportDataErrorsAsync(Telegram.Bot.ITelegramBotClient,System.Int32,System.Collections.Generic.IEnumerable{Telegram.Bot.Types.Passport.PassportElementError},System.Threading.CancellationToken)">
+            <summary>
+            Informs a user that some of the Telegram Passport elements they provided contains errors. The user will
+            not be able to re-submit their Passport to you until the errors are fixed (the contents of the field for
+            which you returned the error must change). Returns True on success.
+            Use this if the data submitted by the user doesn't satisfy the standards your service requires for
+            any reason. For example, if a birthday date seems invalid, a submitted document is blurry, a scan shows
+            evidence of tampering, etc. Supply some details in the error message to make sure the user knows how to
+            correct the issues.
+            </summary>
+            <param name="botClient">Instance of bot client</param>
+            <param name="userId">User identifier</param>
+            <param name="errors">Descriptions of the errors</param>
+            <param name="cancellationToken">The cancellation token to cancel operation.</param>
+            <see href="https://core.telegram.org/bots/api#setpassportdataerrors"/>
+        </member>
+        <member name="M:Telegram.Bot.TelegramBotClientPassportExtensions.DownloadAndDecryptPassportFileAsync(Telegram.Bot.ITelegramBotClient,Telegram.Bot.Types.Passport.PassportFile,Telegram.Bot.Types.Passport.FileCredentials,System.IO.Stream,System.Threading.CancellationToken)">
+            <summary>
+            Downloads an encrypted Passport file, decrypts it, and writes the content to
+            <paramref name="destination"/> stream
+            </summary>
+            <param name="botClient">Instance of bot client</param>
+            <param name="passportFile"></param>
+            <param name="fileCredentials"></param>
+            <param name="destination"></param>
+            <param name="cancellationToken">The cancellation token to cancel operation.</param>
+            <returns>File information of the encrypted Passport file on Telegram servers.</returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+    </members>
+</doc>

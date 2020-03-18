@@ -1,0 +1,15 @@
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\obj\Debug\ShareX Main Server.csprojAssemblyReference.cache
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\ShareX Main Server.exe.config
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\ShareX Main Server.exe
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\ShareX Main Server.pdb
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\Newtonsoft.Json.dll
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\Telegram.Bot.dll
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\Newtonsoft.Json.xml
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\Telegram.Bot.xml
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\obj\Debug\ShareX Main Server.csproj.CopyComplete
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\obj\Debug\ShareX Main Server.exe
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\obj\Debug\ShareX Main Server.pdb
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\Telegram.Bot.Extensions.Passport.dll
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\Telegram.Bot.Extensions.Polling.dll
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\Telegram.Bot.Extensions.Passport.xml
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\Telegram.Bot.Extensions.Polling.xml
