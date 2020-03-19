@@ -54,14 +54,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="COVID-19 Information BOT.exe" size="16400">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="COVID-19 Information BOT.exe" size="20496">
       <assemblyIdentity name="COVID-19 Information BOT" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>I6ZMeX7jhtdZUzOnw2wbjbXwCf5LK77X8+0EHSauN0k=</dsig:DigestValue>
+        <dsig:DigestValue>rqU3QDT3p/q6zxWQ59O43XnpPKMe4oblcYvHWFRAE6c=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Logger.dll" size="23040">
+      <assemblyIdentity name="Logger" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>HH5+Df8CtzlSHcn4MMAY0vBI6AWspCrdUqEEbu9uFVc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -174,6 +186,30 @@
     </dependentAssembly>
   </dependency>
   <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MongoDB.Bson.dll" size="376832">
+      <assemblyIdentity name="MongoDB.Bson" version="1.8.3.9" publicKeyToken="F686731CFB9CC103" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>t7skEwBUvhGu3K4HMWlIYqdcD5lST6XnzYKa57Xb1dk=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MongoDB.Driver.dll" size="435200">
+      <assemblyIdentity name="MongoDB.Driver" version="1.8.3.9" publicKeyToken="F686731CFB9CC103" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>wNNbF6CShM/6FOy6onCo/0xfeGVyQjvEFSOyRqSMNVE=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Newtonsoft.Json.dll" size="662528">
       <assemblyIdentity name="Newtonsoft.Json" version="11.0.0.0" publicKeyToken="30AD4FE6B2A6AEED" language="neutral" processorArchitecture="msil" />
       <hash>
@@ -182,6 +218,18 @@
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
         <dsig:DigestValue>9Yw3T/yq5ONtdA2Q+/f+cNCrtzKM2a86CntwgD6ZS6Q=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="NLog.dll" size="838144">
+      <assemblyIdentity name="NLog" version="4.0.0.0" publicKeyToken="5120E14C03D0593C" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>CPH1JxYhb9v06RjIi+3YfBPQbZFOTzlnPyUoI3Y4EHw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

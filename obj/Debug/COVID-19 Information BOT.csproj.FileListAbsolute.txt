@@ -1,27 +1,15 @@
-C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\COVID-19 Information BOT.exe.config
-C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\COVID-19 Information BOT.exe.manifest
-C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\COVID-19 Information BOT.application
-C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\COVID-19 Information BOT.exe
-C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\COVID-19 Information BOT.pdb
-C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\Newtonsoft.Json.dll
-C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\Telegram.Bot.dll
-C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\Telegram.Bot.Extensions.Passport.dll
-C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\Telegram.Bot.Extensions.Polling.dll
-C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\Newtonsoft.Json.xml
-C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\Telegram.Bot.xml
-C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\Telegram.Bot.Extensions.Passport.xml
-C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\Telegram.Bot.Extensions.Polling.xml
-C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\obj\Debug\COVID-19 Information BOT.exe.manifest
-C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\obj\Debug\COVID-19 Information BOT.application
-C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\obj\Debug\COVID-19 Information BOT.csproj.CopyComplete
-C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\obj\Debug\COVID-19 Information BOT.exe
-C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\obj\Debug\COVID-19 Information BOT.pdb
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\x86\sqlite3.dll
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\x64\sqlite3.dll
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\runtimes\win-x86\native\e_sqlite3.dll
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\runtimes\win-x64\native\e_sqlite3.dll
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\runtimes\win-arm\native\e_sqlite3.dll
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\COVID-19 Information BOT.exe.config
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\COVID-19 Information BOT.exe.manifest
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\COVID-19 Information BOT.application
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\COVID-19 Information BOT.exe
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\COVID-19 Information BOT.pdb
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\Ado.dll
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\Logger.dll
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\Microsoft.Data.Sqlite.dll
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\Microsoft.Extensions.Configuration.dll
@@ -31,6 +19,10 @@ C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\Microso
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\Microsoft.Extensions.FileProviders.Physical.dll
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\Microsoft.Extensions.FileSystemGlobbing.dll
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\Microsoft.Extensions.Primitives.dll
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\MongoDB.Bson.dll
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\MongoDB.Driver.dll
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\Newtonsoft.Json.dll
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\NLog.dll
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\SQLitePCLRaw.batteries_v2.dll
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\SQLitePCLRaw.core.dll
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\SQLitePCLRaw.nativelibrary.dll
@@ -43,6 +35,9 @@ C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\System.
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\System.Numerics.Vectors.dll
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\System.Reflection.TypeExtensions.dll
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\Telegram.Bot.dll
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\Telegram.Bot.Extensions.Passport.dll
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\Telegram.Bot.Extensions.Polling.dll
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\Microsoft.Data.Sqlite.xml
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\Microsoft.Extensions.Configuration.xml
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.xml
@@ -52,6 +47,10 @@ C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\Microso
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\Microsoft.Extensions.FileProviders.Physical.xml
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\Microsoft.Extensions.FileSystemGlobbing.xml
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\Microsoft.Extensions.Primitives.xml
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\MongoDB.Bson.xml
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\MongoDB.Driver.xml
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\Newtonsoft.Json.xml
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\NLog.xml
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\System.Buffers.xml
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\System.Data.SQLite.xml
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\System.Data.SQLite.dll.config
@@ -59,5 +58,12 @@ C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\System.
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\System.Memory.xml
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\obj\Debug\COVID-19 Information BOT.csprojAssemblyReference.cache
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\Telegram.Bot.xml
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\Telegram.Bot.Extensions.Passport.xml
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\bin\Debug\Telegram.Bot.Extensions.Polling.xml
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\obj\Debug\COVID-19 Information BOT.exe.config
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\obj\Debug\COVID-19 Information BOT.exe.manifest
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\obj\Debug\COVID-19 Information BOT.application
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\obj\Debug\COVID-19 Information BOT.csproj.CopyComplete
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\obj\Debug\COVID-19 Information BOT.exe
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\obj\Debug\COVID-19 Information BOT.pdb

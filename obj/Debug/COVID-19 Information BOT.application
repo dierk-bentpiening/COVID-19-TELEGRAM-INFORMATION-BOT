@@ -7,14 +7,14 @@
     <framework targetVersion="4.7.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="COVID-19 Information BOT.exe.manifest" size="23982">
+    <dependentAssembly dependencyType="install" codebase="COVID-19 Information BOT.exe.manifest" size="26631">
       <assemblyIdentity name="COVID-19 Information BOT.exe" version="1.0.0.3" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>OHgLD9pjXEf8sN6H/6EVmq//fiHVN5T2BBVz1zwqEyc=</dsig:DigestValue>
+        <dsig:DigestValue>76Czg+WKF1LgdtNUyC65H0prBunLyy4NwZRCfp0w63k=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
