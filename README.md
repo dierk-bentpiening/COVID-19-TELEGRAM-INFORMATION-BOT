@@ -5,7 +5,7 @@
 # COVID-19 Telegram Information Bot Server for Germany
 COVID-19 Telegram Information Bot Server is a bot server software to inform the citizens of the Federal Republic of Germany about the current number of infections, deaths and cured patients in the Federal Republic.
 
-The bot allows to search for imposed curfews and new prescriptions.
+The bot allows to search for imposed curfews and new restrictions.
 Tips on hygiene and information on COVID-19 symptoms are transmitted.
 
 It is also possible to send current news and advice messages to the users.
