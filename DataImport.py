@@ -18,9 +18,12 @@ subset_zugelassen = list(filter(lambda z: z[5] in bl_filter, fileread))
 db_open = sqlite3.connect('CISB.sqlite3')
 # Erstelle Cursor
 db_open_cursor = db_open.cursor()
+# Lade alle bisherigen Einträge aus der DB
 double_prevention = db_open_cursor.execute("SELECT PLZ, VON, BIS, Bundesland FROM AusgangssperrenLK").fetchall()
+# Erstelle PLZ Kategorien
 plz_list_disregard = []
 plz_list_update = []
+# Prüfe welche Einträge aktualisiert werden müssen (z.B. verlängerte Ausgangssperre)
 for i in range(0,len(double_prevention)):
     try:
         end_date_new = stop_dates[bl_filter.index(double_prevention[i][3])]
@@ -46,6 +49,7 @@ for o in range(0,len(subset_zugelassen)):
         BEHOERDECurr = 'Staatskanzlei ' + subset_zugelassen[o][5] if not subset_zugelassen[o][5] in ['Bremen', 'Berlin', 'Hamburg'] else 'Senat ' + subset_zugelassen[o][5]
         PLZCurr = subset_zugelassen[o][3]
         db_open_cursor.execute("INSERT INTO AusgangssperrenLK (LKN, VON, BIS, Bundesland, BEHÖRDE, PLZ) VALUES (?,?,?,?,?,?)", [LKNCurr, VONCurr, BISCurr, BUNDESLANDCurr, BEHOERDECurr, PLZCurr])
+# Schließe DBs
 db_open.commit()
 db_open.close()
 file_current.close()
