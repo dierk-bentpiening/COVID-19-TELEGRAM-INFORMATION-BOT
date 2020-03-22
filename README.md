@@ -1,5 +1,5 @@
 
-![Logo](https://ibb.co/hVnLSBH)
+![Logo](https://i.ibb.co/FzfmF5J/logo.png)
 
 
 # COVID-19 Telegram Information Bot Server for Germany
