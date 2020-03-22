@@ -30,7 +30,7 @@ namespace covid19bot
                 while (reader.Read())
                 {
                     vurl = reader.GetString(reader.GetOrdinal("URL"));
-                    Console.WriteLine("### Abfrage der Ausgangssperren data------------{0}");
+                    Console.WriteLine("### Abfrage des BL Bild Link data------------{0}");
                     
                 }
                 return vurl;
