@@ -82,6 +82,8 @@ namespace covid19bot
                                             await botClient.SendTextMessageAsync(chatId: e.Message.Chat, text: 
                                                 "COVID-19 Information Bot\n CODE: Dierk-Bent Piening, MED-BERATUNG: Roman Spies \n_____ Aktuelle Daten _____\n" + "Fälle: " + JObject.Parse(data)["current_totals"]["cases"] + " \nTodesfälle:" + JObject.Parse(data)["current_totals"]["deaths"] + "\nGeheilt: " + JObject.Parse(data)["current_totals"]["recovered"] + "\nZeitpunkt: " + JObject.Parse(data)["meta"]["time_source_last_updated_iso8601"] + "\nQuelle: " + JObject.Parse(data)["meta"]["source"]);
                                             InfectionStatistic.writeInfetctionNumbers(JObject.Parse(data)["current_totals"]["cases"].ToString(), JObject.Parse(data)["current_totals"]["deaths"].ToString(), JObject.Parse(data)["current_totals"]["recovered"].ToString(), JObject.Parse(data)["meta"]["time_source_last_updated_iso8601"].ToString(), DateTime.Now.ToString());
+                                            await botClient.SendTextMessageAsync(chatId: e.Message.Chat, text: "_____ACHTUNG AKTUELLE HINWEISE____\n" + PublicMessages.vPublicMessage());
+
                                         }
                                         else
                                         {
@@ -109,6 +111,8 @@ namespace covid19bot
                         caption: "<b>COVID-19 NACH BUNDESLÄNDERN</b>. <i>Source</i>: <a href=\"https://www.bild.de/ratgeber/2020/ratgeber/aktuelle-zahlen-zum-coronavirus-in-deutschland-69349102.bild.html\">Axel Springer SE BILD</a>", parseMode: Telegram.Bot.Types.Enums.ParseMode.Html
                           );
                         Statistics.newQueryLog(e.Message.Chat.Id.ToString(), vADateTime, "AktuelleInfektionenNachBundesländern");
+                        await botClient.SendTextMessageAsync(chatId: e.Message.Chat, text: "_____ACHTUNG AKTUELLE HINWEISE____\n" + PublicMessages.vPublicMessage());
+
                     }
                     else if (e.Message.Text == "!Ausgangssperre alle!" || e.Message.Text == "!ausgangssperre alle!")
                     {
@@ -130,8 +134,11 @@ namespace covid19bot
                                 await botClient.SendTextMessageAsync(chatId: e.Message.Chat, text: "Ausgangsperre im Landkreis: " + vLK + " im Bundesland: " + vBUNDESLAND + " verhängt durch: " + vBEHÖRDE + "\n Gültig von:" + vDatumVON + " bis: " + vDatumBIS);
                                 Console.WriteLine("### Abfrage der Ausgangssperren data------------{0}");
 
+
                             }
                             Statistics.newQueryLog(e.Message.Chat.Id.ToString(), vADateTime, "AusgangssperrenALLE");
+                            await botClient.SendTextMessageAsync(chatId: e.Message.Chat, text: "_____ACHTUNG AKTUELLE HINWEISE____\n" + PublicMessages.vPublicMessage());
+
                         }
                         connection.Close();
 
@@ -159,12 +166,16 @@ namespace covid19bot
 
                                 }
                                 Statistics.newQueryLog(e.Message.Chat.Id.ToString(), vADateTime, "AusgangssperreNachBundesland: " + cmdlist[2]);
+                                await botClient.SendTextMessageAsync(chatId: e.Message.Chat, text: "_____ACHTUNG AKTUELLE HINWEISE____\n" + PublicMessages.vPublicMessage());
+
                             }
                             else
                             {
                                 await botClient.SendTextMessageAsync(chatId: e.Message.Chat, text: "Für das Bundesland: " + cmdlist[2] + " ist uns keine Ausgangssperre bekannt!");
                                 Console.WriteLine("### Abfrage der Ausgangssperren nach Bundesland data------------{0}");
                                 Statistics.newQueryLog(e.Message.Chat.Id.ToString(), vADateTime, "AusgangssperreNachBundesland: Unbekannt");
+                                await botClient.SendTextMessageAsync(chatId: e.Message.Chat, text: "_____ACHTUNG AKTUELLE HINWEISE____\n" + PublicMessages.vPublicMessage());
+
                             }
                             connection.Close();
 
@@ -191,12 +202,16 @@ namespace covid19bot
 
                                 }
                                 Statistics.newQueryLog(e.Message.Chat.Id.ToString(), vADateTime, "AusgangssperreNachLK: " + cmdlist[2]);
+                                await botClient.SendTextMessageAsync(chatId: e.Message.Chat, text: "_____ACHTUNG AKTUELLE HINWEISE____\n" + PublicMessages.vPublicMessage());
+
                             }
                             else
                             {
                                 await botClient.SendTextMessageAsync(chatId: e.Message.Chat, text: "Für den Landkreis: " + cmdlist[2] + " ist uns keine Ausgangssperre bekannt!");
                                 Console.WriteLine("### Abfrage der Ausgangssperren nach Bundesland data------------{0}");
                                 Statistics.newQueryLog(e.Message.Chat.Id.ToString(), vADateTime, "AusgangssperreNachBundesland Unbekannt");
+                                await botClient.SendTextMessageAsync(chatId: e.Message.Chat, text: "_____ACHTUNG AKTUELLE HINWEISE____\n" + PublicMessages.vPublicMessage());
+
                             }
                             connection.Close();
 
@@ -224,12 +239,16 @@ namespace covid19bot
                                     
                                 }
                                 Statistics.newQueryLog(e.Message.Chat.Id.ToString(), vADateTime, "AusgangssperreNachPLZ: " + cmdlist[1]);
+                                await botClient.SendTextMessageAsync(chatId: e.Message.Chat, text: "_____ACHTUNG AKTUELLE HINWEISE____\n" + PublicMessages.vPublicMessage());
+
                             }
                             else
                             {
                                 await botClient.SendTextMessageAsync(chatId: e.Message.Chat, text: "Für die PLZ: " + cmdlist[1] + " ist uns keine Ausgangssperre bekannt!");
                                 Console.WriteLine("### Abfrage der Ausgangssperren data------------{0}");
                                 Statistics.newQueryLog(e.Message.Chat.Id.ToString(), vADateTime, "AusgangssperreNachPLZ: Unbekannt");
+                                await botClient.SendTextMessageAsync(chatId: e.Message.Chat, text: "_____ACHTUNG AKTUELLE HINWEISE____\n" + PublicMessages.vPublicMessage());
+
                             }
                             connection.Close();
 
@@ -245,6 +264,8 @@ namespace covid19bot
                          );
                         Console.WriteLine("### Abfrage der Symptome data------------{0}");
                         Statistics.newQueryLog(e.Message.Chat.Id.ToString(), vADateTime, "Symptome");
+                        await botClient.SendTextMessageAsync(chatId: e.Message.Chat, text: "_____ACHTUNG AKTUELLE HINWEISE____\n" + PublicMessages.vPublicMessage());
+
                     }
 
                     else if (cmdlist[0] == "tipps" || cmdlist[0] == "Hygiene" || cmdlist[0] == "hygiene" || cmdlist[0] == "wie schützen")
@@ -256,10 +277,13 @@ namespace covid19bot
                          );
                         Console.WriteLine("### Abfrage der SchutzDaten: data------------{0}");
                         Statistics.newQueryLog(e.Message.Chat.Id.ToString(), vADateTime, "Hygiene");
+                        await botClient.SendTextMessageAsync(chatId: e.Message.Chat, text: "_____ACHTUNG AKTUELLE HINWEISE____\n" + PublicMessages.vPublicMessage());
+
                     }
                     else if (cmdlist[0] == "hilfe" || cmdlist[0] == "Hilfe" || cmdlist[0] == "h" || cmdlist[0] == "H")
                     {
                         await botClient.SendTextMessageAsync(chatId: e.Message.Chat, text: "_____ACHTUNG:_____\nSollten Sie den Verdacht haben, sich mit COVID-19 infiziert zu haben, wenden Sie sich an die bundesweite Ärtzte-Hotline 116117.\nBleiben Sie zu Hause!");
+                        await botClient.SendTextMessageAsync(chatId: e.Message.Chat, text: "_____ACHTUNG AKTUELLE HINWEISE____\n" + PublicMessages.vPublicMessage());
 
                         Statistics.newQueryLog(e.Message.Chat.Id.ToString(), vADateTime, "Hilfe");
                     }
@@ -269,6 +293,7 @@ namespace covid19bot
 
 
                         await botClient.SendTextMessageAsync(chatId: e.Message.Chat, text: "_____ACHTUNG:_____\nGib info oder Info oder i ein, um die Daten zu erhalten.\nUm die aktuellen Zahlen der Bundesländer zu erhalten, gebe BL oder bl oder Bundesländer ein\nAusgangssperre 26427 zeigt Dir an, ob eine Ausgangssperre für Deinen PLZ Bereich vorliegt, z.B: 26427\n Ausgangssperre Landkreis Diepholz zeigt Dir an, ob eine Ausgangssperre für Deinen Landkreis, z.B. Diepholz vorliegt, z.B: 26427\nAusgangssperre BL Bayern oder Ausgangssperre Bundesland Bayern zeigt Dir die Ausgangssperren der Gemeinden im Land Bayern an\nGeben Sie tipps oder hygiene ein, um Hinweise zum Schutz vor einer Covid-19 Infektion zu erhalten.\nDurch die Eingabe von symptome, erhalten Sie eine Auflistung der bekannten COVID-19 Symptome");
+                        await botClient.SendTextMessageAsync(chatId: e.Message.Chat, text: "_____ACHTUNG AKTUELLE HINWEISE____\n" + PublicMessages.vPublicMessage());
 
                         Console.WriteLine("### Abfrage aber unbekannter Befehl------------{0}");
                         Statistics.newQueryLog(e.Message.Chat.Id.ToString(), vADateTime, "Unbekannter Befehl ");

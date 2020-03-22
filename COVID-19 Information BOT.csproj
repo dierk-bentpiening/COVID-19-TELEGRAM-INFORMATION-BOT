@@ -69,6 +69,17 @@
   <PropertyGroup>
     <SignManifests>true</SignManifests>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'BotRelease|AnyCPU'">
+    <OutputPath>bin\BotRelease\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Ado, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\Ado.1.1.1\lib\netstandard1.6\Ado.dll</HintPath>
@@ -358,6 +369,7 @@
     <Compile Include="InfectionStatistic.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PublicMessages.cs" />
     <Compile Include="Statistics.cs" />
   </ItemGroup>
   <ItemGroup>

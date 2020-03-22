@@ -54,14 +54,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="COVID-19 Information BOT.exe" size="27664">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="COVID-19 Information BOT.exe" size="30736">
       <assemblyIdentity name="COVID-19 Information BOT" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>hfSPEJr+9VF1vPegyNujKF0P1HGo2KK83gTpj+YCLCQ=</dsig:DigestValue>
+        <dsig:DigestValue>xqAr0pIE46PMP6GHWas4yq4DsudTjoNHVFRd6wvEsCc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
