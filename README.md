@@ -8,7 +8,7 @@ It is also possible to send current news and advice messages to the users.
 
 CTIBS creates statistics about the number of requests and case numbers with time markings.
 
-CTIB uses SQLite as database system.
+CTIBS uses SQLite as database system.
 And generates its data via a JSON API.
 
 ## Installation
