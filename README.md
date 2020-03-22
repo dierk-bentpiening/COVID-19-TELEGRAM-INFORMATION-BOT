@@ -1,3 +1,7 @@
+
+![Logo](https://i.ibb.co/FzfmF5J/logo.png)
+
+
 # COVID-19 Telegram Information Bot Server for Germany
 COVID-19 Telegram Information Bot Server is a bot server software to inform the citizens of the Federal Republic of Germany about the current number of infections, deaths and cured patients in the Federal Republic.
 
