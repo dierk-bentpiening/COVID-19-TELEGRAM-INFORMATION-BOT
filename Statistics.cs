@@ -12,8 +12,8 @@ namespace covid19bot
         public static void newQueryLog(string vChatID, string vDateTime, string vQueryType)
         {
    
-            string dbpath = "C:\\CISB.sqlite3";
-            SQLiteConnection connection = new SQLiteConnection("Data Source=" + dbpath);
+            
+            SQLiteConnection connection = new SQLiteConnection("Data Source=" + ConfigLoader.vDBPATH());
             connection.Open();
 
             SQLiteCommand insertSQL = new SQLiteCommand("INSERT INTO statistics (ID, CHATID, DATETIME, QUERRYTYPE) VALUES (NULL, $chatid, $datetime, $querrytype)", connection);

@@ -4,6 +4,101 @@
         <name>Microsoft.Extensions.Configuration</name>
     </assembly>
     <members>
+        <member name="T:Microsoft.Extensions.Configuration.ChainedBuilderExtensions">
+            <summary>
+            Extension methods for adding <see cref="T:Microsoft.Extensions.Configuration.IConfiguration"/> to an <see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Extensions.Configuration.ChainedBuilderExtensions.AddConfiguration(Microsoft.Extensions.Configuration.IConfigurationBuilder,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Adds an existing configuration to <paramref name="configurationBuilder"/>.
+            </summary>
+            <param name="configurationBuilder">The <see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder"/> to add to.</param>
+            <param name="config">The <see cref="T:Microsoft.Extensions.Configuration.IConfiguration"/> to add.</param>
+            <returns>The <see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder"/>.</returns>
+        </member>
+        <member name="M:Microsoft.Extensions.Configuration.ChainedBuilderExtensions.AddConfiguration(Microsoft.Extensions.Configuration.IConfigurationBuilder,Microsoft.Extensions.Configuration.IConfiguration,System.Boolean)">
+            <summary>
+            Adds an existing configuration to <paramref name="configurationBuilder"/>.
+            </summary>
+            <param name="configurationBuilder">The <see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder"/> to add to.</param>
+            <param name="config">The <see cref="T:Microsoft.Extensions.Configuration.IConfiguration"/> to add.</param>
+            <param name="shouldDisposeConfiguration">Whether the configuration should get disposed when the configuration provider is disposed.</param>
+            <returns>The <see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder"/>.</returns>
+        </member>
+        <member name="T:Microsoft.Extensions.Configuration.ChainedConfigurationProvider">
+            <summary>
+            Chained implementation of <see cref="T:Microsoft.Extensions.Configuration.IConfigurationProvider"/>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Extensions.Configuration.ChainedConfigurationProvider.#ctor(Microsoft.Extensions.Configuration.ChainedConfigurationSource)">
+            <summary>
+            Initialize a new instance from the source configuration.
+            </summary>
+            <param name="source">The source configuration.</param>
+        </member>
+        <member name="M:Microsoft.Extensions.Configuration.ChainedConfigurationProvider.TryGet(System.String,System.String@)">
+            <summary>
+            Tries to get a configuration value for the specified key.
+            </summary>
+            <param name="key">The key.</param>
+            <param name="value">The value.</param>
+            <returns><c>True</c> if a value for the specified key was found, otherwise <c>false</c>.</returns>
+        </member>
+        <member name="M:Microsoft.Extensions.Configuration.ChainedConfigurationProvider.Set(System.String,System.String)">
+            <summary>
+            Sets a configuration value for the specified key.
+            </summary>
+            <param name="key">The key.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:Microsoft.Extensions.Configuration.ChainedConfigurationProvider.GetReloadToken">
+            <summary>
+            Returns a change token if this provider supports change tracking, null otherwise.
+            </summary>
+            <returns>The change token.</returns>
+        </member>
+        <member name="M:Microsoft.Extensions.Configuration.ChainedConfigurationProvider.Load">
+            <summary>
+            Loads configuration values from the source represented by this <see cref="T:Microsoft.Extensions.Configuration.IConfigurationProvider"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Extensions.Configuration.ChainedConfigurationProvider.GetChildKeys(System.Collections.Generic.IEnumerable{System.String},System.String)">
+            <summary>
+            Returns the immediate descendant configuration keys for a given parent path based on this
+            <see cref="T:Microsoft.Extensions.Configuration.IConfigurationProvider"/>s data and the set of keys returned by all the preceding
+            <see cref="T:Microsoft.Extensions.Configuration.IConfigurationProvider"/>s.
+            </summary>
+            <param name="earlierKeys">The child keys returned by the preceding providers for the same parent path.</param>
+            <param name="parentPath">The parent path.</param>
+            <returns>The child keys.</returns>
+        </member>
+        <member name="M:Microsoft.Extensions.Configuration.ChainedConfigurationProvider.Dispose">
+            <inheritdoc />
+        </member>
+        <member name="T:Microsoft.Extensions.Configuration.ChainedConfigurationSource">
+            <summary>
+            Represents a chained <see cref="T:Microsoft.Extensions.Configuration.IConfiguration"/> as an <see cref="T:Microsoft.Extensions.Configuration.IConfigurationSource"/>.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Extensions.Configuration.ChainedConfigurationSource.Configuration">
+            <summary>
+            The chained configuration.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Extensions.Configuration.ChainedConfigurationSource.ShouldDisposeConfiguration">
+            <summary>
+            Whether the chained configuration should be disposed when the
+            configuration provider gets disposed.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Extensions.Configuration.ChainedConfigurationSource.Build(Microsoft.Extensions.Configuration.IConfigurationBuilder)">
+            <summary>
+            Builds the <see cref="T:Microsoft.Extensions.Configuration.ChainedConfigurationProvider"/> for this source.
+            </summary>
+            <param name="builder">The <see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder"/>.</param>
+            <returns>A <see cref="T:Microsoft.Extensions.Configuration.ChainedConfigurationProvider"/></returns>
+        </member>
         <member name="T:Microsoft.Extensions.Configuration.ConfigurationBuilder">
             <summary>
             Used to build key/value based configuration settings for use in an application.
@@ -11,7 +106,7 @@
         </member>
         <member name="P:Microsoft.Extensions.Configuration.ConfigurationBuilder.Sources">
             <summary>
-            Returns the sources used to obtain configuation values.
+            Returns the sources used to obtain configuration values.
             </summary>
         </member>
         <member name="P:Microsoft.Extensions.Configuration.ConfigurationBuilder.Properties">
@@ -50,7 +145,7 @@
             </summary>
             <param name="x">First string.</param>
             <param name="y">Second string.</param>
-            <returns></returns>
+            <returns>Less than 0 if x is less than y, 0 if x is equal to y and greater than 0 if x is greater than y.</returns>
         </member>
         <member name="T:Microsoft.Extensions.Configuration.ConfigurationProvider">
             <summary>
@@ -99,12 +194,18 @@
             <summary>
             Returns a <see cref="T:Microsoft.Extensions.Primitives.IChangeToken"/> that can be used to listen when this provider is reloaded.
             </summary>
-            <returns></returns>
+            <returns>The <see cref="T:Microsoft.Extensions.Primitives.IChangeToken"/>.</returns>
         </member>
         <member name="M:Microsoft.Extensions.Configuration.ConfigurationProvider.OnReload">
             <summary>
             Triggers the reload change token and creates a new one.
             </summary>
+        </member>
+        <member name="M:Microsoft.Extensions.Configuration.ConfigurationProvider.ToString">
+            <summary>
+            Generates a string representing this provider name and relevant details.
+            </summary>
+            <returns> The configuration name. </returns>
         </member>
         <member name="T:Microsoft.Extensions.Configuration.ConfigurationReloadToken">
             <summary>
@@ -115,20 +216,22 @@
             <summary>
             Indicates if this token will proactively raise callbacks. Callbacks are still guaranteed to be invoked, eventually.
             </summary>
+            <returns>True if the token will proactively raise callbacks.</returns>
         </member>
         <member name="P:Microsoft.Extensions.Configuration.ConfigurationReloadToken.HasChanged">
             <summary>
-            Gets a value that indicates if a change has occured.
+            Gets a value that indicates if a change has occurred.
             </summary>
+            <returns>True if a change has occurred.</returns>
         </member>
         <member name="M:Microsoft.Extensions.Configuration.ConfigurationReloadToken.RegisterChangeCallback(System.Action{System.Object},System.Object)">
             <summary>
-            Registers for a callback that will be invoked when the entry has changed. Microsoft.Extensions.Primitives.IChangeToken.HasChanged
+            Registers for a callback that will be invoked when the entry has changed. <see cref="P:Microsoft.Extensions.Primitives.IChangeToken.HasChanged"/>
             MUST be set before the callback is invoked.
             </summary>
             <param name="callback">The callback to invoke.</param>
             <param name="state">State to be passed into the callback.</param>
-            <returns></returns>
+            <returns>The <see cref="T:System.Threading.CancellationToken"/> registration.</returns>
         </member>
         <member name="M:Microsoft.Extensions.Configuration.ConfigurationReloadToken.OnReload">
             <summary>
@@ -146,6 +249,11 @@
             </summary>
             <param name="providers">The <see cref="T:Microsoft.Extensions.Configuration.IConfigurationProvider"/>s for this configuration.</param>
         </member>
+        <member name="P:Microsoft.Extensions.Configuration.ConfigurationRoot.Providers">
+            <summary>
+            The <see cref="T:Microsoft.Extensions.Configuration.IConfigurationProvider"/>s for this configuration.
+            </summary>
+        </member>
         <member name="P:Microsoft.Extensions.Configuration.ConfigurationRoot.Item(System.String)">
             <summary>
             Gets or sets the value corresponding to a configuration key.
@@ -157,13 +265,13 @@
             <summary>
             Gets the immediate children sub-sections.
             </summary>
-            <returns></returns>
+            <returns>The children.</returns>
         </member>
         <member name="M:Microsoft.Extensions.Configuration.ConfigurationRoot.GetReloadToken">
             <summary>
             Returns a <see cref="T:Microsoft.Extensions.Primitives.IChangeToken"/> that can be used to observe when this configuration is reloaded.
             </summary>
-            <returns></returns>
+            <returns>The <see cref="T:Microsoft.Extensions.Primitives.IChangeToken"/>.</returns>
         </member>
         <member name="M:Microsoft.Extensions.Configuration.ConfigurationRoot.GetSection(System.String)">
             <summary>
@@ -181,12 +289,15 @@
             Force the configuration values to be reloaded from the underlying sources.
             </summary>
         </member>
+        <member name="M:Microsoft.Extensions.Configuration.ConfigurationRoot.Dispose">
+            <inheritdoc />
+        </member>
         <member name="T:Microsoft.Extensions.Configuration.ConfigurationSection">
             <summary>
             Represents a section of application configuration values.
             </summary>
         </member>
-        <member name="M:Microsoft.Extensions.Configuration.ConfigurationSection.#ctor(Microsoft.Extensions.Configuration.ConfigurationRoot,System.String)">
+        <member name="M:Microsoft.Extensions.Configuration.ConfigurationSection.#ctor(Microsoft.Extensions.Configuration.IConfigurationRoot,System.String)">
             <summary>
             Initializes a new instance.
             </summary>
@@ -236,7 +347,20 @@
             <summary>
             Returns a <see cref="T:Microsoft.Extensions.Primitives.IChangeToken"/> that can be used to observe when this configuration is reloaded.
             </summary>
-            <returns></returns>
+            <returns>The <see cref="T:Microsoft.Extensions.Primitives.IChangeToken"/>.</returns>
+        </member>
+        <member name="T:Microsoft.Extensions.Configuration.InternalConfigurationRootExtensions">
+            <summary>
+            Extensions method for <see cref="T:Microsoft.Extensions.Configuration.IConfigurationRoot"/>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Extensions.Configuration.InternalConfigurationRootExtensions.GetChildrenImplementation(Microsoft.Extensions.Configuration.IConfigurationRoot,System.String)">
+            <summary>
+            Gets the immediate children sub-sections of configuration root based on key.
+            </summary>
+            <param name="root">Configuration from which to retrieve sub-sections.</param>
+            <param name="path">Key of a section of which children to retrieve.</param>
+            <returns>Immediate children sub-sections of section specified by key.</returns>
         </member>
         <member name="T:Microsoft.Extensions.Configuration.MemoryConfigurationBuilderExtensions">
             <summary>
@@ -305,15 +429,52 @@
             <param name="builder">The <see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder"/>.</param>
             <returns>A <see cref="T:Microsoft.Extensions.Configuration.Memory.MemoryConfigurationProvider"/></returns>
         </member>
-        <member name="P:Microsoft.Extensions.Configuration.Resources.Error_NoSources">
+        <member name="T:Microsoft.Extensions.Configuration.StreamConfigurationProvider">
             <summary>
-            A configuration provider is not registered. Please register one before setting a value.
+            Stream based configuration provider
             </summary>
         </member>
-        <member name="M:Microsoft.Extensions.Configuration.Resources.FormatError_NoSources">
+        <member name="P:Microsoft.Extensions.Configuration.StreamConfigurationProvider.Source">
             <summary>
-            A configuration provider is not registered. Please register one before setting a value.
+            The source settings for this provider.
             </summary>
+        </member>
+        <member name="M:Microsoft.Extensions.Configuration.StreamConfigurationProvider.#ctor(Microsoft.Extensions.Configuration.StreamConfigurationSource)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="source">The source.</param>
+        </member>
+        <member name="M:Microsoft.Extensions.Configuration.StreamConfigurationProvider.Load(System.IO.Stream)">
+            <summary>
+            Load the configuration data from the stream.
+            </summary>
+            <param name="stream">The data stream.</param>
+        </member>
+        <member name="M:Microsoft.Extensions.Configuration.StreamConfigurationProvider.Load">
+            <summary>
+            Load the configuration data from the stream. Will throw after the first call.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Extensions.Configuration.StreamConfigurationSource">
+            <summary>
+            Stream based <see cref="T:Microsoft.Extensions.Configuration.IConfigurationSource" />.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Extensions.Configuration.StreamConfigurationSource.Stream">
+            <summary>
+            The stream containing the configuration data.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Extensions.Configuration.StreamConfigurationSource.Build(Microsoft.Extensions.Configuration.IConfigurationBuilder)">
+            <summary>
+            Builds the <see cref="T:Microsoft.Extensions.Configuration.StreamConfigurationProvider"/> for this source.
+            </summary>
+            <param name="builder">The <see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder"/>.</param>
+            <returns>An <see cref="T:Microsoft.Extensions.Configuration.IConfigurationProvider"/></returns>
+        </member>
+        <member name="P:Microsoft.Extensions.Configuration.Resources.Error_NoSources">
+            <summary>A configuration source is not registered. Please register one before setting a value.</summary>
         </member>
     </members>
 </doc>

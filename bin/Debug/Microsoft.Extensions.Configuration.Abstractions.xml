@@ -6,8 +6,16 @@
     <members>
         <member name="T:Microsoft.Extensions.Configuration.ConfigurationExtensions">
             <summary>
-            Extension methods for <see cref="T:Microsoft.Extensions.Configuration.IConfiguration" />.
+            Extension methods for configuration classes./>.
             </summary>
+        </member>
+        <member name="M:Microsoft.Extensions.Configuration.ConfigurationExtensions.Add``1(Microsoft.Extensions.Configuration.IConfigurationBuilder,System.Action{``0})">
+            <summary>
+            Adds a new configuration source.
+            </summary>
+            <param name="builder">The <see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder"/> to add to.</param>
+            <param name="configureSource">Configures the source secrets.</param>
+            <returns>The <see cref="T:Microsoft.Extensions.Configuration.IConfigurationBuilder"/>.</returns>
         </member>
         <member name="M:Microsoft.Extensions.Configuration.ConfigurationExtensions.GetConnectionString(Microsoft.Extensions.Configuration.IConfiguration,System.String)">
             <summary>
@@ -15,7 +23,7 @@
             </summary>
             <param name="configuration">The configuration.</param>
             <param name="name">The connection string key.</param>
-            <returns></returns>
+            <returns>The connection string.</returns>
         </member>
         <member name="M:Microsoft.Extensions.Configuration.ConfigurationExtensions.AsEnumerable(Microsoft.Extensions.Configuration.IConfiguration)">
             <summary>
@@ -31,6 +39,11 @@
             <param name="configuration">The <see cref="T:Microsoft.Extensions.Configuration.IConfiguration"/> to enumerate.</param>
             <param name="makePathsRelative">If true, the child keys returned will have the current configuration's Path trimmed from the front.</param>
             <returns>An enumeration of key value pairs.</returns>
+        </member>
+        <member name="M:Microsoft.Extensions.Configuration.ConfigurationExtensions.Exists(Microsoft.Extensions.Configuration.IConfigurationSection)">
+            <summary>
+            Determines whether the section has a <see cref="P:Microsoft.Extensions.Configuration.IConfigurationSection.Value"/> or has children
+            </summary>
         </member>
         <member name="T:Microsoft.Extensions.Configuration.ConfigurationPath">
             <summary>
@@ -69,6 +82,17 @@
             </summary>
             <param name="path">The path.</param>
             <returns>The original path minus the last individual segment found in it. Null if the original path corresponds to a top level node.</returns>
+        </member>
+        <member name="T:Microsoft.Extensions.Configuration.ConfigurationRootExtensions">
+            <summary>
+            Extension methods for <see cref="T:Microsoft.Extensions.Configuration.IConfigurationRoot"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Extensions.Configuration.ConfigurationRootExtensions.GetDebugView(Microsoft.Extensions.Configuration.IConfigurationRoot)">
+            <summary>
+            Generates a human-readable view of the configuration showing where each value came from.
+            </summary>
+            <returns> The debug view. </returns>
         </member>
         <member name="T:Microsoft.Extensions.Configuration.IConfiguration">
             <summary>
@@ -118,7 +142,7 @@
         </member>
         <member name="P:Microsoft.Extensions.Configuration.IConfigurationBuilder.Sources">
             <summary>
-            Gets the sources used to obtain configuation values
+            Gets the sources used to obtain configuration values
             </summary>
         </member>
         <member name="M:Microsoft.Extensions.Configuration.IConfigurationBuilder.Add(Microsoft.Extensions.Configuration.IConfigurationSource)">
@@ -159,7 +183,7 @@
             <summary>
             Returns a change token if this provider supports change tracking, null otherwise.
             </summary>
-            <returns></returns>
+            <returns>The change token.</returns>
         </member>
         <member name="M:Microsoft.Extensions.Configuration.IConfigurationProvider.Load">
             <summary>
@@ -169,7 +193,7 @@
         <member name="M:Microsoft.Extensions.Configuration.IConfigurationProvider.GetChildKeys(System.Collections.Generic.IEnumerable{System.String},System.String)">
             <summary>
             Returns the immediate descendant configuration keys for a given parent path based on this
-            <see cref="T:Microsoft.Extensions.Configuration.IConfigurationProvider"/>'s data and the set of keys returned by all the preceding
+            <see cref="T:Microsoft.Extensions.Configuration.IConfigurationProvider"/>s data and the set of keys returned by all the preceding
             <see cref="T:Microsoft.Extensions.Configuration.IConfigurationProvider"/>s.
             </summary>
             <param name="earlierKeys">The child keys returned by the preceding providers for the same parent path.</param>
@@ -184,6 +208,11 @@
         <member name="M:Microsoft.Extensions.Configuration.IConfigurationRoot.Reload">
             <summary>
             Force the configuration values to be reloaded from the underlying <see cref="T:Microsoft.Extensions.Configuration.IConfigurationProvider"/>s.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Extensions.Configuration.IConfigurationRoot.Providers">
+            <summary>
+            The <see cref="T:Microsoft.Extensions.Configuration.IConfigurationProvider"/>s for this configuration.
             </summary>
         </member>
         <member name="T:Microsoft.Extensions.Configuration.IConfigurationSection">

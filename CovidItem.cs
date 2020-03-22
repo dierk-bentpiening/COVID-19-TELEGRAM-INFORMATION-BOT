@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ShareX_Main_Server
+namespace covid19bot
 {
     class CovidItem
     {
