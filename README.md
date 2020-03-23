@@ -19,11 +19,13 @@ And generates its data via a JSON API.
 
 Start Bot.exe and Place the cbot.cfg config containing your SQLite Database Path on to your C:\ root directory.
 
-## Data Mirgration and Integration
+## Data Migration and Integration
 
 The project folder contains Python programs for the migration and integration of data from the Federal Statistical Office 
 
-## Version 3.10: Data Insert Tool integrated
+## Changelog
+
+### Version 3.10: Data Insert Tool integrated
 
 We have added a Windows application for writing current curfews and messages and updating links.
 
