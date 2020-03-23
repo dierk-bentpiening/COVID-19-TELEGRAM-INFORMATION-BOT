@@ -30,7 +30,9 @@ We have added a Windows application for writing current curfews and messages and
 It is available in every current release.
 
 ## Screenshot
+
 Version: 3.10
+
 ![Logo](https://i.ibb.co/qkm9jDZ/grafik.png)
 
 ## License
