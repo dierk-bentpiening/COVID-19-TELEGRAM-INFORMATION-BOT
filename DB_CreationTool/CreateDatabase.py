@@ -15,7 +15,7 @@ import getopt
 import sqlite3
 import os
 if len(sys.argv) == 1:
-    path_userinput = input("Bitte geben Sie den gewünschten Pfad inklusive Dateinamen zu Ihrer sqlite3-Datei ein. Beispiel: \"C:\\Users\\Username\\Documents\\CISB.sqlite3\"")
+    path_userinput = input("Bitte geben Sie den gewünschten Pfad inklusive Dateinamen zu Ihrer sqlite3-Datei ein. Beispiel: C:\\Users\\Username\\Documents\\CISB.sqlite3")
 else:
     try:
         opts, args = getopt.getopt(sys.argv[1:], "p:", ["path="])
