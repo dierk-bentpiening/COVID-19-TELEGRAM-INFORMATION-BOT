@@ -71,6 +71,7 @@
             this.btnAddMessage.TabIndex = 2;
             this.btnAddMessage.Text = "Nachricht Hinzufügen";
             this.btnAddMessage.UseVisualStyleBackColor = false;
+            this.btnAddMessage.Click += new System.EventHandler(this.btnAddMessage_Click);
             // 
             // btnExit
             // 
@@ -92,6 +93,7 @@
             this.btnAddLink.TabIndex = 4;
             this.btnAddLink.Text = "Link Hinzufügen";
             this.btnAddLink.UseVisualStyleBackColor = false;
+            this.btnAddLink.Click += new System.EventHandler(this.btnAddLink_Click);
             // 
             // Form1
             // 

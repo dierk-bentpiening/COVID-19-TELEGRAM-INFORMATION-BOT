@@ -1,7 +1,6 @@
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DBInsertTool\DB Data Insert Tool\bin\Debug\DB Data Insert Tool.exe.config
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DBInsertTool\DB Data Insert Tool\bin\Debug\DB Data Insert Tool.exe
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DBInsertTool\DB Data Insert Tool\bin\Debug\DB Data Insert Tool.pdb
-C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DBInsertTool\DB Data Insert Tool\obj\Debug\DB Data Insert Tool.csprojAssemblyReference.cache
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DBInsertTool\DB Data Insert Tool\obj\Debug\DB_Data_Insert_Tool.Form1.resources
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DBInsertTool\DB Data Insert Tool\obj\Debug\DB_Data_Insert_Tool.Properties.Resources.resources
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DBInsertTool\DB Data Insert Tool\obj\Debug\DB Data Insert Tool.csproj.GenerateResource.cache
@@ -31,3 +30,6 @@ C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DBInsertTool\DB Data Insert Tool\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DBInsertTool\DB Data Insert Tool\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DBInsertTool\DB Data Insert Tool\obj\Debug\DB Data Insert Tool.csproj.CopyComplete
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DBInsertTool\DB Data Insert Tool\obj\Debug\DB_Data_Insert_Tool.AddMessage.resources
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DBInsertTool\DB Data Insert Tool\obj\Debug\DB_Data_Insert_Tool.AddURL.resources
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DBInsertTool\DB Data Insert Tool\obj\Debug\DB Data Insert Tool.csprojAssemblyReference.cache

@@ -34,5 +34,19 @@ namespace DB_Data_Insert_Tool
         {
             Environment.Exit(1);
         }
+
+        private void btnAddMessage_Click(object sender, EventArgs e)
+        {
+            AddMessage addMSG;
+            addMSG = new AddMessage();
+            addMSG.Show();
+        }
+
+        private void btnAddLink_Click(object sender, EventArgs e)
+        {
+            AddURL addURI;
+            addURI = new AddURL();
+            addURI.Show();
+        }
     }
 }
