@@ -23,6 +23,12 @@ Start Bot.exe and Place the cbot.cfg config containing your SQLite Database Path
 
 The project folder contains Python programs for the migration and integration of data from the Federal Statistical Office 
 
+## Version 3.10: Data Insert Tool integrated
+
+We have added a Windows application for writing current curfews and messages and updating links.
+
+It is available in every current release.
+
 ## License
 CITBS
 
