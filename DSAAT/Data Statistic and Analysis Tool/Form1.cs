@@ -35,5 +35,10 @@ namespace Data_Statistic_and_Analysis_Tool
             shwSta = new ShowStatistics();
             shwSta.Show();
         }
+
+        private void beendenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

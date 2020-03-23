@@ -63,5 +63,15 @@ namespace Data_Statistic_and_Analysis_Tool
             dataFill("Select * from InfektionStatistics ORDER BY INFECTIONCOUNT ASC");
             
         }
+
+        private void btnReload_Click(object sender, EventArgs e)
+        {
+            dataFill("Select * from InfektionStatistics");
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

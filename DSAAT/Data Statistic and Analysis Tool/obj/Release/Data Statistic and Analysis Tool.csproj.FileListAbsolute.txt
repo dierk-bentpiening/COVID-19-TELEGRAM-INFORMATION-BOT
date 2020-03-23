@@ -21,3 +21,7 @@ C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DSAAT\Data Statistic and Analysis Tool\obj\Release\Data Statistic and Analysis Tool.csproj.CopyComplete
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DSAAT\Data Statistic and Analysis Tool\obj\Release\Data Statistic and Analysis Tool.exe
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DSAAT\Data Statistic and Analysis Tool\obj\Release\Data Statistic and Analysis Tool.pdb
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DSAAT\Data Statistic and Analysis Tool\bin\Release\Data Statistic and Analysis Tool.exe.manifest
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DSAAT\Data Statistic and Analysis Tool\bin\Release\Data Statistic and Analysis Tool.application
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DSAAT\Data Statistic and Analysis Tool\obj\Release\Data Statistic and Analysis Tool.exe.manifest
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DSAAT\Data Statistic and Analysis Tool\obj\Release\Data Statistic and Analysis Tool.application

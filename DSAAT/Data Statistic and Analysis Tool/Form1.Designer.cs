@@ -34,26 +34,32 @@
             this.tabellenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.datenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.alleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.hilfeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dateiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureLOGO = new System.Windows.Forms.PictureBox();
             this.botStatistikToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.anzeigenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.alleToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.hilfeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dateiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureLOGO = new System.Windows.Forms.PictureBox();
+            this.menüToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.beendenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureLOGO)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.menuStrip1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menüToolStripMenuItem,
             this.funktionenToolStripMenuItem,
             this.hilfeToolStripMenuItem,
             this.dateiToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(280, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -90,6 +96,29 @@
             this.alleToolStripMenuItem.Text = "Alle";
             this.alleToolStripMenuItem.Click += new System.EventHandler(this.alleToolStripMenuItem_Click);
             // 
+            // botStatistikToolStripMenuItem
+            // 
+            this.botStatistikToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.anzeigenToolStripMenuItem});
+            this.botStatistikToolStripMenuItem.Name = "botStatistikToolStripMenuItem";
+            this.botStatistikToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.botStatistikToolStripMenuItem.Text = "Bot Statistik";
+            // 
+            // anzeigenToolStripMenuItem
+            // 
+            this.anzeigenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.alleToolStripMenuItem1});
+            this.anzeigenToolStripMenuItem.Name = "anzeigenToolStripMenuItem";
+            this.anzeigenToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.anzeigenToolStripMenuItem.Text = "Anzeigen";
+            // 
+            // alleToolStripMenuItem1
+            // 
+            this.alleToolStripMenuItem1.Name = "alleToolStripMenuItem1";
+            this.alleToolStripMenuItem1.Size = new System.Drawing.Size(94, 22);
+            this.alleToolStripMenuItem1.Text = "Alle";
+            this.alleToolStripMenuItem1.Click += new System.EventHandler(this.alleToolStripMenuItem1_Click);
+            // 
             // hilfeToolStripMenuItem
             // 
             this.hilfeToolStripMenuItem.Name = "hilfeToolStripMenuItem";
@@ -115,34 +144,26 @@
             this.pictureLOGO.TabIndex = 1;
             this.pictureLOGO.TabStop = false;
             // 
-            // botStatistikToolStripMenuItem
+            // menüToolStripMenuItem
             // 
-            this.botStatistikToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.anzeigenToolStripMenuItem});
-            this.botStatistikToolStripMenuItem.Name = "botStatistikToolStripMenuItem";
-            this.botStatistikToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.botStatistikToolStripMenuItem.Text = "Bot Statistik";
+            this.menüToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.beendenToolStripMenuItem});
+            this.menüToolStripMenuItem.Name = "menüToolStripMenuItem";
+            this.menüToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.menüToolStripMenuItem.Text = "Menü";
             // 
-            // anzeigenToolStripMenuItem
+            // beendenToolStripMenuItem
             // 
-            this.anzeigenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.alleToolStripMenuItem1});
-            this.anzeigenToolStripMenuItem.Name = "anzeigenToolStripMenuItem";
-            this.anzeigenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.anzeigenToolStripMenuItem.Text = "Anzeigen";
-            // 
-            // alleToolStripMenuItem1
-            // 
-            this.alleToolStripMenuItem1.Name = "alleToolStripMenuItem1";
-            this.alleToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.alleToolStripMenuItem1.Text = "Alle";
-            this.alleToolStripMenuItem1.Click += new System.EventHandler(this.alleToolStripMenuItem1_Click);
+            this.beendenToolStripMenuItem.Name = "beendenToolStripMenuItem";
+            this.beendenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.beendenToolStripMenuItem.Text = "Beenden";
+            this.beendenToolStripMenuItem.Click += new System.EventHandler(this.beendenToolStripMenuItem_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.pictureLOGO);
             this.Controls.Add(this.menuStrip1);
@@ -158,18 +179,19 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem funktionenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tabellenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem datenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hilfeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dateiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem alleToolStripMenuItem;
-        private System.Windows.Forms.PictureBox pictureLOGO;
         private System.Windows.Forms.ToolStripMenuItem botStatistikToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem anzeigenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem alleToolStripMenuItem1;
+        protected System.Windows.Forms.MenuStrip menuStrip1;
+        protected System.Windows.Forms.PictureBox pictureLOGO;
+        private System.Windows.Forms.ToolStripMenuItem menüToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem beendenToolStripMenuItem;
     }
 }
 
