@@ -41,7 +41,7 @@ namespace covid19bot
             Console.WriteLine(" " +
                 "");
             Console.WriteLine(
-              $"COVID-19 TELEGRAM INFROMATION SYSTEM \n(C) 2020 Dierk-Bent Piening, Roman Spies\nVersion 0.2A\nAll rights reserved\nLicensed under the MIT License\n_____________________________________________________________________________\n"
+              $"COVID-19 TELEGRAM INFROMATION SYSTEM \n(C) 2020 Dierk-Bent Piening, Roman Spies\nVersion 3.10\nAll rights reserved\nLicensed under the MIT License\n_____________________________________________________________________________\n"
             );
             
             botClient.OnMessage += Bot_OnMessage;
