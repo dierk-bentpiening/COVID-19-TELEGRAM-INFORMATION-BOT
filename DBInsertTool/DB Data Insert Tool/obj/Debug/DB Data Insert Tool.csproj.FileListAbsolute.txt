@@ -1,0 +1,33 @@
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DBInsertTool\DB Data Insert Tool\bin\Debug\DB Data Insert Tool.exe.config
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DBInsertTool\DB Data Insert Tool\bin\Debug\DB Data Insert Tool.exe
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DBInsertTool\DB Data Insert Tool\bin\Debug\DB Data Insert Tool.pdb
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DBInsertTool\DB Data Insert Tool\obj\Debug\DB Data Insert Tool.csprojAssemblyReference.cache
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DBInsertTool\DB Data Insert Tool\obj\Debug\DB_Data_Insert_Tool.Form1.resources
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DBInsertTool\DB Data Insert Tool\obj\Debug\DB_Data_Insert_Tool.Properties.Resources.resources
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DBInsertTool\DB Data Insert Tool\obj\Debug\DB Data Insert Tool.csproj.GenerateResource.cache
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DBInsertTool\DB Data Insert Tool\obj\Debug\DB Data Insert Tool.exe
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DBInsertTool\DB Data Insert Tool\obj\Debug\DB Data Insert Tool.pdb
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DBInsertTool\DB Data Insert Tool\obj\Debug\DB_Data_Insert_Tool.AddAusgangssperreForm.resources
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DBInsertTool\DB Data Insert Tool\bin\Debug\x86\sqlite3.dll
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DBInsertTool\DB Data Insert Tool\bin\Debug\x64\sqlite3.dll
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DBInsertTool\DB Data Insert Tool\bin\Debug\EntityFramework.dll
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DBInsertTool\DB Data Insert Tool\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DBInsertTool\DB Data Insert Tool\bin\Debug\Microsoft.Data.Sqlite.dll
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DBInsertTool\DB Data Insert Tool\bin\Debug\SQLitePCLRaw.core.dll
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DBInsertTool\DB Data Insert Tool\bin\Debug\System.Buffers.dll
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DBInsertTool\DB Data Insert Tool\bin\Debug\System.Data.SQLite.dll
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DBInsertTool\DB Data Insert Tool\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DBInsertTool\DB Data Insert Tool\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DBInsertTool\DB Data Insert Tool\bin\Debug\System.Memory.dll
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DBInsertTool\DB Data Insert Tool\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DBInsertTool\DB Data Insert Tool\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DBInsertTool\DB Data Insert Tool\bin\Debug\EntityFramework.xml
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DBInsertTool\DB Data Insert Tool\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DBInsertTool\DB Data Insert Tool\bin\Debug\Microsoft.Data.Sqlite.xml
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DBInsertTool\DB Data Insert Tool\bin\Debug\System.Buffers.xml
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DBInsertTool\DB Data Insert Tool\bin\Debug\System.Data.SQLite.xml
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DBInsertTool\DB Data Insert Tool\bin\Debug\System.Data.SQLite.dll.config
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DBInsertTool\DB Data Insert Tool\bin\Debug\System.Memory.xml
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DBInsertTool\DB Data Insert Tool\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DBInsertTool\DB Data Insert Tool\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DBInsertTool\DB Data Insert Tool\obj\Debug\DB Data Insert Tool.csproj.CopyComplete
