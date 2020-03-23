@@ -5,8 +5,6 @@ C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\bin\BotRelease\runtimes\win-arm\native\e_sqlite3.dll
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\bin\BotRelease\mongocrypt.dll
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\bin\BotRelease\COVID-19 Information BOT.exe.config
-C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\bin\BotRelease\COVID-19 Information BOT.exe.manifest
-C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\bin\BotRelease\COVID-19 Information BOT.application
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\bin\BotRelease\COVID-19 Information BOT.exe
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\bin\BotRelease\COVID-19 Information BOT.pdb
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\bin\BotRelease\Ado.dll
@@ -92,8 +90,6 @@ C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\bin\BotRelease\Telegram.Bot.Extensions.Passport.xml
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\bin\BotRelease\Telegram.Bot.Extensions.Polling.xml
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\obj\BotRelease\COVID-19 Information BOT.csprojAssemblyReference.cache
-C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\obj\BotRelease\COVID-19 Information BOT.exe.manifest
-C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\obj\BotRelease\COVID-19 Information BOT.application
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\obj\BotRelease\COVID-19 Information BOT.csproj.CopyComplete
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\obj\BotRelease\COVID-19 Information BOT.exe
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\obj\BotRelease\COVID-19 Information BOT.pdb
