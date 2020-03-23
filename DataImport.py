@@ -14,9 +14,9 @@ import csv
 import sqlite3
 import os
 #gloVARs
-bl_filter = ['Bayern', 'Saarland']
-start_dates = ['21.03.2020', '21.03.2020']
-stop_dates = ['03.04.2020', '03.04.2020']
+bl_filter = ['Bayern', 'Saarland', 'Sachsen']
+start_dates = ['21.03.2020', '21.03.2020', '23.03.2020']
+stop_dates = ['03.04.2020', '03.04.2020', '05.04.2020']
 # Change dir
 os.chdir("D:\\Roman\\Projects_Private\\coronabot\\")
 # öffne CSV File mit allen Städten
