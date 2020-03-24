@@ -94,12 +94,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddAusgangssperre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddAusgangssperre.Designer.cs">
+      <DependentUpon>AddAusgangssperre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddMesage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddMesage.Designer.cs">
+      <DependentUpon>AddMesage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddURL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddURL.Designer.cs">
+      <DependentUpon>AddURL.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConfigLoader.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InfoFenster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfoFenster.Designer.cs">
+      <DependentUpon>InfoFenster.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -115,8 +139,20 @@
     <Compile Include="ShowStatistics.Designer.cs">
       <DependentUpon>ShowStatistics.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddAusgangssperre.resx">
+      <DependentUpon>AddAusgangssperre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddMesage.resx">
+      <DependentUpon>AddMesage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddURL.resx">
+      <DependentUpon>AddURL.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoFenster.resx">
+      <DependentUpon>InfoFenster.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

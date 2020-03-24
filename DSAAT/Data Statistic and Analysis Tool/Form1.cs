@@ -40,5 +40,43 @@ namespace Data_Statistic_and_Analysis_Tool
         {
             Application.Exit();
         }
+
+        private void infoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            InfoFenster ifFenster;
+            ifFenster = new InfoFenster();
+            ifFenster.Show();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void ausgangssperreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddAusgangssperre addAUSG;
+            addAUSG = new AddAusgangssperre();
+            addAUSG.Show();
+        }
+
+        private void nachrichtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddMesage addMe;
+            addMe = new AddMesage();
+            addMe.Show();
+        }
+
+        private void einfügenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void uRLToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddURL addURL;
+            addURL = new AddURL();
+            addURL.Show();
+        }
     }
 }

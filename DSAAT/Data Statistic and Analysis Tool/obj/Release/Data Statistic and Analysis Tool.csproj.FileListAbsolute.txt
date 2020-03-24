@@ -24,3 +24,8 @@ C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DSAAT\Data Statistic and Analysis Tool\bin\Release\Data Statistic and Analysis Tool.application
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DSAAT\Data Statistic and Analysis Tool\obj\Release\Data Statistic and Analysis Tool.exe.manifest
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DSAAT\Data Statistic and Analysis Tool\obj\Release\Data Statistic and Analysis Tool.application
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DSAAT\Data Statistic and Analysis Tool\obj\Release\Data_Statistic_and_Analysis_Tool.InfoFenster.resources
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DSAAT\Data Statistic and Analysis Tool\obj\Release\Data Statistic and Analysis Tool.csprojAssemblyReference.cache
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DSAAT\Data Statistic and Analysis Tool\obj\Release\Data_Statistic_and_Analysis_Tool.AddAusgangssperre.resources
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DSAAT\Data Statistic and Analysis Tool\obj\Release\Data_Statistic_and_Analysis_Tool.AddMesage.resources
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DSAAT\Data Statistic and Analysis Tool\obj\Release\Data_Statistic_and_Analysis_Tool.AddURL.resources
