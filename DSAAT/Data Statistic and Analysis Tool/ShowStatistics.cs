@@ -141,5 +141,17 @@ namespace Data_Statistic_and_Analysis_Tool
         {
             dataFill("SELECT * FROM statistics ORDER BY ID ASC");
         }
+
+        private void dvInfect_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void sQLToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SQLLauncher sqlLauncher;
+            sqlLauncher = new SQLLauncher();
+            sqlLauncher.Show();
+        }
     }
 }

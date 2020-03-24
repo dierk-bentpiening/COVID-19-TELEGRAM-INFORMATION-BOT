@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace Data_Statistic_and_Analysis_Tool
 {
@@ -19,14 +20,15 @@ namespace Data_Statistic_and_Analysis_Tool
 
         private void datenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-     
-        }
 
+        }
+       
         private void alleToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ShowInfectionStatistics shwIS;
             shwIS = new ShowInfectionStatistics();
             shwIS.Show();
+            Console.WriteLine("*-*-* Show infection statistics");
         }
 
         private void alleToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -34,6 +36,7 @@ namespace Data_Statistic_and_Analysis_Tool
             ShowStatistics shwSta;
             shwSta = new ShowStatistics();
             shwSta.Show();
+            Console.WriteLine("*-*-* Show Bot statistics");
         }
 
         private void beendenToolStripMenuItem_Click(object sender, EventArgs e)
@@ -46,6 +49,7 @@ namespace Data_Statistic_and_Analysis_Tool
             InfoFenster ifFenster;
             ifFenster = new InfoFenster();
             ifFenster.Show();
+            Console.WriteLine("*-*-* Show Info Window");
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -58,6 +62,7 @@ namespace Data_Statistic_and_Analysis_Tool
             AddAusgangssperre addAUSG;
             addAUSG = new AddAusgangssperre();
             addAUSG.Show();
+            Console.WriteLine("*-*-* Open Add Ausganssperre Window");
         }
 
         private void nachrichtToolStripMenuItem_Click(object sender, EventArgs e)
@@ -65,6 +70,7 @@ namespace Data_Statistic_and_Analysis_Tool
             AddMesage addMe;
             addMe = new AddMesage();
             addMe.Show();
+            Console.WriteLine("*-*-* Open Add Message Window");
         }
 
         private void einfügenToolStripMenuItem_Click(object sender, EventArgs e)
@@ -77,6 +83,17 @@ namespace Data_Statistic_and_Analysis_Tool
             AddURL addURL;
             addURL = new AddURL();
             addURL.Show();
+            Console.WriteLine("*-*-* Open Add URL Window");
+        }
+
+        private void anzeigenToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+            Debug.AllocConsole();
+           
+            }
         }
     }
-}
+
+    
+

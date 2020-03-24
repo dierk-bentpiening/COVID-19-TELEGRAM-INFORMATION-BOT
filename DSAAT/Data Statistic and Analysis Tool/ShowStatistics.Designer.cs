@@ -29,10 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ShowStatistics));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menüToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.schließenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dateiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sortierenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.iDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aufsteigendToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,7 +47,9 @@
             this.cQuerryType = new System.Windows.Forms.CheckBox();
             this.cDateTime = new System.Windows.Forms.CheckBox();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.dateiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.developerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sQLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.konsoleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dvInfect)).BeginInit();
             this.SuspendLayout();
@@ -58,10 +61,11 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menüToolStripMenuItem,
             this.dateiToolStripMenuItem,
-            this.sortierenToolStripMenuItem});
+            this.sortierenToolStripMenuItem,
+            this.developerToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(218, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(306, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -83,6 +87,13 @@
             this.schließenToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.schließenToolStripMenuItem.Text = "Schließen";
             this.schließenToolStripMenuItem.Click += new System.EventHandler(this.schließenToolStripMenuItem_Click);
+            // 
+            // dateiToolStripMenuItem
+            // 
+            this.dateiToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("dateiToolStripMenuItem.Image")));
+            this.dateiToolStripMenuItem.Name = "dateiToolStripMenuItem";
+            this.dateiToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.dateiToolStripMenuItem.Text = "Datei";
             // 
             // sortierenToolStripMenuItem
             // 
@@ -133,18 +144,19 @@
             this.dvInfect.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dvInfect.Location = new System.Drawing.Point(12, 27);
             this.dvInfect.Name = "dvInfect";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Info;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dvInfect.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dvInfect.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dvInfect.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.dvInfect.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Navy;
             this.dvInfect.Size = new System.Drawing.Size(924, 541);
             this.dvInfect.TabIndex = 1;
+            this.dvInfect.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvInfect_CellContentClick);
             // 
             // btnClose
             // 
@@ -249,12 +261,30 @@
             this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // dateiToolStripMenuItem
+            // developerToolStripMenuItem
             // 
-            this.dateiToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("dateiToolStripMenuItem.Image")));
-            this.dateiToolStripMenuItem.Name = "dateiToolStripMenuItem";
-            this.dateiToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
-            this.dateiToolStripMenuItem.Text = "Datei";
+            this.developerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sQLToolStripMenuItem,
+            this.konsoleToolStripMenuItem});
+            this.developerToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("developerToolStripMenuItem.Image")));
+            this.developerToolStripMenuItem.Name = "developerToolStripMenuItem";
+            this.developerToolStripMenuItem.Size = new System.Drawing.Size(88, 20);
+            this.developerToolStripMenuItem.Text = "Developer";
+            // 
+            // sQLToolStripMenuItem
+            // 
+            this.sQLToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("sQLToolStripMenuItem.Image")));
+            this.sQLToolStripMenuItem.Name = "sQLToolStripMenuItem";
+            this.sQLToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sQLToolStripMenuItem.Text = "SQL";
+            this.sQLToolStripMenuItem.Click += new System.EventHandler(this.sQLToolStripMenuItem_Click);
+            // 
+            // konsoleToolStripMenuItem
+            // 
+            this.konsoleToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("konsoleToolStripMenuItem.Image")));
+            this.konsoleToolStripMenuItem.Name = "konsoleToolStripMenuItem";
+            this.konsoleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.konsoleToolStripMenuItem.Text = "Konsole";
             // 
             // ShowStatistics
             // 
@@ -287,7 +317,6 @@
         #endregion
         private System.Windows.Forms.ToolStripMenuItem menüToolStripMenuItem;
         protected System.Windows.Forms.MenuStrip menuStrip1;
-        protected System.Windows.Forms.DataGridView dvInfect;
         protected System.Windows.Forms.Button btnClose;
         protected System.Windows.Forms.Button btnReload;
         private System.Windows.Forms.TextBox txtSearch;
@@ -302,5 +331,9 @@
         private System.Windows.Forms.ToolStripMenuItem aufsteigendToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem absteigendToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dateiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem developerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sQLToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem konsoleToolStripMenuItem;
+        public System.Windows.Forms.DataGridView dvInfect;
     }
 }

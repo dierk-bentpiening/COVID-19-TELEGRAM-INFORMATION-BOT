@@ -49,6 +49,11 @@
             this.ausgangssperreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.uRLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nachrichtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.developerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sQLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.konsoleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ausführenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.anzeigenToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureLOGO)).BeginInit();
             this.SuspendLayout();
@@ -61,6 +66,7 @@
             this.funktionenToolStripMenuItem,
             this.einfügenToolStripMenuItem,
             this.dateiToolStripMenuItem,
+            this.developerToolStripMenuItem,
             this.hilfeToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -255,6 +261,49 @@
             this.nachrichtToolStripMenuItem.Text = "Nachricht";
             this.nachrichtToolStripMenuItem.Click += new System.EventHandler(this.nachrichtToolStripMenuItem_Click);
             // 
+            // developerToolStripMenuItem
+            // 
+            this.developerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sQLToolStripMenuItem,
+            this.konsoleToolStripMenuItem});
+            this.developerToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("developerToolStripMenuItem.Image")));
+            this.developerToolStripMenuItem.Name = "developerToolStripMenuItem";
+            this.developerToolStripMenuItem.Size = new System.Drawing.Size(88, 20);
+            this.developerToolStripMenuItem.Text = "Developer";
+            // 
+            // sQLToolStripMenuItem
+            // 
+            this.sQLToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ausführenToolStripMenuItem});
+            this.sQLToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("sQLToolStripMenuItem.Image")));
+            this.sQLToolStripMenuItem.Name = "sQLToolStripMenuItem";
+            this.sQLToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sQLToolStripMenuItem.Text = "SQL";
+            // 
+            // konsoleToolStripMenuItem
+            // 
+            this.konsoleToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.anzeigenToolStripMenuItem1});
+            this.konsoleToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("konsoleToolStripMenuItem.Image")));
+            this.konsoleToolStripMenuItem.Name = "konsoleToolStripMenuItem";
+            this.konsoleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.konsoleToolStripMenuItem.Text = "Konsole";
+            // 
+            // ausführenToolStripMenuItem
+            // 
+            this.ausführenToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("ausführenToolStripMenuItem.Image")));
+            this.ausführenToolStripMenuItem.Name = "ausführenToolStripMenuItem";
+            this.ausführenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ausführenToolStripMenuItem.Text = "Ausführen";
+            // 
+            // anzeigenToolStripMenuItem1
+            // 
+            this.anzeigenToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("anzeigenToolStripMenuItem1.Image")));
+            this.anzeigenToolStripMenuItem1.Name = "anzeigenToolStripMenuItem1";
+            this.anzeigenToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.anzeigenToolStripMenuItem1.Text = "Anzeigen";
+            this.anzeigenToolStripMenuItem1.Click += new System.EventHandler(this.anzeigenToolStripMenuItem1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -297,6 +346,11 @@
         private System.Windows.Forms.ToolStripMenuItem ausgangssperreToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem uRLToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nachrichtToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem developerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sQLToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ausführenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem konsoleToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem anzeigenToolStripMenuItem1;
     }
 }
 

@@ -113,6 +113,7 @@
       <DependentUpon>AddURL.cs</DependentUpon>
     </Compile>
     <Compile Include="ConfigLoader.cs" />
+    <Compile Include="Debug.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +126,7 @@
     <Compile Include="InfoFenster.Designer.cs">
       <DependentUpon>InfoFenster.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interpreter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ShowInfectionStatistics.cs">
@@ -138,6 +140,12 @@
     </Compile>
     <Compile Include="ShowStatistics.Designer.cs">
       <DependentUpon>ShowStatistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SQLLauncher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SQLLauncher.Designer.cs">
+      <DependentUpon>SQLLauncher.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AddAusgangssperre.resx">
       <DependentUpon>AddAusgangssperre.cs</DependentUpon>
@@ -168,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ShowStatistics.resx">
       <DependentUpon>ShowStatistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SQLLauncher.resx">
+      <DependentUpon>SQLLauncher.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Data Statistic and Analysis Tool_TemporaryKey.pfx" />
     <None Include="packages.config" />
