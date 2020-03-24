@@ -25,7 +25,7 @@ The project folder contains Python programs for the migration and integration of
 
 ## Changelog
 
-### Version 3.20: Data Statistics and Analysis Tool integrated
+### Version 3.20: Data Statistics and Analysis Tool integrated (DSAAT)
 
 We have added a Windows application for writing current curfews and messages and updating links also for access statistical Data from the Bot Server and the infection counters.
 
@@ -33,7 +33,7 @@ It is available in every current release.
 
 ## Screenshot
 
-Version: 3.10
+Version: 3.20
 
 ![Logo](https://i.ibb.co/DM0wpJn/grafik.png)
 
