@@ -25,9 +25,9 @@ The project folder contains Python programs for the migration and integration of
 
 ## Changelog
 
-### Version 3.10: Data Insert Tool integrated
+### Version 3.20: Data Statistics and Analysis Tool integrated
 
-We have added a Windows application for writing current curfews and messages and updating links.
+We have added a Windows application for writing current curfews and messages and updating links also for access statistical Data from the Bot Server and the infection counters.
 
 It is available in every current release.
 
@@ -35,7 +35,7 @@ It is available in every current release.
 
 Version: 3.10
 
-![Logo](https://i.ibb.co/qkm9jDZ/grafik.png)
+![Logo](https://i.ibb.co/DM0wpJn/grafik.png)
 
 ## License
 CITBS
