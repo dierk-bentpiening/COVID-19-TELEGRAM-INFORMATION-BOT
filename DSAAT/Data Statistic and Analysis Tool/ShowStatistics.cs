@@ -129,5 +129,17 @@ namespace Data_Statistic_and_Analysis_Tool
         {
             btnSearch.Enabled = true;
         }
+
+   
+
+        private void absteigendToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dataFill("SELECT * FROM statistics ORDER BY ID DESC");
+        }
+
+        private void aufsteigendToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dataFill("SELECT * FROM statistics ORDER BY ID ASC");
+        }
     }
 }

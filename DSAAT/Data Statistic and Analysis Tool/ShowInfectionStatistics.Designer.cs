@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.sortToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.iDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -76,14 +76,14 @@
             // neusteZuerstToolStripMenuItem
             // 
             this.neusteZuerstToolStripMenuItem.Name = "neusteZuerstToolStripMenuItem";
-            this.neusteZuerstToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.neusteZuerstToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.neusteZuerstToolStripMenuItem.Text = "Neuste zuerst";
             this.neusteZuerstToolStripMenuItem.Click += new System.EventHandler(this.neusteZuerstToolStripMenuItem_Click);
             // 
             // ältesteZuerstToolStripMenuItem
             // 
             this.ältesteZuerstToolStripMenuItem.Name = "ältesteZuerstToolStripMenuItem";
-            this.ältesteZuerstToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.ältesteZuerstToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.ältesteZuerstToolStripMenuItem.Text = "Älteste zuerst";
             // 
             // dvInfect
@@ -96,14 +96,14 @@
             this.dvInfect.Location = new System.Drawing.Point(12, 27);
             this.dvInfect.Name = "dvInfect";
             this.dvInfect.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dvInfect.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dvInfect.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dvInfect.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.dvInfect.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Navy;
             this.dvInfect.Size = new System.Drawing.Size(1067, 565);

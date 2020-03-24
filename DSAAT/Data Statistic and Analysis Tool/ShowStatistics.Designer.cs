@@ -28,9 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ShowStatistics));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menüToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.schließenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sortierenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.iDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aufsteigendToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.absteigendToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dvInfect = new System.Windows.Forms.DataGridView();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnReload = new System.Windows.Forms.Button();
@@ -40,21 +46,22 @@
             this.cQuerryType = new System.Windows.Forms.CheckBox();
             this.cDateTime = new System.Windows.Forms.CheckBox();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.schließenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dateiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dvInfect)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
-            this.menuStrip1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menüToolStripMenuItem});
+            this.menüToolStripMenuItem,
+            this.dateiToolStripMenuItem,
+            this.sortierenToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(58, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(218, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -63,9 +70,58 @@
             // 
             this.menüToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.schließenToolStripMenuItem});
+            this.menüToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("menüToolStripMenuItem.Image")));
             this.menüToolStripMenuItem.Name = "menüToolStripMenuItem";
-            this.menüToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.menüToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.menüToolStripMenuItem.Text = "Menü";
+            // 
+            // schließenToolStripMenuItem
+            // 
+            this.schließenToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("schließenToolStripMenuItem.Image")));
+            this.schließenToolStripMenuItem.Name = "schließenToolStripMenuItem";
+            this.schließenToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Q)));
+            this.schließenToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.schließenToolStripMenuItem.Text = "Schließen";
+            this.schließenToolStripMenuItem.Click += new System.EventHandler(this.schließenToolStripMenuItem_Click);
+            // 
+            // sortierenToolStripMenuItem
+            // 
+            this.sortierenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.iDToolStripMenuItem});
+            this.sortierenToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("sortierenToolStripMenuItem.Image")));
+            this.sortierenToolStripMenuItem.Name = "sortierenToolStripMenuItem";
+            this.sortierenToolStripMenuItem.Size = new System.Drawing.Size(82, 20);
+            this.sortierenToolStripMenuItem.Text = "Sortieren";
+            // 
+            // iDToolStripMenuItem
+            // 
+            this.iDToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aufsteigendToolStripMenuItem,
+            this.absteigendToolStripMenuItem});
+            this.iDToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("iDToolStripMenuItem.Image")));
+            this.iDToolStripMenuItem.Name = "iDToolStripMenuItem";
+            this.iDToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.iDToolStripMenuItem.Text = "ID";
+            // 
+            // aufsteigendToolStripMenuItem
+            // 
+            this.aufsteigendToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("aufsteigendToolStripMenuItem.Image")));
+            this.aufsteigendToolStripMenuItem.Name = "aufsteigendToolStripMenuItem";
+            this.aufsteigendToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.A)));
+            this.aufsteigendToolStripMenuItem.Size = new System.Drawing.Size(265, 22);
+            this.aufsteigendToolStripMenuItem.Text = "Aufsteigend";
+            this.aufsteigendToolStripMenuItem.Click += new System.EventHandler(this.aufsteigendToolStripMenuItem_Click);
+            // 
+            // absteigendToolStripMenuItem
+            // 
+            this.absteigendToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("absteigendToolStripMenuItem.Image")));
+            this.absteigendToolStripMenuItem.Name = "absteigendToolStripMenuItem";
+            this.absteigendToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.D)));
+            this.absteigendToolStripMenuItem.Size = new System.Drawing.Size(265, 22);
+            this.absteigendToolStripMenuItem.Text = "Absteigend";
+            this.absteigendToolStripMenuItem.Click += new System.EventHandler(this.absteigendToolStripMenuItem_Click);
             // 
             // dvInfect
             // 
@@ -77,14 +133,14 @@
             this.dvInfect.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dvInfect.Location = new System.Drawing.Point(12, 27);
             this.dvInfect.Name = "dvInfect";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Info;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dvInfect.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dvInfect.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dvInfect.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.dvInfect.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Navy;
             this.dvInfect.Size = new System.Drawing.Size(924, 541);
@@ -94,6 +150,9 @@
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClose.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
+            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnClose.Location = new System.Drawing.Point(830, 574);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(106, 23);
@@ -106,17 +165,22 @@
             // 
             this.btnReload.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnReload.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnReload.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.btnReload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReload.Image = ((System.Drawing.Image)(resources.GetObject("btnReload.Image")));
+            this.btnReload.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReload.Location = new System.Drawing.Point(718, 574);
             this.btnReload.Name = "btnReload";
             this.btnReload.Size = new System.Drawing.Size(106, 23);
             this.btnReload.TabIndex = 3;
-            this.btnReload.Text = "Aktualisieren";
+            this.btnReload.Text = "   Aktualisieren";
             this.btnReload.UseVisualStyleBackColor = false;
             this.btnReload.Click += new System.EventHandler(this.btnReload_Click);
             // 
             // txtSearch
             // 
             this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSearch.Location = new System.Drawing.Point(82, 576);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(224, 20);
@@ -174,6 +238,9 @@
             // 
             this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSearch.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
+            this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSearch.Location = new System.Drawing.Point(606, 573);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(106, 23);
@@ -182,12 +249,12 @@
             this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // schließenToolStripMenuItem
+            // dateiToolStripMenuItem
             // 
-            this.schließenToolStripMenuItem.Name = "schließenToolStripMenuItem";
-            this.schließenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.schließenToolStripMenuItem.Text = "Schließen";
-            this.schließenToolStripMenuItem.Click += new System.EventHandler(this.schließenToolStripMenuItem_Click);
+            this.dateiToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("dateiToolStripMenuItem.Image")));
+            this.dateiToolStripMenuItem.Name = "dateiToolStripMenuItem";
+            this.dateiToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.dateiToolStripMenuItem.Text = "Datei";
             // 
             // ShowStatistics
             // 
@@ -230,5 +297,10 @@
         protected System.Windows.Forms.CheckBox cDateTime;
         protected System.Windows.Forms.Button btnSearch;
         protected System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem sortierenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem iDToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aufsteigendToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem absteigendToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dateiToolStripMenuItem;
     }
 }

@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Data Statistic and Analysis Tool.exe" size="146448">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Data Statistic and Analysis Tool.exe" size="172048">
       <assemblyIdentity name="Data Statistic and Analysis Tool" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Hvx22x9FsgB0fVpETFx/wpwKw2kkmdcKjspNXRIcrXo=</dsig:DigestValue>
+        <dsig:DigestValue>6kNio24W6tUZ7NqBSgsSQ5WGwNHRbxpP18nr68f6RMg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
