@@ -19,6 +19,21 @@ And generates its data via a JSON API.
 
 Start Bot.exe and Place the cbot.cfg config containing your SQLite Database Path on to your C:\ root directory.
 
+## Usage / Commands
+
+Info, info oder i:
+Allgemeine Daten zu Infektionen / Geheilten / Verstorbenen in Deutschland sowie aktuelle Hinweise.
+
+Mit Bundesländer , bl oder BL erhalten Sie eine aktuelle Infografik mit den Fallzahlen zu den einzelnen Bundesländern.
+
+Ausgangssperre [PLZ] zeigt Ihnen, ob eine Ausgangssperre für diese PLZ vorliegt. Anstatt PLZ können Sie aber auch Landkreis x verwenden, z.B. Diepholz.
+Ausgangssperre BL y oder Ausgangssperre Bundesland y zeigt Ihnen alle PLZ-Bereiche in diesem Bundesland, für die eine Ausgangssperre vorliegt.
+
+Geben Sie tipps oder hygiene ein, um eine Auflistung der Schutzmaßnahmen bezüglich viraler Infektionen im Allgemeinen und CoV-2 im Besonderen zu erhalten.
+
+symptome liefert eine Auflistung von Symptomen, die möglicherweise bei einer Corona-Infektion auftreten. Sollten Sie derartige Symptome bei sich oder bei Ihrer Familie 
+beobachten, so beantragen Sie bitte einen Test unter 116 117
+
 ## Data Migration and Integration
 
 The project folder contains Python programs for the migration and integration of data from the Federal Statistical Office 
