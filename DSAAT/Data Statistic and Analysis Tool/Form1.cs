@@ -95,7 +95,17 @@ namespace Data_Statistic_and_Analysis_Tool
 
         private void weltweitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            jhuDataExtraktion.startExtract();
+            jhuDataExtraktion.startExtractAsync();
+        }
+
+        private void botToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void startToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            StartBot.startingBot();
         }
     }
     }

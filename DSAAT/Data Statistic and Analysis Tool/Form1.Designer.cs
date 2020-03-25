@@ -57,6 +57,8 @@
             this.datenExtraktionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.jHUToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.weltweitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.botToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.startToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureLOGO)).BeginInit();
             this.SuspendLayout();
@@ -69,6 +71,7 @@
             this.funktionenToolStripMenuItem,
             this.einfügenToolStripMenuItem,
             this.datenExtraktionToolStripMenuItem,
+            this.botToolStripMenuItem,
             this.dateiToolStripMenuItem,
             this.developerToolStripMenuItem,
             this.hilfeToolStripMenuItem});
@@ -334,6 +337,24 @@
             this.weltweitToolStripMenuItem.Text = "Weltweit";
             this.weltweitToolStripMenuItem.Click += new System.EventHandler(this.weltweitToolStripMenuItem_Click);
             // 
+            // botToolStripMenuItem
+            // 
+            this.botToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.startToolStripMenuItem});
+            this.botToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("botToolStripMenuItem.Image")));
+            this.botToolStripMenuItem.Name = "botToolStripMenuItem";
+            this.botToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+            this.botToolStripMenuItem.Text = "Bot";
+            this.botToolStripMenuItem.Click += new System.EventHandler(this.botToolStripMenuItem_Click);
+            // 
+            // startToolStripMenuItem
+            // 
+            this.startToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("startToolStripMenuItem.Image")));
+            this.startToolStripMenuItem.Name = "startToolStripMenuItem";
+            this.startToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.startToolStripMenuItem.Text = "Start";
+            this.startToolStripMenuItem.Click += new System.EventHandler(this.startToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -384,6 +405,8 @@
         private System.Windows.Forms.ToolStripMenuItem datenExtraktionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem jHUToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem weltweitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem botToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem startToolStripMenuItem;
     }
 }
 

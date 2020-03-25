@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Telegram.Bot.Extensions.Polling</name>
+    </assembly>
+    <members>
+        <member name="T:Telegram.Bot.Extensions.Polling.DefaultUpdateHandler">
+            <summary>
+            A very simple <see cref="T:Telegram.Bot.Extensions.Polling.IUpdateHandler"/> implementation
+            </summary>
+        </member>
+        <member name="P:Telegram.Bot.Extensions.Polling.DefaultUpdateHandler.AllowedUpdates">
+            <summary>
+            Indicates which <see cref="T:Telegram.Bot.Types.Enums.UpdateType"/>s are allowed to be received. null means all updates
+            </summary>
+        </member>
+        <member name="M:Telegram.Bot.Extensions.Polling.DefaultUpdateHandler.#ctor(System.Func{Telegram.Bot.Types.Update,System.Threading.CancellationToken,System.Threading.Tasks.Task},System.Func{System.Exception,System.Threading.CancellationToken,System.Threading.Tasks.Task},Telegram.Bot.Types.Enums.UpdateType[])">
+            <summary>
+            Constructs a new <see cref="T:Telegram.Bot.Extensions.Polling.DefaultUpdateHandler"/> with the specified callback functions
+            </summary>
+            <param name="updateHandler">The function to invoke when an update is received</param>
+            <param name="errorHandler">The function to invoke when an error occurs</param>
+            <param name="allowedUpdates">Indicates which <see cref="T:Telegram.Bot.Types.Enums.UpdateType"/>s are allowed to be received. null means all updates</param>
+        </member>
+        <member name="M:Telegram.Bot.Extensions.Polling.DefaultUpdateHandler.HandleUpdate(Telegram.Bot.Types.Update,System.Threading.CancellationToken)">
+            <summary>
+            Handles an <see cref="T:Telegram.Bot.Types.Update"/>
+            </summary>
+            <param name="update">The <see cref="T:Telegram.Bot.Types.Update"/> to handle</param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telegram.Bot.Extensions.Polling.DefaultUpdateHandler.HandleError(System.Exception,System.Threading.CancellationToken)">
+            <summary>
+            Handles an <see cref="T:System.Exception"/>
+            </summary>
+            <param name="exception">The <see cref="T:System.Exception"/> to handle</param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Telegram.Bot.Extensions.Polling.IUpdateHandler">
+            <summary>
+            Processes <see cref="T:Telegram.Bot.Types.Update"/>s and errors.
+            <para>See <see cref="T:Telegram.Bot.Extensions.Polling.DefaultUpdateHandler"/> for a simple implementation</para>
+            </summary>
+        </member>
+        <member name="M:Telegram.Bot.Extensions.Polling.IUpdateHandler.HandleUpdate(Telegram.Bot.Types.Update,System.Threading.CancellationToken)">
+            <summary>
+            Handles an <see cref="T:Telegram.Bot.Types.Update"/>
+            </summary>
+            <param name="update">The <see cref="T:Telegram.Bot.Types.Update"/> to handle</param>
+            <param name="cancellationToken">The <see cref="T:System.Threading.CancellationToken"/> which will notify that method execution should be cancelled</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telegram.Bot.Extensions.Polling.IUpdateHandler.HandleError(System.Exception,System.Threading.CancellationToken)">
+            <summary>
+            Handles an <see cref="T:System.Exception"/>
+            </summary>
+            <param name="exception">The <see cref="T:System.Exception"/> to handle</param>
+            <param name="cancellationToken">The <see cref="T:System.Threading.CancellationToken"/> which will notify that method execution should be cancelled</param>
+            <returns></returns>
+        </member>
+        <member name="P:Telegram.Bot.Extensions.Polling.IUpdateHandler.AllowedUpdates">
+            <summary>
+            Indicates which <see cref="T:Telegram.Bot.Types.Enums.UpdateType"/>s are allowed to be received. null means all updates
+            </summary>
+        </member>
+        <member name="T:Telegram.Bot.TelegramBotClientPollingExtensions">
+            <summary>
+            Provides extension methods for <see cref="T:Telegram.Bot.ITelegramBotClient"/> that allow for <see cref="T:Telegram.Bot.Types.Update"/> polling
+            </summary>
+        </member>
+        <member name="M:Telegram.Bot.TelegramBotClientPollingExtensions.StartReceiving``1(Telegram.Bot.ITelegramBotClient,System.Threading.CancellationToken)">
+            <summary>
+            Starts receiving <see cref="T:Telegram.Bot.Types.Update"/>s on the ThreadPool, invoking <see cref="M:Telegram.Bot.Extensions.Polling.IUpdateHandler.HandleUpdate(Telegram.Bot.Types.Update,System.Threading.CancellationToken)"/> for each.
+            <para>This method does not block. GetUpdates will be called AFTER the <see cref="M:Telegram.Bot.Extensions.Polling.IUpdateHandler.HandleUpdate(Telegram.Bot.Types.Update,System.Threading.CancellationToken)"/> returns</para>
+            </summary>
+            <typeparam name="TUpdateHandler">The <see cref="T:Telegram.Bot.Extensions.Polling.IUpdateHandler"/> used for processing <see cref="T:Telegram.Bot.Types.Update"/>s</typeparam>
+            <param name="botClient">The <see cref="T:Telegram.Bot.ITelegramBotClient"/> used for making GetUpdates calls</param>
+            <param name="cancellationToken">The <see cref="T:System.Threading.CancellationToken"/> with which you can stop receiving</param>
+        </member>
+        <member name="M:Telegram.Bot.TelegramBotClientPollingExtensions.StartReceiving(Telegram.Bot.ITelegramBotClient,Telegram.Bot.Extensions.Polling.IUpdateHandler,System.Threading.CancellationToken)">
+            <summary>
+            Starts receiving <see cref="T:Telegram.Bot.Types.Update"/>s on the ThreadPool, invoking <see cref="M:Telegram.Bot.Extensions.Polling.IUpdateHandler.HandleUpdate(Telegram.Bot.Types.Update,System.Threading.CancellationToken)"/> for each.
+            <para>This method does not block. GetUpdates will be called AFTER the <see cref="M:Telegram.Bot.Extensions.Polling.IUpdateHandler.HandleUpdate(Telegram.Bot.Types.Update,System.Threading.CancellationToken)"/> returns</para>
+            </summary>
+            <param name="botClient">The <see cref="T:Telegram.Bot.ITelegramBotClient"/> used for making GetUpdates calls</param>
+            <param name="updateHandler">The <see cref="T:Telegram.Bot.Extensions.Polling.IUpdateHandler"/> used for processing <see cref="T:Telegram.Bot.Types.Update"/>s</param>
+            <param name="cancellationToken">The <see cref="T:System.Threading.CancellationToken"/> with which you can stop receiving</param>
+        </member>
+        <member name="M:Telegram.Bot.TelegramBotClientPollingExtensions.ReceiveAsync``1(Telegram.Bot.ITelegramBotClient,System.Threading.CancellationToken)">
+            <summary>
+            Starts receiving <see cref="T:Telegram.Bot.Types.Update"/>s on the ThreadPool, invoking <see cref="M:Telegram.Bot.Extensions.Polling.IUpdateHandler.HandleUpdate(Telegram.Bot.Types.Update,System.Threading.CancellationToken)"/> for each.
+            <para>This method will block if awaited. GetUpdates will be called AFTER the <see cref="M:Telegram.Bot.Extensions.Polling.IUpdateHandler.HandleUpdate(Telegram.Bot.Types.Update,System.Threading.CancellationToken)"/> returns</para>
+            </summary>
+            <typeparam name="TUpdateHandler">The <see cref="T:Telegram.Bot.Extensions.Polling.IUpdateHandler"/> used for processing <see cref="T:Telegram.Bot.Types.Update"/>s</typeparam>
+            <param name="botClient">The <see cref="T:Telegram.Bot.ITelegramBotClient"/> used for making GetUpdates calls</param>
+            <param name="cancellationToken">The <see cref="T:System.Threading.CancellationToken"/> with which you can stop receiving</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telegram.Bot.TelegramBotClientPollingExtensions.ReceiveAsync(Telegram.Bot.ITelegramBotClient,Telegram.Bot.Extensions.Polling.IUpdateHandler,System.Threading.CancellationToken)">
+            <summary>
+            Starts receiving <see cref="T:Telegram.Bot.Types.Update"/>s on the ThreadPool, invoking <see cref="M:Telegram.Bot.Extensions.Polling.IUpdateHandler.HandleUpdate(Telegram.Bot.Types.Update,System.Threading.CancellationToken)"/> for each.
+            <para>This method will block if awaited. GetUpdates will be called AFTER the <see cref="M:Telegram.Bot.Extensions.Polling.IUpdateHandler.HandleUpdate(Telegram.Bot.Types.Update,System.Threading.CancellationToken)"/> returns</para>
+            </summary>
+            <param name="botClient">The <see cref="T:Telegram.Bot.ITelegramBotClient"/> used for making GetUpdates calls</param>
+            <param name="updateHandler">The <see cref="T:Telegram.Bot.Extensions.Polling.IUpdateHandler"/> used for processing <see cref="T:Telegram.Bot.Types.Update"/>s</param>
+            <param name="cancellationToken">The <see cref="T:System.Threading.CancellationToken"/> with which you can stop receiving</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

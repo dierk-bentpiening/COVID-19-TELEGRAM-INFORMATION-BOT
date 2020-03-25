@@ -1,53 +1,96 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data.SQLite;
 using OpenQA.Selenium.PhantomJS;
-using OpenQA.Selenium;
-using System.Drawing.Imaging;
 using System.Windows.Forms;
-using IronOcr;
+using System.Drawing;
+using System.Net;
+using System.IO;
 
 namespace Data_Statistic_and_Analysis_Tool
 {
     class jhuDataExtraktion
     {
-        public static void startExtract()
+        public static async System.Threading.Tasks.Task startExtractAsync()
         {
+         
+            Debug.AllocConsole();
+            Console.WriteLine("### STARTING EXTRACTION PROCESS ###");
+            CreateDirectory.createDir("C:\\images");
             String vDateTime = DateTime.Now.ToString("yyyy-dd-M--HH-mm-ss");
-            String vDateiName = "jhuwwi-" + vDateTime + ".png";
-            IWebDriver driver = new PhantomJSDriver();
-            driver.Navigate().GoToUrl("https://www.arcgis.com/apps/opsdashboard/index.html#/5c7f096096ed482395f6a626150366e2");
-            System.Threading.Thread.Sleep(20000);
-            ((ITakesScreenshot)driver).GetScreenshot().SaveAsFile(vDateiName, ImageFormat.Png);
+            String vFileNameBuffer = vDateTime + ".png";
+            String vDateiName = "C:\\images\\jhuwwi-" + vFileNameBuffer;
+            String vURL = ConfigLoader.vPUBLICURL() + vFileNameBuffer;
+            //Als Backup im Code:
+
+           //IWebDriver driver = new PhantomJSDriver();
+            //driver.Navigate().GoToUrl("https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6");
+            //System.Threading.Thread.Sleep(20000);
+            //((ITakesScreenshot)driver).GetScreenshot().SaveAsFile(vDateiName, ImageFormat.Png);
+            var driverService = PhantomJSDriverService.CreateDefaultService();
+            driverService.HideCommandPromptWindow = true;
+            driverService.LoadImages = true;
+            driverService.ProxyType = "none";
+
+            using (var driver = new PhantomJSDriver(driverService))
+            {
+                driver.Manage().Window.Size = new System.Drawing.Size(1920, 1080);
+                driver.Url = "https://www.arcgis.com/apps/opsdashboard/index.html#/5c7f096096ed482395f6a626150366e2";
+                System.Threading.Thread.Sleep(25000);
+                driver.GetScreenshot().SaveAsFile(vDateiName, System.Drawing.Imaging.ImageFormat.Png);
+            }
+
+            try
+
+            {
+
+
+                String sourcefilepath = vDateiName; // e.g. “d:/test.docx”
+                String ftpurl = ConfigLoader.vFTPURI() + "/" + vFileNameBuffer; // e.g. ftp://serverip/foldername/foldername
+                String ftpusername = ConfigLoader.vFTPUSERNAME();
+                String ftppassword = ConfigLoader.vFTPPASSWORD();
+                string filename = Path.GetFileName(vDateiName);
+                string ftpfullpath = ftpurl;
+                FtpWebRequest ftp = (FtpWebRequest)FtpWebRequest.Create(ftpfullpath);
+                ftp.Credentials = new NetworkCredential(ftpusername, ftppassword);
+
+                ftp.KeepAlive = true;
+                ftp.UseBinary = true;
+                ftp.Method = WebRequestMethods.Ftp.UploadFile;
+
+                FileStream fs = File.OpenRead(vDateiName);
+                byte[] buffer = new byte[fs.Length];
+                fs.Read(buffer, 0, buffer.Length);
+                fs.Close();
+
+                Stream ftpstream = ftp.GetRequestStream();
+                ftpstream.Write(buffer, 0, buffer.Length);
+                ftpstream.Close();
+
+
+
+               // using (WebClient webClient = new WebClient())
+               // {
+               //     webClient.Credentials = new NetworkCredential(ConfigLoader.vFTPUSERNAME(), ConfigLoader.vFTPPASSWORD());
+               //     await webClient.UploadFileTaskAsync(ConfigLoader.vFTPURI(), WebRequestMethods.Ftp.UploadFile, vDateiName);
+               // }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
             SQLiteConnection connection = new SQLiteConnection("Data Source=" + ConfigLoader.vDBPATH());
             connection.Open();
-            var Ocr = new AdvancedOcr()
-            {
-                CleanBackgroundNoise = true,
-                EnhanceContrast = true,
-                EnhanceResolution = true,
-                Language = IronOcr.Languages.English.OcrLanguagePack,
-                Strategy = IronOcr.AdvancedOcr.OcrStrategy.Advanced,
-                ColorSpace = AdvancedOcr.OcrColorSpace.Color,
-                DetectWhiteTextOnDarkBackgrounds = true,
-                InputImageType = AdvancedOcr.InputTypes.Document,
-                RotateAndStraighten = true,
-                ReadBarCodes = true,
-                ColorDepth = 4
-            };
-            Console.WriteLine(vDateiName);
-            var vOcrResult = Ocr.Read(vDateiName);
-            string vInfectionWordlwide = vOcrResult.ToString();
+            
+            Console.WriteLine("### SAVING IMAGE FILE AS: " + vDateiName);
+            //var text = Tesseract.Helper.UtliTesseract.GetCaptchaStringFromImage(vDateiName);
+            //Console.WriteLine(text.ToString());
             SQLiteCommand insertSQL = new SQLiteCommand("INSERT INTO InfectionWorldwide (ID, ImagePath, DateTime, OCRText) VALUES (NULL, $ImagePath, $DateTime, $OCRText)", connection);
-            insertSQL.Parameters.Add("$ImagePath", System.Data.DbType.String).Value = vDateiName;
+            insertSQL.Parameters.Add("$ImagePath", System.Data.DbType.String).Value = vURL;
             insertSQL.Parameters.Add("$DateTime", System.Data.DbType.String).Value = vDateTime;
-            insertSQL.Parameters.Add("$OCRText", System.Data.DbType.String).Value = vInfectionWordlwide;
-
-            Console.WriteLine("### OCR Result: " + vInfectionWordlwide);
-            Console.WriteLine("### WRITTEN AUSGANGSSPERRE DATA IN DB");
+            insertSQL.Parameters.Add("$OCRText", System.Data.DbType.String).Value = "No Info Gathered";
+            Console.WriteLine("### OCR Result: " + "NO INFO GATHERED");
+            Console.WriteLine("### WRITTEN OCR DATA IN DATABASE");
             try
             {
                 insertSQL.ExecuteNonQuery();

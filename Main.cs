@@ -25,6 +25,8 @@ using Microsoft.Data.Sqlite;
 using System.Data.SQLite;
 using NLog.Fluent;
 using covid19bot;
+using System.Drawing;
+using System.Windows;
 
 namespace covid19bot
 {
@@ -35,13 +37,12 @@ namespace covid19bot
         {
             Console.ForegroundColor = ConsoleColor.DarkGreen;
             Console.BackgroundColor = ConsoleColor.DarkBlue;
-            Console.Clear();
-            botClient = new TelegramBotClient("1048276961:AAEqjnUyZedMU4N4Vc962K7YqPaVlhRPI2Q");
+            botClient = new TelegramBotClient(ConfigLoader.vBOTAUTHCODE());
             var me = botClient.GetMeAsync().Result;
             Console.WriteLine(" " +
                 "");
             Console.WriteLine(
-              $"COVID-19 TELEGRAM INFROMATION SYSTEM \n(C) 2020 Dierk-Bent Piening, Roman Spies\nVersion 3.10\nAll rights reserved\nLicensed under the MIT License\n_____________________________________________________________________________\n"
+              $"CITBS \n(C) 2020 Dierk-Bent Piening, Roman Spies\nVersion 3.30\nAll rights reserved\nLicensed under the MIT License\n_____________________________________________________________________________\n"
             );
             
             botClient.OnMessage += Bot_OnMessage;
@@ -92,7 +93,7 @@ namespace covid19bot
                                             //Now log your data object in the console
                                             Console.WriteLine("### Abfrage der Infektions Daten: data------------{0}", JObject.Parse(data)["current_totals"]["cases"]);
 
-                                            await botClient.SendTextMessageAsync(chatId: e.Message.Chat, text: 
+                                            await botClient.SendTextMessageAsync(chatId: e.Message.Chat, text:
                                                 "COVID-19 Information Bot\n CODE: Dierk-Bent Piening, MED-BERATUNG: Roman Spies \n_____ Aktuelle Daten _____\n" + "Fälle: " + JObject.Parse(data)["current_totals"]["cases"] + " \nTodesfälle:" + JObject.Parse(data)["current_totals"]["deaths"] + "\nGeheilt: " + JObject.Parse(data)["current_totals"]["recovered"] + "\nZeitpunkt: " + JObject.Parse(data)["meta"]["time_source_last_updated_iso8601"] + "\nQuelle: " + JObject.Parse(data)["meta"]["source"]);
                                             InfectionStatistic.writeInfetctionNumbers(JObject.Parse(data)["current_totals"]["cases"].ToString(), JObject.Parse(data)["current_totals"]["deaths"].ToString(), JObject.Parse(data)["current_totals"]["recovered"].ToString(), JObject.Parse(data)["meta"]["time_source_last_updated_iso8601"].ToString(), DateTime.Now.ToString());
                                             await botClient.SendTextMessageAsync(chatId: e.Message.Chat, text: "_____ACHTUNG AKTUELLE HINWEISE____\n" + PublicMessages.vPublicMessage());
@@ -126,6 +127,36 @@ namespace covid19bot
                         Statistics.newQueryLog(e.Message.Chat.Id.ToString(), vADateTime, "AktuelleInfektionenNachBundesländern");
                         await botClient.SendTextMessageAsync(chatId: e.Message.Chat, text: "_____ACHTUNG AKTUELLE HINWEISE____\n" + PublicMessages.vPublicMessage());
 
+                    }
+
+                    else if (e.Message.Text == "Infektionen Weltweit" || e.Message.Text == "infektionen weltweit" || e.Message.Text == "Infektionen weltweit" || e.Message.Text == "iw" || e.Message.Text == "IW" || e.Message.Text == "Iw")
+                    {
+
+                        connection.Open();
+                        SQLiteCommand cmd = new SQLiteCommand("select * from InfectionWorldwide ORDER BY rowid DESC LIMIT 1", connection);
+                        SQLiteDataReader reader = cmd.ExecuteReader();
+
+                        if (reader.HasRows)
+                        {
+                            while (reader.Read())
+                            {
+                                string vImagePath = reader.GetString(reader.GetOrdinal("ImagePath"));
+                                string DateTime = reader.GetString(reader.GetOrdinal("DateTime"));
+                                string vBUNDESLAND = reader.GetString(reader.GetOrdinal("OCRText"));
+                                Console.WriteLine("### Abfrage der InfectionWorldwide data------------");
+                              
+                                Telegram.Bot.Types.Message message = await botClient.SendPhotoAsync(
+                                chatId: e.Message.Chat,
+                                photo: vImagePath,
+                       caption: "<b>Quelle: John Hopkins University</b>", parseMode: Telegram.Bot.Types.Enums.ParseMode.Html
+                         );
+
+                            }
+                            Statistics.newQueryLog(e.Message.Chat.Id.ToString(), vADateTime, "InfectionWorldwide");
+                            await botClient.SendTextMessageAsync(chatId: e.Message.Chat, text: "_____ACHTUNG AKTUELLE HINWEISE____\n" + PublicMessages.vPublicMessage());
+
+                        }
+                        connection.Close();
                     }
                     else if (e.Message.Text == "!Ausgangssperre alle!" || e.Message.Text == "!ausgangssperre alle!")
                     {
@@ -161,7 +192,7 @@ namespace covid19bot
                         if (cmdlist[1] == "bundesland" || cmdlist[1] == "Bundesland" || cmdlist[1] == "bl" || cmdlist[1] == "BL" || cmdlist[1] == "Bl")
                         {
                             connection.Open();
-                            SQLiteCommand cmd = new SQLiteCommand("select * from AusgangssperrenLK where upper(BUNDESLAND) = upper('" + cmdlist[2] +"')", connection);
+                            SQLiteCommand cmd = new SQLiteCommand("select * from AusgangssperrenLK where upper(BUNDESLAND) = upper('" + cmdlist[2] + "')", connection);
                             SQLiteDataReader reader = cmd.ExecuteReader();
 
                             if (reader.HasRows)
@@ -249,7 +280,7 @@ namespace covid19bot
                                     int vPLZ = reader.GetInt32(reader.GetOrdinal("PLZ"));
                                     await botClient.SendTextMessageAsync(chatId: e.Message.Chat, text: "Ausgangsperre im Landkreis: " + vLK + " im Bundesland: " + vBUNDESLAND + " verhängt durch: " + vBEHÖRDE + "\n Gültig von:" + vDatumVON + " bis: " + vDatumBIS);
                                     Console.WriteLine("### Abfrage der Ausgangssperren data------------{0}");
-                                    
+
                                 }
                                 Statistics.newQueryLog(e.Message.Chat.Id.ToString(), vADateTime, "AusgangssperreNachPLZ: " + cmdlist[1]);
                                 await botClient.SendTextMessageAsync(chatId: e.Message.Chat, text: "_____ACHTUNG AKTUELLE HINWEISE____\n" + PublicMessages.vPublicMessage());
@@ -305,7 +336,7 @@ namespace covid19bot
                     {
 
 
-                        await botClient.SendTextMessageAsync(chatId: e.Message.Chat, text: "_____ACHTUNG:_____\nGib info oder Info oder i ein, um die Daten zu erhalten.\nUm die aktuellen Zahlen der Bundesländer zu erhalten, gebe BL oder bl oder Bundesländer ein\nAusgangssperre 26427 zeigt Dir an, ob eine Ausgangssperre für Deinen PLZ Bereich vorliegt, z.B: 26427\n Ausgangssperre Landkreis Diepholz zeigt Dir an, ob eine Ausgangssperre für Deinen Landkreis, z.B. Diepholz vorliegt, z.B: 26427\nAusgangssperre BL Bayern oder Ausgangssperre Bundesland Bayern zeigt Dir die Ausgangssperren der Gemeinden im Land Bayern an\nGeben Sie tipps oder hygiene ein, um Hinweise zum Schutz vor einer Covid-19 Infektion zu erhalten.\nDurch die Eingabe von symptome, erhalten Sie eine Auflistung der bekannten COVID-19 Symptome");
+                        await botClient.SendTextMessageAsync(chatId: e.Message.Chat, text: "_____ACHTUNG:_____\nGib info oder Info oder i ein, um die Daten zu erhalten.\nUm die aktuellen Zahlen der Bundesländer zu erhalten, gebe BL oder bl oder Bundesländer ein\n Um die Weltweiten Infektionszahlen auszugeben, gebe Infektionen Weltweit oder iw ein\nAusgangssperre 26427 zeigt Dir an, ob eine Ausgangssperre für Deinen PLZ Bereich vorliegt, z.B: 26427\n Ausgangssperre Landkreis Diepholz zeigt Dir an, ob eine Ausgangssperre für Deinen Landkreis, z.B. Diepholz vorliegt, z.B: 26427\nAusgangssperre BL Bayern oder Ausgangssperre Bundesland Bayern zeigt Dir die Ausgangssperren der Gemeinden im Land Bayern an\nGeben Sie tipps oder hygiene ein, um Hinweise zum Schutz vor einer Covid-19 Infektion zu erhalten.\nDurch die Eingabe von symptome, erhalten Sie eine Auflistung der bekannten COVID-19 Symptome");
                         await botClient.SendTextMessageAsync(chatId: e.Message.Chat, text: "_____ACHTUNG AKTUELLE HINWEISE____\n" + PublicMessages.vPublicMessage());
 
                         Console.WriteLine("### Abfrage aber unbekannter Befehl------------{0}");

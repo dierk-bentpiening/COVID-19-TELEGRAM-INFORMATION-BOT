@@ -21,6 +21,7 @@ namespace Data_Statistic_and_Analysis_Tool
         [DllImport("kernel32.dll", SetLastError = true)]
         internal static extern int AllocConsole();
 
+
         // http://msdn.microsoft.com/en-us/library/ms683150(VS.85).aspx
         /// <summary>
         /// Detaches the calling process from its console.

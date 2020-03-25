@@ -59,10 +59,16 @@
     <ManifestKeyFile>Data Statistic and Analysis Tool_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <GenerateManifests>true</GenerateManifests>
+    <GenerateManifests>false</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
     <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -101,6 +107,13 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="Tesseract, Version=2.3.0.0, Culture=neutral, PublicKeyToken=ebeb3d86bef60cbe, processorArchitecture=MSIL">
+      <HintPath>packages\Tesseract.2.3.0.0\lib\net451\Tesseract.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Tesseract.Helper, Version=1.0.5777.32678, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Tesseract.Helper.1.2.0\lib\net40\Tesseract.Helper.dll</HintPath>
+    </Reference>
     <Reference Include="WebDriver, Version=2.45.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\Selenium.WebDriver.PhantomJS.Xplatform.2.45.0.1\lib\net40\WebDriver.dll</HintPath>
     </Reference>
@@ -125,6 +138,7 @@
       <DependentUpon>AddURL.cs</DependentUpon>
     </Compile>
     <Compile Include="ConfigLoader.cs" />
+    <Compile Include="CreateDirectory.cs" />
     <Compile Include="Debug.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -160,6 +174,7 @@
     <Compile Include="SQLLauncher.Designer.cs">
       <DependentUpon>SQLLauncher.cs</DependentUpon>
     </Compile>
+    <Compile Include="StartBot.cs" />
     <EmbeddedResource Include="AddAusgangssperre.resx">
       <DependentUpon>AddAusgangssperre.cs</DependentUpon>
     </EmbeddedResource>
@@ -193,6 +208,7 @@
     <EmbeddedResource Include="SQLLauncher.resx">
       <DependentUpon>SQLLauncher.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="app.manifest" />
     <None Include="Data Statistic and Analysis Tool_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -204,6 +220,52 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="tessdata\eng.cube.bigrams" />
+    <None Include="tessdata\eng.cube.fold" />
+    <None Include="tessdata\eng.cube.lm" />
+    <None Include="tessdata\eng.cube.nn" />
+    <None Include="tessdata\eng.cube.params" />
+    <None Include="tessdata\eng.cube.size" />
+    <None Include="tessdata\eng.cube.word-freq" />
+    <None Include="tessdata\eng.tesseract_cube.nn" />
+    <None Include="tessdata\eng.traineddata" />
+    <None Include="Tesseract-OCR\doc\AUTHORS" />
+    <None Include="Tesseract-OCR\doc\COPYING" />
+    <None Include="Tesseract-OCR\doc\README" />
+    <None Include="Tesseract-OCR\doc\ReleaseNotes" />
+    <None Include="Tesseract-OCR\tessdata\chi_sim.traineddata" />
+    <None Include="Tesseract-OCR\tessdata\configs\ambigs.train" />
+    <None Include="Tesseract-OCR\tessdata\configs\api_config" />
+    <None Include="Tesseract-OCR\tessdata\configs\bigram" />
+    <None Include="Tesseract-OCR\tessdata\configs\box.train" />
+    <None Include="Tesseract-OCR\tessdata\configs\box.train.stderr" />
+    <None Include="Tesseract-OCR\tessdata\configs\digits" />
+    <None Include="Tesseract-OCR\tessdata\configs\hocr" />
+    <None Include="Tesseract-OCR\tessdata\configs\inter" />
+    <None Include="Tesseract-OCR\tessdata\configs\kannada" />
+    <None Include="Tesseract-OCR\tessdata\configs\linebox" />
+    <None Include="Tesseract-OCR\tessdata\configs\logfile" />
+    <None Include="Tesseract-OCR\tessdata\configs\makebox" />
+    <None Include="Tesseract-OCR\tessdata\configs\quiet" />
+    <None Include="Tesseract-OCR\tessdata\configs\rebox" />
+    <None Include="Tesseract-OCR\tessdata\configs\strokewidth" />
+    <None Include="Tesseract-OCR\tessdata\configs\unlv" />
+    <None Include="Tesseract-OCR\tessdata\eng.cube.bigrams" />
+    <None Include="Tesseract-OCR\tessdata\eng.cube.fold" />
+    <None Include="Tesseract-OCR\tessdata\eng.cube.lm" />
+    <None Include="Tesseract-OCR\tessdata\eng.cube.lm_" />
+    <None Include="Tesseract-OCR\tessdata\eng.cube.nn" />
+    <None Include="Tesseract-OCR\tessdata\eng.cube.params" />
+    <None Include="Tesseract-OCR\tessdata\eng.cube.size" />
+    <None Include="Tesseract-OCR\tessdata\eng.cube.word-freq" />
+    <None Include="Tesseract-OCR\tessdata\eng.tesseract_cube.nn" />
+    <None Include="Tesseract-OCR\tessdata\eng.traineddata" />
+    <None Include="Tesseract-OCR\tessdata\tessconfigs\batch" />
+    <None Include="Tesseract-OCR\tessdata\tessconfigs\batch.nochop" />
+    <None Include="Tesseract-OCR\tessdata\tessconfigs\matdemo" />
+    <None Include="Tesseract-OCR\tessdata\tessconfigs\msdemo" />
+    <None Include="Tesseract-OCR\tessdata\tessconfigs\nobatch" />
+    <None Include="Tesseract-OCR\tessdata\tessconfigs\segdemo" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -222,6 +284,32 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="phantomjs.exe" />
+    <Content Include="Tesseract-OCR\ambiguous_words.exe" />
+    <Content Include="Tesseract-OCR\classifier_tester.exe" />
+    <Content Include="Tesseract-OCR\cntraining.exe" />
+    <Content Include="Tesseract-OCR\combine_tessdata.exe" />
+    <Content Include="Tesseract-OCR\dawg2wordlist.exe" />
+    <Content Include="Tesseract-OCR\doc\eurotext.tif" />
+    <Content Include="Tesseract-OCR\doc\phototest.tif" />
+    <Content Include="Tesseract-OCR\java\ScrollView.jar" />
+    <Content Include="Tesseract-OCR\mftraining.exe" />
+    <Content Include="Tesseract-OCR\output\ocr_output_buffer.txt" />
+    <Content Include="Tesseract-OCR\shapeclustering.exe" />
+    <Content Include="Tesseract-OCR\tesseract.exe" />
+    <Content Include="Tesseract-OCR\unicharset_extractor.exe" />
+    <Content Include="Tesseract-OCR\wordlist2dawg.exe" />
+    <Content Include="x64\liblept168.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x64\libtesseract302.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\liblept168.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\libtesseract302.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
