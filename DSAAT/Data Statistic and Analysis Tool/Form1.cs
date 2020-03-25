@@ -92,7 +92,12 @@ namespace Data_Statistic_and_Analysis_Tool
             Debug.AllocConsole();
            
             }
+
+        private void weltweitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            jhuDataExtraktion.startExtract();
         }
+    }
     }
 
     
