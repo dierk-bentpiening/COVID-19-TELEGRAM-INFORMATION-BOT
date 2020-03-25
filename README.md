@@ -50,7 +50,7 @@ It is available in every current release.
 
 Version: 3.20
 
-![Logo](https://i.ibb.co/DM0wpJn/grafik.png)
+![Logo](https://i.imgur.com/GvFZLBD.png)
 
 ## License
 CITBS
