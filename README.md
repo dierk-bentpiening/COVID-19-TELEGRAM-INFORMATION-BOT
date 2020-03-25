@@ -21,18 +21,18 @@ Start Bot.exe and Place the cbot.cfg config containing your SQLite Database Path
 
 ## Usage / Commands
 
-Info, info oder i:
-Allgemeine Daten zu Infektionen / Geheilten / Verstorbenen in Deutschland sowie aktuelle Hinweise.
+Info, info or i:
+Real-time data pertaining to the number of infections, deceased COVID-19 patients and cured patients.
 
-Mit Bundesländer , bl oder BL erhalten Sie eine aktuelle Infografik mit den Fallzahlen zu den einzelnen Bundesländern.
+Using Bundesländer , bl oder BL , you'll receive a visual representation of current case numbers in all federal states of the FRG.
 
-Ausgangssperre [PLZ] zeigt Ihnen, ob eine Ausgangssperre für diese PLZ vorliegt. Anstatt PLZ können Sie aber auch Landkreis x verwenden, z.B. Diepholz.
-Ausgangssperre BL y oder Ausgangssperre Bundesland y zeigt Ihnen alle PLZ-Bereiche in diesem Bundesland, für die eine Ausgangssperre vorliegt.
+Ausgangssperre [Post Code] returns information on whether a curfew is in effect in that area. You may also use the name of that Landkreis instead.
+Ausgangssperre BL y or Ausgangssperre Bundesland y displays all area codes in the aforementioned Bundesland (federal state) in which a mandatory curfew is in effect. 
 
-Geben Sie tipps oder hygiene ein, um eine Auflistung der Schutzmaßnahmen bezüglich viraler Infektionen im Allgemeinen und CoV-2 im Besonderen zu erhalten.
+Send tipps or hygiene to obtain guidelines pertaining measures and precautions to be followed as to curb the spread of COVID-19.
 
-symptome liefert eine Auflistung von Symptomen, die möglicherweise bei einer Corona-Infektion auftreten. Sollten Sie derartige Symptome bei sich oder bei Ihrer Familie 
-beobachten, so beantragen Sie bitte einen Test unter 116 117
+symptome gives you a list of observed symptoms related to COVID-19 infection. Should you notice such symptoms in yourself or someone you've been in close contact with,
+you may call 116 117 and speak to a healthcare professional as to determine whether a COVID-19 test will be necessary and which precautions should be taken.
 
 ## Data Migration and Integration
 
