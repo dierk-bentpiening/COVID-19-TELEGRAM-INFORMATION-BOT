@@ -1,0 +1,75 @@
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DataStatisticAndAnalysisTool\Data Statistic and Analysis Tool\bin\Debug\Data Statistic and Analysis Tool.exe.config
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DataStatisticAndAnalysisTool\Data Statistic and Analysis Tool\bin\Debug\Data Statistic and Analysis Tool.exe
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DataStatisticAndAnalysisTool\Data Statistic and Analysis Tool\bin\Debug\Data Statistic and Analysis Tool.pdb
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DataStatisticAndAnalysisTool\Data Statistic and Analysis Tool\obj\Debug\Data Statistic and Analysis Tool.csprojAssemblyReference.cache
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DataStatisticAndAnalysisTool\Data Statistic and Analysis Tool\obj\Debug\Data_Statistic_and_Analysis_Tool.Form1.resources
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DataStatisticAndAnalysisTool\Data Statistic and Analysis Tool\obj\Debug\Data_Statistic_and_Analysis_Tool.Properties.Resources.resources
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DataStatisticAndAnalysisTool\Data Statistic and Analysis Tool\obj\Debug\Data Statistic and Analysis Tool.csproj.GenerateResource.cache
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DataStatisticAndAnalysisTool\Data Statistic and Analysis Tool\obj\Debug\Data Statistic and Analysis Tool.exe
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DataStatisticAndAnalysisTool\Data Statistic and Analysis Tool\obj\Debug\Data Statistic and Analysis Tool.pdb
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DataStatisticAndAnalysisTool\Data Statistic and Analysis Tool\obj\Debug\Data_Statistic_and_Analysis_Tool.ShowInfectionStatistics.resources
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DSAAT\Data Statistic and Analysis Tool\bin\Debug\x86\sqlite3.dll
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DSAAT\Data Statistic and Analysis Tool\bin\Debug\x64\sqlite3.dll
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DSAAT\Data Statistic and Analysis Tool\bin\Debug\Data Statistic and Analysis Tool.exe.config
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DSAAT\Data Statistic and Analysis Tool\bin\Debug\Data Statistic and Analysis Tool.exe
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DSAAT\Data Statistic and Analysis Tool\bin\Debug\Data Statistic and Analysis Tool.pdb
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DSAAT\Data Statistic and Analysis Tool\bin\Debug\EntityFramework.dll
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DSAAT\Data Statistic and Analysis Tool\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DSAAT\Data Statistic and Analysis Tool\bin\Debug\System.Data.SQLite.dll
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DSAAT\Data Statistic and Analysis Tool\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DSAAT\Data Statistic and Analysis Tool\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DSAAT\Data Statistic and Analysis Tool\bin\Debug\EntityFramework.xml
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DSAAT\Data Statistic and Analysis Tool\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DSAAT\Data Statistic and Analysis Tool\bin\Debug\System.Data.SQLite.xml
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DSAAT\Data Statistic and Analysis Tool\bin\Debug\System.Data.SQLite.dll.config
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DSAAT\Data Statistic and Analysis Tool\obj\Debug\Data Statistic and Analysis Tool.csprojAssemblyReference.cache
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DSAAT\Data Statistic and Analysis Tool\obj\Debug\Data_Statistic_and_Analysis_Tool.Form1.resources
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DSAAT\Data Statistic and Analysis Tool\obj\Debug\Data_Statistic_and_Analysis_Tool.Properties.Resources.resources
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DSAAT\Data Statistic and Analysis Tool\obj\Debug\Data_Statistic_and_Analysis_Tool.ShowInfectionStatistics.resources
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DSAAT\Data Statistic and Analysis Tool\obj\Debug\Data Statistic and Analysis Tool.csproj.GenerateResource.cache
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DSAAT\Data Statistic and Analysis Tool\obj\Debug\Data Statistic and Analysis Tool.csproj.CopyComplete
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DSAAT\Data Statistic and Analysis Tool\obj\Debug\Data Statistic and Analysis Tool.exe
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DSAAT\Data Statistic and Analysis Tool\obj\Debug\Data Statistic and Analysis Tool.pdb
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\DSAAT\Data Statistic and Analysis Tool\obj\Debug\Data_Statistic_and_Analysis_Tool.ShowStatistics.resources
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\bin\Debug\x86\sqlite3.dll
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\bin\Debug\x64\sqlite3.dll
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\bin\Debug\x64\liblept168.dll
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\bin\Debug\x64\libtesseract302.dll
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\bin\Debug\x86\liblept168.dll
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\bin\Debug\x86\libtesseract302.dll
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\bin\Debug\Data Statistic and Analysis Tool.exe.config
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\bin\Debug\Data Statistic and Analysis Tool.exe
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\bin\Debug\Data Statistic and Analysis Tool.pdb
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\bin\Debug\EntityFramework.dll
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\bin\Debug\Ionic.Zip.dll
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\bin\Debug\IronOcr.dll
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\bin\Debug\Newtonsoft.Json.dll
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\bin\Debug\System.Data.SQLite.dll
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\bin\Debug\Telegram.Bot.dll
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\bin\Debug\Tesseract.Helper.dll
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\bin\Debug\WebDriver.dll
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\bin\Debug\EntityFramework.xml
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\bin\Debug\IronOcr.xml
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\bin\Debug\Newtonsoft.Json.xml
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\bin\Debug\System.Data.SQLite.xml
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\bin\Debug\System.Data.SQLite.dll.config
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\bin\Debug\Telegram.Bot.xml
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\bin\Debug\WebDriver.xml
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\obj\Debug\Data Statistic and Analysis Tool.csprojAssemblyReference.cache
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\obj\Debug\Data_Statistic_and_Analysis_Tool.AddAusgangssperre.resources
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\obj\Debug\Data_Statistic_and_Analysis_Tool.AddMesage.resources
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\obj\Debug\Data_Statistic_and_Analysis_Tool.AddURL.resources
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\obj\Debug\Data_Statistic_and_Analysis_Tool.Form1.resources
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\obj\Debug\Data_Statistic_and_Analysis_Tool.InfoFenster.resources
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\obj\Debug\Data_Statistic_and_Analysis_Tool.Properties.Resources.resources
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\obj\Debug\Data_Statistic_and_Analysis_Tool.ShowInfectionStatistics.resources
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\obj\Debug\Data_Statistic_and_Analysis_Tool.ShowStatistics.resources
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\obj\Debug\Data_Statistic_and_Analysis_Tool.SQLLauncher.resources
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\obj\Debug\Data Statistic and Analysis Tool.csproj.GenerateResource.cache
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\obj\Debug\Data Statistic and Analysis Tool.csproj.CopyComplete
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\obj\Debug\Data Statistic and Analysis Tool.exe
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\obj\Debug\Data Statistic and Analysis Tool.pdb

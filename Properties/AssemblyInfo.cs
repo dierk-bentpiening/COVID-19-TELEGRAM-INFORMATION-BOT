@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // Allgemeine Informationen über eine Assembly werden über die folgenden
 // Attribute gesteuert. Ändern Sie diese Attributwerte, um die Informationen zu ändern,
 // die einer Assembly zugeordnet sind.
-[assembly: AssemblyTitle("COVID-19 Information Bot System")]
+[assembly: AssemblyTitle("Data Statistic and Analysis Tool")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("COVID-19 Information System")]
-[assembly: AssemblyCopyright("Copyright © Dierk-Bent Piening, SRLAB DEVELOPMENT TEAM 2020")]
+[assembly: AssemblyProduct("Data Statistic and Analysis Tool")]
+[assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Die folgende GUID bestimmt die ID der Typbibliothek, wenn dieses Projekt für COM verfügbar gemacht wird
-[assembly: Guid("e998ee3d-8672-4723-8052-1b32ffc4450a")]
+[assembly: Guid("4693c615-dbd0-42a8-adf8-4c9c9a7b67d5")]
 
 // Versionsinformationen für eine Assembly bestehen aus den folgenden vier Werten:
 //
