@@ -18,7 +18,7 @@ namespace Data_Statistic_and_Analysis_Tool
             String[] vDBALLBUFFER = vBuffer.Split(seperator, count, StringSplitOptions.RemoveEmptyEntries);
             String vDataBuffer = vDBALLBUFFER[0].ToString();
 
-            return System.IO.File.Exists(Regex.Replace(vDataBuffer, "\\", "\\\\"));
+            return System.IO.File.Exists(vDataBuffer);
         }
     }
 }

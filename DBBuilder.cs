@@ -17,10 +17,10 @@ namespace Data_Statistic_and_Analysis_Tool
             String[] seperator = { ";" };
             Int32 count = 6;
             String[] vDBALLBUFFER = vBuffer.Split(seperator, count, StringSplitOptions.RemoveEmptyEntries);
-            String vDataBuffer = vDBALLBUFFER[0].ToString();
-            String pathCorrected = Regex.Replace(vDataBuffer, "\\", "\\\\");
-            SQLiteConnection.CreateFile(pathCorrected);
-            var connectionDb = new SQLiteConnection($"URI=file:{pathCorrected}");
+            String vPath = vDBALLBUFFER[0].ToString();
+            Console.WriteLine(vPath);
+            SQLiteConnection.CreateFile(vPath);
+            var connectionDb = new SQLiteConnection($"URI=file:{vPath}");
             connectionDb.Open();
             var dbComm = new SQLiteCommand(connectionDb);
 

@@ -113,6 +113,12 @@ namespace Data_Statistic_and_Analysis_Tool
             Thread botStartThread = new Thread(StartBot.startingBot);
             botStartThread.Start();
         }
+
+        private void neuErstellenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Thread createDBThread = new Thread(DBBuilder.buildDB);
+            createDBThread.Start();
+        }
     }
     }
 
