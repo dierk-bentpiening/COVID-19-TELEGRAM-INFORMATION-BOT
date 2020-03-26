@@ -140,8 +140,10 @@
     <Compile Include="AddURL.Designer.cs">
       <DependentUpon>AddURL.cs</DependentUpon>
     </Compile>
+    <Compile Include="fileChecker.cs" />
     <Compile Include="ConfigLoader.cs" />
     <Compile Include="CreateDirectory.cs" />
+    <Compile Include="DBBuilder.cs" />
     <Compile Include="Debug.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
