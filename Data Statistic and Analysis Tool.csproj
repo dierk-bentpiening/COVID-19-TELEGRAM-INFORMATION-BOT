@@ -142,7 +142,9 @@
     </Compile>
     <Compile Include="ConfigLoader.cs" />
     <Compile Include="CreateDirectory.cs" />
+    <Compile Include="DBBuilder.cs" />
     <Compile Include="Debug.cs" />
+    <Compile Include="fileChecker.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
