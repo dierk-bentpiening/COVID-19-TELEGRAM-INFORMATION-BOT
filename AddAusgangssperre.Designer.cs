@@ -33,9 +33,9 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menüToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.schließenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.speichernToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label3 = new System.Windows.Forms.Label();
             this.txtLKN = new System.Windows.Forms.TextBox();
-            this.speichernToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.txtBundesland = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -92,9 +92,17 @@
             // 
             this.schließenToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("schließenToolStripMenuItem.Image")));
             this.schließenToolStripMenuItem.Name = "schließenToolStripMenuItem";
-            this.schließenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.schließenToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.schließenToolStripMenuItem.Text = "Schließen";
             this.schließenToolStripMenuItem.Click += new System.EventHandler(this.schließenToolStripMenuItem_Click);
+            // 
+            // speichernToolStripMenuItem
+            // 
+            this.speichernToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("speichernToolStripMenuItem.Image")));
+            this.speichernToolStripMenuItem.Name = "speichernToolStripMenuItem";
+            this.speichernToolStripMenuItem.Size = new System.Drawing.Size(87, 20);
+            this.speichernToolStripMenuItem.Text = "Speichern";
+            this.speichernToolStripMenuItem.Click += new System.EventHandler(this.speichernToolStripMenuItem_Click);
             // 
             // label3
             // 
@@ -121,14 +129,6 @@
             this.txtLKN.Size = new System.Drawing.Size(217, 20);
             this.txtLKN.TabIndex = 6;
             this.txtLKN.TextChanged += new System.EventHandler(this.txtLKN_TextChanged);
-            // 
-            // speichernToolStripMenuItem
-            // 
-            this.speichernToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("speichernToolStripMenuItem.Image")));
-            this.speichernToolStripMenuItem.Name = "speichernToolStripMenuItem";
-            this.speichernToolStripMenuItem.Size = new System.Drawing.Size(87, 20);
-            this.speichernToolStripMenuItem.Text = "Speichern";
-            this.speichernToolStripMenuItem.Click += new System.EventHandler(this.speichernToolStripMenuItem_Click);
             // 
             // label1
             // 

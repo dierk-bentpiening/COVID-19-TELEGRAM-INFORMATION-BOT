@@ -123,7 +123,7 @@
             this.schließenToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("schließenToolStripMenuItem.Image")));
             this.schließenToolStripMenuItem.Name = "schließenToolStripMenuItem";
             this.schließenToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Q)));
-            this.schließenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.schließenToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.schließenToolStripMenuItem.Text = "Schließen";
             // 
             // btnClose

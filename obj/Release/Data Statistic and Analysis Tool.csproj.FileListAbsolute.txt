@@ -82,3 +82,5 @@ C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\obj\Release\Data Statistic and Analysis Tool.csproj.CopyComplete
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\obj\Release\Data Statistic and Analysis Tool.exe
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\obj\Release\Data Statistic and Analysis Tool.pdb
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\obj\Release\Data_Statistic_and_Analysis_Tool.ShowConfig.resources
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\obj\Release\Data_Statistic_and_Analysis_Tool.ChangeConfiguration.resources

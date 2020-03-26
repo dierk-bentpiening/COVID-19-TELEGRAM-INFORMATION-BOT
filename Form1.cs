@@ -119,6 +119,18 @@ namespace Data_Statistic_and_Analysis_Tool
             Thread createDBThread = new Thread(DBBuilder.buildDB);
             createDBThread.Start();
         }
+
+        private void anzeigenToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            ShowConfig shwCfg = new ShowConfig();
+            shwCfg.Show();
+        }
+
+        private void verändernToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChangeConfiguration chgCFG = new ChangeConfiguration();
+            chgCFG.Show();
+        }
     }
     }
 

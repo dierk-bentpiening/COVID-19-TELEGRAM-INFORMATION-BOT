@@ -56,12 +56,16 @@
             this.anzeigenToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.hilfeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureLOGO = new System.Windows.Forms.PictureBox();
-            this.lblCopyright = new System.Windows.Forms.Label();
-            this.btnClose = new System.Windows.Forms.Button();
             this.einstellungenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.neuErstellenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.configToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.neuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.verändernToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.anzeigenToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblCopyright = new System.Windows.Forms.Label();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.pictureLOGO = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureLOGO)).BeginInit();
             this.SuspendLayout();
@@ -316,18 +320,66 @@
             this.infoToolStripMenuItem.Text = "Info";
             this.infoToolStripMenuItem.Click += new System.EventHandler(this.infoToolStripMenuItem_Click);
             // 
-            // pictureLOGO
+            // einstellungenToolStripMenuItem
             // 
-            this.pictureLOGO.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureLOGO.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureLOGO.Image = ((System.Drawing.Image)(resources.GetObject("pictureLOGO.Image")));
-            this.pictureLOGO.Location = new System.Drawing.Point(130, -102);
-            this.pictureLOGO.Name = "pictureLOGO";
-            this.pictureLOGO.Size = new System.Drawing.Size(506, 338);
-            this.pictureLOGO.TabIndex = 1;
-            this.pictureLOGO.TabStop = false;
+            this.einstellungenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dBToolStripMenuItem,
+            this.configToolStripMenuItem});
+            this.einstellungenToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("einstellungenToolStripMenuItem.Image")));
+            this.einstellungenToolStripMenuItem.Name = "einstellungenToolStripMenuItem";
+            this.einstellungenToolStripMenuItem.Size = new System.Drawing.Size(106, 20);
+            this.einstellungenToolStripMenuItem.Text = "Einstellungen";
+            // 
+            // dBToolStripMenuItem
+            // 
+            this.dBToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.neuErstellenToolStripMenuItem});
+            this.dBToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("dBToolStripMenuItem.Image")));
+            this.dBToolStripMenuItem.Name = "dBToolStripMenuItem";
+            this.dBToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.dBToolStripMenuItem.Text = "DB";
+            // 
+            // neuErstellenToolStripMenuItem
+            // 
+            this.neuErstellenToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("neuErstellenToolStripMenuItem.Image")));
+            this.neuErstellenToolStripMenuItem.Name = "neuErstellenToolStripMenuItem";
+            this.neuErstellenToolStripMenuItem.Size = new System.Drawing.Size(96, 22);
+            this.neuErstellenToolStripMenuItem.Text = "Neu";
+            this.neuErstellenToolStripMenuItem.Click += new System.EventHandler(this.neuErstellenToolStripMenuItem_Click);
+            // 
+            // configToolStripMenuItem
+            // 
+            this.configToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.neuToolStripMenuItem,
+            this.verändernToolStripMenuItem,
+            this.anzeigenToolStripMenuItem2});
+            this.configToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("configToolStripMenuItem.Image")));
+            this.configToolStripMenuItem.Name = "configToolStripMenuItem";
+            this.configToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.configToolStripMenuItem.Text = "Config Datei";
+            // 
+            // neuToolStripMenuItem
+            // 
+            this.neuToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("neuToolStripMenuItem.Image")));
+            this.neuToolStripMenuItem.Name = "neuToolStripMenuItem";
+            this.neuToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.neuToolStripMenuItem.Text = "Neu";
+            // 
+            // verändernToolStripMenuItem
+            // 
+            this.verändernToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("verändernToolStripMenuItem.Image")));
+            this.verändernToolStripMenuItem.Name = "verändernToolStripMenuItem";
+            this.verändernToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.verändernToolStripMenuItem.Text = "Verändern";
+            this.verändernToolStripMenuItem.Click += new System.EventHandler(this.verändernToolStripMenuItem_Click);
+            // 
+            // anzeigenToolStripMenuItem2
+            // 
+            this.anzeigenToolStripMenuItem2.Image = ((System.Drawing.Image)(resources.GetObject("anzeigenToolStripMenuItem2.Image")));
+            this.anzeigenToolStripMenuItem2.Name = "anzeigenToolStripMenuItem2";
+            this.anzeigenToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.anzeigenToolStripMenuItem2.Text = "Anzeigen";
+            this.anzeigenToolStripMenuItem2.Click += new System.EventHandler(this.anzeigenToolStripMenuItem2_Click);
             // 
             // lblCopyright
             // 
@@ -351,7 +403,7 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(328, 373);
+            this.btnClose.Location = new System.Drawing.Point(326, 373);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(136, 23);
             this.btnClose.TabIndex = 3;
@@ -359,31 +411,18 @@
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // einstellungenToolStripMenuItem
+            // pictureLOGO
             // 
-            this.einstellungenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.dBToolStripMenuItem});
-            this.einstellungenToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("einstellungenToolStripMenuItem.Image")));
-            this.einstellungenToolStripMenuItem.Name = "einstellungenToolStripMenuItem";
-            this.einstellungenToolStripMenuItem.Size = new System.Drawing.Size(106, 20);
-            this.einstellungenToolStripMenuItem.Text = "Einstellungen";
-            // 
-            // dBToolStripMenuItem
-            // 
-            this.dBToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.neuErstellenToolStripMenuItem});
-            this.dBToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("dBToolStripMenuItem.Image")));
-            this.dBToolStripMenuItem.Name = "dBToolStripMenuItem";
-            this.dBToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.dBToolStripMenuItem.Text = "DB";
-            // 
-            // neuErstellenToolStripMenuItem
-            // 
-            this.neuErstellenToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("neuErstellenToolStripMenuItem.Image")));
-            this.neuErstellenToolStripMenuItem.Name = "neuErstellenToolStripMenuItem";
-            this.neuErstellenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.neuErstellenToolStripMenuItem.Text = "Neu";
-            this.neuErstellenToolStripMenuItem.Click += new System.EventHandler(this.neuErstellenToolStripMenuItem_Click);
+            this.pictureLOGO.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureLOGO.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureLOGO.Image = ((System.Drawing.Image)(resources.GetObject("pictureLOGO.Image")));
+            this.pictureLOGO.Location = new System.Drawing.Point(159, 0);
+            this.pictureLOGO.Name = "pictureLOGO";
+            this.pictureLOGO.Size = new System.Drawing.Size(506, 338);
+            this.pictureLOGO.TabIndex = 1;
+            this.pictureLOGO.TabStop = false;
             // 
             // Form1
             // 
@@ -417,7 +456,6 @@
         private System.Windows.Forms.ToolStripMenuItem anzeigenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem alleToolStripMenuItem1;
         protected System.Windows.Forms.MenuStrip menuStrip1;
-        protected System.Windows.Forms.PictureBox pictureLOGO;
         private System.Windows.Forms.ToolStripMenuItem menüToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem beendenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem infoToolStripMenuItem;
@@ -440,6 +478,11 @@
         private System.Windows.Forms.ToolStripMenuItem einstellungenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dBToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem neuErstellenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem configToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem neuToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem verändernToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem anzeigenToolStripMenuItem2;
+        protected System.Windows.Forms.PictureBox pictureLOGO;
     }
 }
 
