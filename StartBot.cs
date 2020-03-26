@@ -49,7 +49,7 @@ namespace Data_Statistic_and_Analysis_Tool
             {
 
                 Console.WriteLine($"Received a text message in chat {e.Message.Chat.Id}.");
-
+                    Logging.WriteLog("Received a text message in chat: " + e.Message.Chat.Id.ToString());
 
                 if (cmdlist[0] == "i" || cmdlist[0] == "info" || cmdlist[0] == "Info" || cmdlist[0] == "I")
                 {
@@ -85,6 +85,7 @@ namespace Data_Statistic_and_Analysis_Tool
                                     else
                                     {
                                         Console.WriteLine("NO Data----------");
+                                        Logging.WriteLog("JSON DATA Gathering NO Data---------");
                                     }
                                 }
                             }
@@ -94,7 +95,8 @@ namespace Data_Statistic_and_Analysis_Tool
                     catch (Exception exception)
                     {
                         Console.WriteLine("Exception Hit------------");
-                        Console.WriteLine(exception);
+                            Logging.WriteLog("Error Exception: " + exception.ToString());
+                            Console.WriteLine(exception);
                     }
 
                 }
@@ -190,8 +192,9 @@ namespace Data_Statistic_and_Analysis_Tool
                                 int vPLZ = reader.GetInt32(reader.GetOrdinal("PLZ"));
                                 await botClient.SendTextMessageAsync(chatId: e.Message.Chat, text: "Ausgangsperre im Landkreis: " + vLK + " im Bundesland: " + vBUNDESLAND + " verhängt durch: " + vBEHÖRDE + "\n Gültig von:" + vDatumVON + " bis: " + vDatumBIS);
                                 Console.WriteLine("### Abfrage der Ausgangssperren nach Bundesland data------------{0}");
+                                Logging.WriteLog("### Abfrage der Ausgangssperren nach Bundesland data------------{0}");
 
-                            }
+                                }
                             Statistics.newQueryLog(e.Message.Chat.Id.ToString(), vADateTime, "AusgangssperreNachBundesland: " + cmdlist[2]);
                             await botClient.SendTextMessageAsync(chatId: e.Message.Chat, text: "_____ACHTUNG AKTUELLE HINWEISE____\n" + PublicMessages.vPublicMessage());
 
@@ -200,6 +203,7 @@ namespace Data_Statistic_and_Analysis_Tool
                         {
                             await botClient.SendTextMessageAsync(chatId: e.Message.Chat, text: "Für das Bundesland: " + cmdlist[2] + " ist uns keine Ausgangssperre bekannt!");
                             Console.WriteLine("### Abfrage der Ausgangssperren nach Bundesland data------------{0}");
+                            Logging.WriteLog("### Abfrage der Ausgangssperren nach Bundesland data------------{0}");
                             Statistics.newQueryLog(e.Message.Chat.Id.ToString(), vADateTime, "AusgangssperreNachBundesland: Unbekannt");
                             await botClient.SendTextMessageAsync(chatId: e.Message.Chat, text: "_____ACHTUNG AKTUELLE HINWEISE____\n" + PublicMessages.vPublicMessage());
 
@@ -226,16 +230,19 @@ namespace Data_Statistic_and_Analysis_Tool
                                 int vPLZ = reader.GetInt32(reader.GetOrdinal("PLZ"));
                                 await botClient.SendTextMessageAsync(chatId: e.Message.Chat, text: "Ausgangsperre im Landkreis: " + vLK + " im Bundesland: " + vBUNDESLAND + " verhängt durch: " + vBEHÖRDE + "\n Gültig von:" + vDatumVON + " bis: " + vDatumBIS + " mit der PLZ: " + vPLZ);
                                 Console.WriteLine("### Abfrage der Ausgangssperren nach Landkreis data------------{0}");
+                                Logging.WriteLog("### Abfrage der Ausgangssperren nach Landkreis data------------{0}");
 
-                            }
-                            Statistics.newQueryLog(e.Message.Chat.Id.ToString(), vADateTime, "AusgangssperreNachLK: " + cmdlist[2]);
-                            await botClient.SendTextMessageAsync(chatId: e.Message.Chat, text: "_____ACHTUNG AKTUELLE HINWEISE____\n" + PublicMessages.vPublicMessage());
+
+                                }
+                                Statistics.newQueryLog(e.Message.Chat.Id.ToString(), vADateTime, "AusgangssperreNachLK: " + cmdlist[2]);
+                                await botClient.SendTextMessageAsync(chatId: e.Message.Chat, text: "_____ACHTUNG AKTUELLE HINWEISE____\n" + PublicMessages.vPublicMessage());
 
                         }
                         else
                         {
                             await botClient.SendTextMessageAsync(chatId: e.Message.Chat, text: "Für den Landkreis: " + cmdlist[2] + " ist uns keine Ausgangssperre bekannt!");
                             Console.WriteLine("### Abfrage der Ausgangssperren nach Bundesland data------------{0}");
+                            Logging.WriteLog("### Abfrage der Ausgangssperren nach Bundesland data------------{0}");
                             Statistics.newQueryLog(e.Message.Chat.Id.ToString(), vADateTime, "AusgangssperreNachBundesland Unbekannt");
                             await botClient.SendTextMessageAsync(chatId: e.Message.Chat, text: "_____ACHTUNG AKTUELLE HINWEISE____\n" + PublicMessages.vPublicMessage());
 
@@ -263,9 +270,11 @@ namespace Data_Statistic_and_Analysis_Tool
                                 int vPLZ = reader.GetInt32(reader.GetOrdinal("PLZ"));
                                 await botClient.SendTextMessageAsync(chatId: e.Message.Chat, text: "Ausgangsperre im Landkreis: " + vLK + " im Bundesland: " + vBUNDESLAND + " verhängt durch: " + vBEHÖRDE + "\n Gültig von:" + vDatumVON + " bis: " + vDatumBIS);
                                 Console.WriteLine("### Abfrage der Ausgangssperren data------------{0}");
+                                Logging.WriteLog("### Abfrage der Ausgangssperren data------------{0}");
 
-                            }
-                            Statistics.newQueryLog(e.Message.Chat.Id.ToString(), vADateTime, "AusgangssperreNachPLZ: " + cmdlist[1]);
+
+                                }
+                                Statistics.newQueryLog(e.Message.Chat.Id.ToString(), vADateTime, "AusgangssperreNachPLZ: " + cmdlist[1]);
                             await botClient.SendTextMessageAsync(chatId: e.Message.Chat, text: "_____ACHTUNG AKTUELLE HINWEISE____\n" + PublicMessages.vPublicMessage());
 
                         }
@@ -274,6 +283,7 @@ namespace Data_Statistic_and_Analysis_Tool
                             await botClient.SendTextMessageAsync(chatId: e.Message.Chat, text: "Für die PLZ: " + cmdlist[1] + " ist uns keine Ausgangssperre bekannt!");
                             Console.WriteLine("### Abfrage der Ausgangssperren data------------{0}");
                             Statistics.newQueryLog(e.Message.Chat.Id.ToString(), vADateTime, "AusgangssperreNachPLZ: Unbekannt");
+                            Logging.WriteLog("### Abfrage der Ausgangssperren data------------{0}");
                             await botClient.SendTextMessageAsync(chatId: e.Message.Chat, text: "_____ACHTUNG AKTUELLE HINWEISE____\n" + PublicMessages.vPublicMessage());
 
                         }
@@ -290,6 +300,7 @@ namespace Data_Statistic_and_Analysis_Tool
                    caption: "<b>COVID-19 SYMPTOME</b>. <i>Source</i>: <a href=\"https://www.coronavirus.sachsen.de/coronavirus-faq.html\">Robert Koch Institut</a>", parseMode: Telegram.Bot.Types.Enums.ParseMode.Html
                      );
                     Console.WriteLine("### Abfrage der Symptome data------------{0}");
+                    Logging.WriteLog("### Abfrage der Symptome data------------{0}");
                     Statistics.newQueryLog(e.Message.Chat.Id.ToString(), vADateTime, "Symptome");
                     await botClient.SendTextMessageAsync(chatId: e.Message.Chat, text: "_____ACHTUNG AKTUELLE HINWEISE____\n" + PublicMessages.vPublicMessage());
 
@@ -303,6 +314,7 @@ namespace Data_Statistic_and_Analysis_Tool
                    caption: "<b>SO SCHÜTZEN SIE SICH!</b>. <i>Source</i>: <a href=\"https://www.zeit.de/wissen/gesundheit/2020-02/coronavirus-hygienetipps-ansteckung-infektion-schutz\">ZEIT.DE</a>", parseMode: Telegram.Bot.Types.Enums.ParseMode.Html
                      );
                     Console.WriteLine("### Abfrage der SchutzDaten: data------------{0}");
+                    Logging.WriteLog("### Abfrage der SchutzDaten: data------------{0}");
                     Statistics.newQueryLog(e.Message.Chat.Id.ToString(), vADateTime, "Hygiene");
                     await botClient.SendTextMessageAsync(chatId: e.Message.Chat, text: "_____ACHTUNG AKTUELLE HINWEISE____\n" + PublicMessages.vPublicMessage());
 
@@ -323,6 +335,7 @@ namespace Data_Statistic_and_Analysis_Tool
                     await botClient.SendTextMessageAsync(chatId: e.Message.Chat, text: "_____ACHTUNG AKTUELLE HINWEISE____\n" + PublicMessages.vPublicMessage());
 
                     Console.WriteLine("### Abfrage aber unbekannter Befehl------------{0}");
+                    Logging.WriteLog("### Abfrage aber unbekannter Befehl------------{0}");
                     Statistics.newQueryLog(e.Message.Chat.Id.ToString(), vADateTime, "Unbekannter Befehl ");
                 }
             }
@@ -331,9 +344,10 @@ namespace Data_Statistic_and_Analysis_Tool
         {
             Console.ForegroundColor = ConsoleColor.Red;
             Console.BackgroundColor = ConsoleColor.DarkBlue;
-            Console.WriteLine("*-*-*-*-* Ein Fehler ist aufgetreten und wurde abgefangen------------{0}" + ex);
+            Console.WriteLine("### Ein Fehler ist aufgetreten und wurde abgefangen------------{0}" + ex);
+            Console.WriteLine("### Error: Ein Fehler ist aufgetreten und wurde abgefangen------------{0}" + ex);
 
-        }
+            }
 
         //throw new NotImplementedException();
     }
