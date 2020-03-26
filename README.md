@@ -1,5 +1,9 @@
 
-![Logo](https://i.ibb.co/FzfmF5J/logo.png)
+
+
+<p align="center">
+  <img src="https://i.imgur.com/etrrN7p.png">
+</p>
 
 
 # COVID-19 Telegram Information Bot Server for Germany
@@ -50,7 +54,11 @@ It is available in every current release.
 
 Version: 3.20
 
-![Logo](https://i.imgur.com/GvFZLBD.png)
+
+
+<p align="center">
+  <img src="https://i.imgur.com/xXsHwuq.png">
+</p>
 
 ## License
 CITBS
