@@ -32,6 +32,7 @@ namespace Data_Statistic_and_Analysis_Tool
             catch (Exception e)
             {
                 Console.WriteLine("Bei der Erstellung der Tabelle ist folgender Fehler aufgetreten: " + e.Message);
+                Logging.WriteLog(e.Message);
             }
 
             try
@@ -42,6 +43,7 @@ namespace Data_Statistic_and_Analysis_Tool
             catch (Exception e)
             {
                 Console.WriteLine("Bei der Erstellung der Tabelle ist folgender Fehler aufgetreten: " + e.Message);
+                Logging.WriteLog(e.Message);
             }
 
             try
@@ -52,6 +54,7 @@ namespace Data_Statistic_and_Analysis_Tool
             catch (Exception e)
             {
                 Console.WriteLine("Bei der Erstellung der Tabelle ist folgender Fehler aufgetreten: " + e.Message);
+                Logging.WriteLog(e.Message);
             }
 
             try
@@ -62,6 +65,7 @@ namespace Data_Statistic_and_Analysis_Tool
             catch (Exception e)
             {
                 Console.WriteLine("Bei der Erstellung der Tabelle ist folgender Fehler aufgetreten: " + e.Message);
+                Logging.WriteLog(e.Message);
             }
 
             try
@@ -72,6 +76,7 @@ namespace Data_Statistic_and_Analysis_Tool
             catch (Exception e)
             {
                 Console.WriteLine("Bei der Erstellung der Tabelle ist folgender Fehler aufgetreten: " + e.Message);
+                Logging.WriteLog(e.Message);
             }
 
             try
@@ -82,6 +87,7 @@ namespace Data_Statistic_and_Analysis_Tool
             catch (Exception e)
             {
                 Console.WriteLine("Bei der Erstellung der Tabelle ist folgender Fehler aufgetreten: " + e.Message);
+                Logging.WriteLog(e.Message);
             }
 
             try
@@ -92,6 +98,7 @@ namespace Data_Statistic_and_Analysis_Tool
             catch (Exception e)
             {
                 Console.WriteLine("Bei der Erstellung der Tabelle ist folgender Fehler aufgetreten: " + e.Message);
+                Logging.WriteLog(e.Message);
             }
 
 
