@@ -29,7 +29,7 @@ namespace Data_Statistic_and_Analysis_Tool
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            String vConfigData = txtDB.Text + ";" + txtFTPURI.Text + ";" + txtUsername.Text + ";" + txtPassword.Text + ";" + txtPBURL + ";" + txtTelegram.Text;
+            String vConfigData = txtDB.Text + ";" + txtFTPURI.Text + ";" + txtUsername.Text + ";" + txtPassword.Text + ";" + txtPBURL.Text + ";" + txtTelegram.Text;
             try
             {
                 System.IO.File.WriteAllText(@"C:\cbot.cfg", vConfigData);

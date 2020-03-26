@@ -64,10 +64,7 @@
             this.verändernToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.anzeigenToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.lblCopyright = new System.Windows.Forms.Label();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.pictureLOGO = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureLOGO)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -85,7 +82,7 @@
             this.einstellungenToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(730, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -336,7 +333,7 @@
             this.neuErstellenToolStripMenuItem});
             this.dBToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("dBToolStripMenuItem.Image")));
             this.dBToolStripMenuItem.Name = "dBToolStripMenuItem";
-            this.dBToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.dBToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.dBToolStripMenuItem.Text = "DB";
             // 
             // neuErstellenToolStripMenuItem
@@ -355,21 +352,21 @@
             this.anzeigenToolStripMenuItem2});
             this.configToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("configToolStripMenuItem.Image")));
             this.configToolStripMenuItem.Name = "configToolStripMenuItem";
-            this.configToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.configToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.configToolStripMenuItem.Text = "Config Datei";
             // 
             // neuToolStripMenuItem
             // 
             this.neuToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("neuToolStripMenuItem.Image")));
             this.neuToolStripMenuItem.Name = "neuToolStripMenuItem";
-            this.neuToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.neuToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.neuToolStripMenuItem.Text = "Neu";
             // 
             // verändernToolStripMenuItem
             // 
             this.verändernToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("verändernToolStripMenuItem.Image")));
             this.verändernToolStripMenuItem.Name = "verändernToolStripMenuItem";
-            this.verändernToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.verändernToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.verändernToolStripMenuItem.Text = "Verändern";
             this.verändernToolStripMenuItem.Click += new System.EventHandler(this.verändernToolStripMenuItem_Click);
             // 
@@ -377,7 +374,7 @@
             // 
             this.anzeigenToolStripMenuItem2.Image = ((System.Drawing.Image)(resources.GetObject("anzeigenToolStripMenuItem2.Image")));
             this.anzeigenToolStripMenuItem2.Name = "anzeigenToolStripMenuItem2";
-            this.anzeigenToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.anzeigenToolStripMenuItem2.Size = new System.Drawing.Size(127, 22);
             this.anzeigenToolStripMenuItem2.Text = "Anzeigen";
             this.anzeigenToolStripMenuItem2.Click += new System.EventHandler(this.anzeigenToolStripMenuItem2_Click);
             // 
@@ -387,59 +384,33 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblCopyright.AutoSize = true;
             this.lblCopyright.Font = new System.Drawing.Font("Liberation Mono", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCopyright.Location = new System.Drawing.Point(248, 399);
+            this.lblCopyright.Location = new System.Drawing.Point(219, 394);
             this.lblCopyright.Name = "lblCopyright";
             this.lblCopyright.Size = new System.Drawing.Size(287, 42);
             this.lblCopyright.TabIndex = 2;
             this.lblCopyright.Text = "(C) 2020 Dierk-Bent Piening, Roman Spies\r\nAll Rights reserved\r\nLicensed under the" +
     " MIT License\r\n";
             this.lblCopyright.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnClose
-            // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
-            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(326, 373);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(136, 23);
-            this.btnClose.TabIndex = 3;
-            this.btnClose.Text = "Beenden";
-            this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // pictureLOGO
-            // 
-            this.pictureLOGO.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureLOGO.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureLOGO.Image = ((System.Drawing.Image)(resources.GetObject("pictureLOGO.Image")));
-            this.pictureLOGO.Location = new System.Drawing.Point(159, 0);
-            this.pictureLOGO.Name = "pictureLOGO";
-            this.pictureLOGO.Size = new System.Drawing.Size(506, 338);
-            this.pictureLOGO.TabIndex = 1;
-            this.pictureLOGO.TabStop = false;
+            this.lblCopyright.Click += new System.EventHandler(this.lblCopyright_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnClose);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ClientSize = new System.Drawing.Size(730, 445);
             this.Controls.Add(this.lblCopyright);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.pictureLOGO);
+            this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Data Statistic and Analysis Tool";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureLOGO)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -460,7 +431,6 @@
         private System.Windows.Forms.ToolStripMenuItem beendenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem infoToolStripMenuItem;
         private System.Windows.Forms.Label lblCopyright;
-        protected System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.ToolStripMenuItem einfügenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ausgangssperreToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem uRLToolStripMenuItem;
@@ -482,7 +452,6 @@
         private System.Windows.Forms.ToolStripMenuItem neuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verändernToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem anzeigenToolStripMenuItem2;
-        protected System.Windows.Forms.PictureBox pictureLOGO;
     }
 }
 

@@ -116,8 +116,16 @@ namespace Data_Statistic_and_Analysis_Tool
 
         private void neuErstellenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Thread createDBThread = new Thread(DBBuilder.buildDB);
-            createDBThread.Start();
+            try
+            {
+                Thread createDBThread = new Thread(DBBuilder.buildDB);
+                createDBThread.Start();
+            }
+            catch(Exception ex)
+            {
+                Logging.WriteLog("Erront cant create DB " + ex);
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void anzeigenToolStripMenuItem2_Click(object sender, EventArgs e)
@@ -130,6 +138,21 @@ namespace Data_Statistic_and_Analysis_Tool
         {
             ChangeConfiguration chgCFG = new ChangeConfiguration();
             chgCFG.Show();
+        }
+
+        private void pictureLOGO_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblCopyright_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+ 
         }
     }
     }

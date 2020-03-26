@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ShowInfectionStatistics));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.sortToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.iDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -70,20 +71,20 @@
             this.neusteZuerstToolStripMenuItem,
             this.ältesteZuerstToolStripMenuItem});
             this.iDToolStripMenuItem.Name = "iDToolStripMenuItem";
-            this.iDToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.iDToolStripMenuItem.Size = new System.Drawing.Size(85, 22);
             this.iDToolStripMenuItem.Text = "ID";
             // 
             // neusteZuerstToolStripMenuItem
             // 
             this.neusteZuerstToolStripMenuItem.Name = "neusteZuerstToolStripMenuItem";
-            this.neusteZuerstToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.neusteZuerstToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.neusteZuerstToolStripMenuItem.Text = "Neuste zuerst";
             this.neusteZuerstToolStripMenuItem.Click += new System.EventHandler(this.neusteZuerstToolStripMenuItem_Click);
             // 
             // ältesteZuerstToolStripMenuItem
             // 
             this.ältesteZuerstToolStripMenuItem.Name = "ältesteZuerstToolStripMenuItem";
-            this.ältesteZuerstToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ältesteZuerstToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.ältesteZuerstToolStripMenuItem.Text = "Älteste zuerst";
             // 
             // dvInfect
@@ -144,6 +145,7 @@
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.dvInfect);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "ShowInfectionStatistics";
             this.Text = "ShowInfectionStatistics";

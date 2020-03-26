@@ -38,6 +38,9 @@
             this.iDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aufsteigendToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.absteigendToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.developerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sQLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.konsoleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dvInfect = new System.Windows.Forms.DataGridView();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnReload = new System.Windows.Forms.Button();
@@ -47,9 +50,6 @@
             this.cQuerryType = new System.Windows.Forms.CheckBox();
             this.cDateTime = new System.Windows.Forms.CheckBox();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.developerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sQLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.konsoleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dvInfect)).BeginInit();
             this.SuspendLayout();
@@ -111,7 +111,7 @@
             this.absteigendToolStripMenuItem});
             this.iDToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("iDToolStripMenuItem.Image")));
             this.iDToolStripMenuItem.Name = "iDToolStripMenuItem";
-            this.iDToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.iDToolStripMenuItem.Size = new System.Drawing.Size(85, 22);
             this.iDToolStripMenuItem.Text = "ID";
             // 
             // aufsteigendToolStripMenuItem
@@ -133,6 +133,31 @@
             this.absteigendToolStripMenuItem.Size = new System.Drawing.Size(265, 22);
             this.absteigendToolStripMenuItem.Text = "Absteigend";
             this.absteigendToolStripMenuItem.Click += new System.EventHandler(this.absteigendToolStripMenuItem_Click);
+            // 
+            // developerToolStripMenuItem
+            // 
+            this.developerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sQLToolStripMenuItem,
+            this.konsoleToolStripMenuItem});
+            this.developerToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("developerToolStripMenuItem.Image")));
+            this.developerToolStripMenuItem.Name = "developerToolStripMenuItem";
+            this.developerToolStripMenuItem.Size = new System.Drawing.Size(88, 20);
+            this.developerToolStripMenuItem.Text = "Developer";
+            // 
+            // sQLToolStripMenuItem
+            // 
+            this.sQLToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("sQLToolStripMenuItem.Image")));
+            this.sQLToolStripMenuItem.Name = "sQLToolStripMenuItem";
+            this.sQLToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.sQLToolStripMenuItem.Text = "SQL";
+            this.sQLToolStripMenuItem.Click += new System.EventHandler(this.sQLToolStripMenuItem_Click);
+            // 
+            // konsoleToolStripMenuItem
+            // 
+            this.konsoleToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("konsoleToolStripMenuItem.Image")));
+            this.konsoleToolStripMenuItem.Name = "konsoleToolStripMenuItem";
+            this.konsoleToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.konsoleToolStripMenuItem.Text = "Konsole";
             // 
             // dvInfect
             // 
@@ -261,31 +286,6 @@
             this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // developerToolStripMenuItem
-            // 
-            this.developerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.sQLToolStripMenuItem,
-            this.konsoleToolStripMenuItem});
-            this.developerToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("developerToolStripMenuItem.Image")));
-            this.developerToolStripMenuItem.Name = "developerToolStripMenuItem";
-            this.developerToolStripMenuItem.Size = new System.Drawing.Size(88, 20);
-            this.developerToolStripMenuItem.Text = "Developer";
-            // 
-            // sQLToolStripMenuItem
-            // 
-            this.sQLToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("sQLToolStripMenuItem.Image")));
-            this.sQLToolStripMenuItem.Name = "sQLToolStripMenuItem";
-            this.sQLToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.sQLToolStripMenuItem.Text = "SQL";
-            this.sQLToolStripMenuItem.Click += new System.EventHandler(this.sQLToolStripMenuItem_Click);
-            // 
-            // konsoleToolStripMenuItem
-            // 
-            this.konsoleToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("konsoleToolStripMenuItem.Image")));
-            this.konsoleToolStripMenuItem.Name = "konsoleToolStripMenuItem";
-            this.konsoleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.konsoleToolStripMenuItem.Text = "Konsole";
-            // 
             // ShowStatistics
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -302,6 +302,7 @@
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.dvInfect);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "ShowStatistics";
             this.Text = "Bot Statistiken";

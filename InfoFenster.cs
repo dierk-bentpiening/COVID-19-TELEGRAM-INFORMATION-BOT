@@ -31,5 +31,15 @@ namespace Data_Statistic_and_Analysis_Tool
         {
             Close();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnClose_Click_1(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

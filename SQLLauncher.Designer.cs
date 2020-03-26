@@ -34,16 +34,16 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menüToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.schließenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.codeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ausführenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.schließenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.txtSQL = new System.Windows.Forms.RichTextBox();
-            this.chkDevelTrue = new System.Windows.Forms.CheckBox();
             this.debugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.konsoleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.anzeigenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.interpreterStartenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.txtSQL = new System.Windows.Forms.RichTextBox();
+            this.chkDevelTrue = new System.Windows.Forms.CheckBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -119,6 +119,13 @@
             this.menüToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.menüToolStripMenuItem.Text = "Menü";
             // 
+            // schließenToolStripMenuItem
+            // 
+            this.schließenToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("schließenToolStripMenuItem.Image")));
+            this.schließenToolStripMenuItem.Name = "schließenToolStripMenuItem";
+            this.schließenToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.schließenToolStripMenuItem.Text = "Schließen";
+            // 
             // codeToolStripMenuItem
             // 
             this.codeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -133,23 +140,51 @@
             // 
             this.ausführenToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("ausführenToolStripMenuItem.Image")));
             this.ausführenToolStripMenuItem.Name = "ausführenToolStripMenuItem";
-            this.ausführenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ausführenToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.ausführenToolStripMenuItem.Text = "Ausführen";
             // 
             // clearToolStripMenuItem
             // 
             this.clearToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("clearToolStripMenuItem.Image")));
             this.clearToolStripMenuItem.Name = "clearToolStripMenuItem";
-            this.clearToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.clearToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.clearToolStripMenuItem.Text = "Clear";
             this.clearToolStripMenuItem.Click += new System.EventHandler(this.clearToolStripMenuItem_Click);
             // 
-            // schließenToolStripMenuItem
+            // debugToolStripMenuItem
             // 
-            this.schließenToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("schließenToolStripMenuItem.Image")));
-            this.schließenToolStripMenuItem.Name = "schließenToolStripMenuItem";
-            this.schließenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.schließenToolStripMenuItem.Text = "Schließen";
+            this.debugToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.konsoleToolStripMenuItem});
+            this.debugToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("debugToolStripMenuItem.Image")));
+            this.debugToolStripMenuItem.Name = "debugToolStripMenuItem";
+            this.debugToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
+            this.debugToolStripMenuItem.Text = "Debug";
+            // 
+            // konsoleToolStripMenuItem
+            // 
+            this.konsoleToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.anzeigenToolStripMenuItem,
+            this.interpreterStartenToolStripMenuItem});
+            this.konsoleToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("konsoleToolStripMenuItem.Image")));
+            this.konsoleToolStripMenuItem.Name = "konsoleToolStripMenuItem";
+            this.konsoleToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.konsoleToolStripMenuItem.Text = "Konsole";
+            // 
+            // anzeigenToolStripMenuItem
+            // 
+            this.anzeigenToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("anzeigenToolStripMenuItem.Image")));
+            this.anzeigenToolStripMenuItem.Name = "anzeigenToolStripMenuItem";
+            this.anzeigenToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.anzeigenToolStripMenuItem.Text = "Anzeigen";
+            this.anzeigenToolStripMenuItem.Click += new System.EventHandler(this.anzeigenToolStripMenuItem_Click);
+            // 
+            // interpreterStartenToolStripMenuItem
+            // 
+            this.interpreterStartenToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("interpreterStartenToolStripMenuItem.Image")));
+            this.interpreterStartenToolStripMenuItem.Name = "interpreterStartenToolStripMenuItem";
+            this.interpreterStartenToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.interpreterStartenToolStripMenuItem.Text = "Interpreter Starten";
+            this.interpreterStartenToolStripMenuItem.Click += new System.EventHandler(this.interpreterStartenToolStripMenuItem_Click);
             // 
             // txtSQL
             // 
@@ -177,41 +212,6 @@
             this.chkDevelTrue.UseVisualStyleBackColor = false;
             this.chkDevelTrue.CheckedChanged += new System.EventHandler(this.chkDevelTrue_CheckedChanged);
             // 
-            // debugToolStripMenuItem
-            // 
-            this.debugToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.konsoleToolStripMenuItem});
-            this.debugToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("debugToolStripMenuItem.Image")));
-            this.debugToolStripMenuItem.Name = "debugToolStripMenuItem";
-            this.debugToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
-            this.debugToolStripMenuItem.Text = "Debug";
-            // 
-            // konsoleToolStripMenuItem
-            // 
-            this.konsoleToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.anzeigenToolStripMenuItem,
-            this.interpreterStartenToolStripMenuItem});
-            this.konsoleToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("konsoleToolStripMenuItem.Image")));
-            this.konsoleToolStripMenuItem.Name = "konsoleToolStripMenuItem";
-            this.konsoleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.konsoleToolStripMenuItem.Text = "Konsole";
-            // 
-            // anzeigenToolStripMenuItem
-            // 
-            this.anzeigenToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("anzeigenToolStripMenuItem.Image")));
-            this.anzeigenToolStripMenuItem.Name = "anzeigenToolStripMenuItem";
-            this.anzeigenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.anzeigenToolStripMenuItem.Text = "Anzeigen";
-            this.anzeigenToolStripMenuItem.Click += new System.EventHandler(this.anzeigenToolStripMenuItem_Click);
-            // 
-            // interpreterStartenToolStripMenuItem
-            // 
-            this.interpreterStartenToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("interpreterStartenToolStripMenuItem.Image")));
-            this.interpreterStartenToolStripMenuItem.Name = "interpreterStartenToolStripMenuItem";
-            this.interpreterStartenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.interpreterStartenToolStripMenuItem.Text = "Interpreter Starten";
-            this.interpreterStartenToolStripMenuItem.Click += new System.EventHandler(this.interpreterStartenToolStripMenuItem_Click);
-            // 
             // SQLLauncher
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -223,6 +223,7 @@
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "SQLLauncher";
             this.Text = "SQL Ausführen";
