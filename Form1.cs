@@ -28,11 +28,10 @@ namespace Data_Statistic_and_Analysis_Tool
         private void alleToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Logging.WriteLog("Loading Infection Statistics");
-
-            ShowInfectionStatistics shwIS;
-            shwIS = new ShowInfectionStatistics();
-            shwIS.Show();
-            Console.WriteLine("*-*-* Show infection statistics");
+            ShowInfectionStatistics shwInfect = new ShowInfectionStatistics();
+            //Thread infecShwThread = new Thread(shwInfect.Show);
+            //infecShwThread.Start();
+            shwInfect.Show();
         }
 
         private void alleToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -153,6 +152,23 @@ namespace Data_Statistic_and_Analysis_Tool
         private void Form1_Load(object sender, EventArgs e)
         {
  
+        }
+
+        private void ausführenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SQLLauncher sqlLauncherW = new SQLLauncher();
+            sqlLauncherW.Show();
+        }
+
+        private void fTPBackupToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void aufFTPServerSichernToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DbBackup dbBackup = new DbBackup();
+            dbBackup.Show();
         }
     }
     }

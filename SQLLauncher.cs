@@ -26,12 +26,12 @@ namespace Data_Statistic_and_Analysis_Tool
 
         private void btnRun_Click(object sender, EventArgs e)
         {
-            ShowStatistics showSta;
-            showSta = new ShowStatistics();
+            SQLLauncherDataViewer showSta;
+            showSta = new SQLLauncherDataViewer();
 
            
             showSta.Show();
-            showSta.dataFill(txtSQL.Text);
+            showSta.dataFill(txtSQL.Text, "first");
         }
 
         private void chkDevelTrue_CheckedChanged(object sender, EventArgs e)

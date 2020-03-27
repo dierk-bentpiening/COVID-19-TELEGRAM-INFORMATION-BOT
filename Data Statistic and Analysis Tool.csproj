@@ -71,6 +71,15 @@
     <TargetZone>LocalIntranet</TargetZone>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.5.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
+      <HintPath>packages\Portable.BouncyCastle.1.8.5\lib\net40\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging, Version=3.4.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>packages\Common.Logging.3.4.1\lib\net40\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging.Core, Version=3.4.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>packages\Common.Logging.Core.3.4.1\lib\net40\Common.Logging.Core.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>packages\EntityFramework.6.3.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -82,6 +91,9 @@
     </Reference>
     <Reference Include="IronOcr, Version=4.4.0.21181, Culture=neutral, PublicKeyToken=5f366048dc436899, processorArchitecture=MSIL">
       <HintPath>packages\IronOcr.4.4.0\lib\net40\IronOcr.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.1, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\iTextSharp.5.5.13.1\lib\itextsharp.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -148,6 +160,12 @@
     </Compile>
     <Compile Include="ConfigLoader.cs" />
     <Compile Include="CreateDirectory.cs" />
+    <Compile Include="DbBackup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DbBackup.Designer.cs">
+      <DependentUpon>DbBackup.cs</DependentUpon>
+    </Compile>
     <Compile Include="DBBuilder.cs" />
     <Compile Include="Debug.cs" />
     <Compile Include="fileChecker.cs" />
@@ -194,6 +212,12 @@
     <Compile Include="SQLLauncher.Designer.cs">
       <DependentUpon>SQLLauncher.cs</DependentUpon>
     </Compile>
+    <Compile Include="SQLLauncherDataViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SQLLauncherDataViewer.Designer.cs">
+      <DependentUpon>SQLLauncherDataViewer.cs</DependentUpon>
+    </Compile>
     <Compile Include="StartBot.cs" />
     <Compile Include="Statistics.cs" />
     <EmbeddedResource Include="AddAusgangssperre.resx">
@@ -207,6 +231,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChangeConfiguration.resx">
       <DependentUpon>ChangeConfiguration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DbBackup.resx">
+      <DependentUpon>DbBackup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -234,6 +261,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SQLLauncher.resx">
       <DependentUpon>SQLLauncher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SQLLauncherDataViewer.resx">
+      <DependentUpon>SQLLauncherDataViewer.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.manifest" />
     <None Include="Data Statistic and Analysis Tool_TemporaryKey.pfx" />

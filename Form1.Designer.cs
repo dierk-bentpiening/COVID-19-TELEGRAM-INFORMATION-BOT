@@ -64,6 +64,8 @@
             this.verändernToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.anzeigenToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.lblCopyright = new System.Windows.Forms.Label();
+            this.fTPBackupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aufFTPServerSichernToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -82,7 +84,7 @@
             this.einstellungenToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(730, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(795, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -121,7 +123,7 @@
             this.datenToolStripMenuItem});
             this.tabellenToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("tabellenToolStripMenuItem.Image")));
             this.tabellenToolStripMenuItem.Name = "tabellenToolStripMenuItem";
-            this.tabellenToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.tabellenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.tabellenToolStripMenuItem.Text = "Infektions Statistik";
             // 
             // datenToolStripMenuItem
@@ -130,7 +132,7 @@
             this.alleToolStripMenuItem});
             this.datenToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("datenToolStripMenuItem.Image")));
             this.datenToolStripMenuItem.Name = "datenToolStripMenuItem";
-            this.datenToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.datenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.datenToolStripMenuItem.Text = "Anzeigen";
             this.datenToolStripMenuItem.Click += new System.EventHandler(this.datenToolStripMenuItem_Click);
             // 
@@ -139,7 +141,7 @@
             this.alleToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("alleToolStripMenuItem.Image")));
             this.alleToolStripMenuItem.Name = "alleToolStripMenuItem";
             this.alleToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.I)));
-            this.alleToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.alleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.alleToolStripMenuItem.Text = "Alle";
             this.alleToolStripMenuItem.Click += new System.EventHandler(this.alleToolStripMenuItem_Click);
             // 
@@ -149,7 +151,7 @@
             this.anzeigenToolStripMenuItem});
             this.botStatistikToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("botStatistikToolStripMenuItem.Image")));
             this.botStatistikToolStripMenuItem.Name = "botStatistikToolStripMenuItem";
-            this.botStatistikToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.botStatistikToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.botStatistikToolStripMenuItem.Text = "Bot Statistik";
             // 
             // anzeigenToolStripMenuItem
@@ -252,10 +254,12 @@
             // 
             // dateiToolStripMenuItem
             // 
+            this.dateiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fTPBackupToolStripMenuItem});
             this.dateiToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("dateiToolStripMenuItem.Image")));
             this.dateiToolStripMenuItem.Name = "dateiToolStripMenuItem";
-            this.dateiToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
-            this.dateiToolStripMenuItem.Text = "Datei";
+            this.dateiToolStripMenuItem.Size = new System.Drawing.Size(118, 20);
+            this.dateiToolStripMenuItem.Text = "Datensicherung";
             // 
             // developerToolStripMenuItem
             // 
@@ -273,15 +277,16 @@
             this.ausführenToolStripMenuItem});
             this.sQLToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("sQLToolStripMenuItem.Image")));
             this.sQLToolStripMenuItem.Name = "sQLToolStripMenuItem";
-            this.sQLToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.sQLToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.sQLToolStripMenuItem.Text = "SQL";
             // 
             // ausführenToolStripMenuItem
             // 
             this.ausführenToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("ausführenToolStripMenuItem.Image")));
             this.ausführenToolStripMenuItem.Name = "ausführenToolStripMenuItem";
-            this.ausführenToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.ausführenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.ausführenToolStripMenuItem.Text = "Ausführen";
+            this.ausführenToolStripMenuItem.Click += new System.EventHandler(this.ausführenToolStripMenuItem_Click);
             // 
             // konsoleToolStripMenuItem
             // 
@@ -289,7 +294,7 @@
             this.anzeigenToolStripMenuItem1});
             this.konsoleToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("konsoleToolStripMenuItem.Image")));
             this.konsoleToolStripMenuItem.Name = "konsoleToolStripMenuItem";
-            this.konsoleToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.konsoleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.konsoleToolStripMenuItem.Text = "Konsole";
             // 
             // anzeigenToolStripMenuItem1
@@ -380,11 +385,12 @@
             // 
             // lblCopyright
             // 
-            this.lblCopyright.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblCopyright.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblCopyright.AutoSize = true;
             this.lblCopyright.Font = new System.Drawing.Font("Liberation Mono", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCopyright.Location = new System.Drawing.Point(219, 394);
+            this.lblCopyright.Location = new System.Drawing.Point(247, 394);
             this.lblCopyright.Name = "lblCopyright";
             this.lblCopyright.Size = new System.Drawing.Size(287, 42);
             this.lblCopyright.TabIndex = 2;
@@ -393,6 +399,24 @@
             this.lblCopyright.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblCopyright.Click += new System.EventHandler(this.lblCopyright_Click);
             // 
+            // fTPBackupToolStripMenuItem
+            // 
+            this.fTPBackupToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aufFTPServerSichernToolStripMenuItem});
+            this.fTPBackupToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("fTPBackupToolStripMenuItem.Image")));
+            this.fTPBackupToolStripMenuItem.Name = "fTPBackupToolStripMenuItem";
+            this.fTPBackupToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.fTPBackupToolStripMenuItem.Text = "Datenbank";
+            this.fTPBackupToolStripMenuItem.Click += new System.EventHandler(this.fTPBackupToolStripMenuItem_Click);
+            // 
+            // aufFTPServerSichernToolStripMenuItem
+            // 
+            this.aufFTPServerSichernToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("aufFTPServerSichernToolStripMenuItem.Image")));
+            this.aufFTPServerSichernToolStripMenuItem.Name = "aufFTPServerSichernToolStripMenuItem";
+            this.aufFTPServerSichernToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.aufFTPServerSichernToolStripMenuItem.Text = "Auf FTP Server sichern";
+            this.aufFTPServerSichernToolStripMenuItem.Click += new System.EventHandler(this.aufFTPServerSichernToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -400,7 +424,7 @@
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(730, 445);
+            this.ClientSize = new System.Drawing.Size(795, 445);
             this.Controls.Add(this.lblCopyright);
             this.Controls.Add(this.menuStrip1);
             this.DoubleBuffered = true;
@@ -452,6 +476,8 @@
         private System.Windows.Forms.ToolStripMenuItem neuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verändernToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem anzeigenToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem fTPBackupToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aufFTPServerSichernToolStripMenuItem;
     }
 }
 
