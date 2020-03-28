@@ -160,6 +160,7 @@
     </Compile>
     <Compile Include="ConfigLoader.cs" />
     <Compile Include="CreateDirectory.cs" />
+    <Compile Include="csvImport.cs" />
     <Compile Include="DbBackup.cs">
       <SubType>Form</SubType>
     </Compile>
