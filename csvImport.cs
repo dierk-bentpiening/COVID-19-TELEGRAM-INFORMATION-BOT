@@ -23,7 +23,7 @@ namespace Data_Statistic_and_Analysis_Tool
             String[] vDBALLBUFFER = vBuffer.Split(seperator, count, StringSplitOptions.RemoveEmptyEntries);
             String vPath = vDBALLBUFFER[0].ToString();
             Console.WriteLine(vPath);
-            SQLiteConnection.CreateFile(vPath);
+            //SQLiteConnection.CreateFile(vPath);
             var connectionDb = new SQLiteConnection($"URI=file:{vPath}");
             connectionDb.Open();
             var dbComm = new SQLiteCommand(connectionDb);
